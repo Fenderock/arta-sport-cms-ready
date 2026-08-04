@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARTA Sport — спортивные события и организация стартов</title>
+  <meta name="description" content="Спортивные события, регистрация участников, результаты и полный цикл организации стартов ARTA Sport.">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ARTA Sport">
+      <img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport">
+    </a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="about.html">О нас</a>
+      <a href="offers.html">Наши предложения</a>
+      <a href="#events">Мероприятия</a>
+      <a href="#news">Новости</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="search-btn" type="button" aria-label="Поиск" data-scroll="#events"></button>
+    <div class="account-menu">
+      <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false">
+        <span></span>
+      </button>
+      <div class="account-dropdown" aria-label="Меню личного кабинета">
+        <a class="account-primary" href="lk.html">Открыть личный кабинет</a>
+        <a href="lk.html#profile">Профиль</a>
+        <a href="lk.html#documents">Документы</a>
+        <a href="lk.html#registrations">Регистрации</a>
+      </div>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  </header>
+
+  <nav class="mobile-menu" aria-label="Мобильная навигация">
+    <a href="about.html">О нас</a>
+    <a href="#partners">Наши партнеры</a>
+    <a href="offers.html">Наши предложения</a>
+    <a href="#events">Предстоящие мероприятия</a>
+    <a href="#event-info">Информация по мероприятиям</a>
+    <a href="#past-events">Прошедшие мероприятия</a>
+    <a href="#news">Новости</a>
+    <a href="#contacts">Контакты</a>
+    <a href="lk.html">Личный кабинет</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media">
+        <img src="assets/images/diz1/imports/1440WLight/12c1e2c7563da31303ab1c49523794c71ae6664c.png" alt="Спортивный старт">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-pill"><span></span> Проводим спортивные мероприятия с 2002 года</p>
+        <h1>Живи в движении</h1>
+        <p class="hero-text">Выбирайте старты по бегу, лыжам и велоспорту, регистрируйтесь за пару кликов и управляйте слотами в личном кабинете.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" type="button" data-scroll="#events">Найти событие</button>
+          <a class="glass-btn" href="offers.html">Организаторам</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong data-count="1500" data-suffix="+">1500+</strong><span>мероприятий</span></div>
+          <div><strong data-count="24">24</strong><span>года опыта</span></div>
+          <div><strong data-count="15">15</strong><span>спортивных дисциплин</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="section-head">
+        <p class="label">Ближайшие события</p>
+        <h2>Выберите свой старт</h2>
+        <p>Календарь событий с фильтрами, таймером до старта и быстрым переходом к регистрации.</p>
+      </div>
+
+      <form class="filters" id="eventFilters">
+        <label>Вид спорта
+          <select id="sportFilter">
+            <option value="all">Все</option>
+            <option value="run">Бег</option>
+            <option value="bike">Велоспорт</option>
+            <option value="ski">Лыжи</option>
+          </select>
+        </label>
+        <label class="is-temporarily-hidden">Регион
+          <select id="regionFilter">
+            <option value="all">Все регионы</option>
+          </select>
+        </label>
+        <label>Статус
+          <select id="statusFilter">
+            <option value="upcoming">Предстоящие</option>
+            <option value="past">Прошедшие</option>
+            <option value="all">Все</option>
+          </select>
+        </label>
+      </form>
+
+      <div class="event-grid" id="eventGrid"></div>
+    </section>
+
+    <section class="section info-section" id="event-info">
+      <div class="section-head">
+        <p class="label blue">Информация по мероприятиям</p>
+        <h2>Рейтинги и зачёты</h2>
+        <p>Актуальные сводные результаты серий и рейтинги участников.</p>
+      </div>
+      <div class="info-grid">
+        <a class="info-card" href="event.html"><time>22 июля 2026</time><h3>Рейтинг участников МФЛРД 2026</h3><p>Москва, Московская область</p><span>Открыть →</span></a>
+        <a class="info-card" href="event.html"><time>07 мая 2025</time><h3>Рейтинг участников и командный зачет ФЛРД 2025</h3><p>Москва</p><span>Открыть →</span></a>
+        <a class="info-card" href="event.html"><time>15 февраля 2025</time><h3>Рейтинг лыжников-гонщиков в Нововоронино</h3><p>Московская область, городской округ Пушкинский</p><span>Открыть →</span></a>
+      </div>
+    </section>
+
+    <section class="section past-section" id="past-events">
+      <div class="section-head">
+        <p class="label">Прошедшие мероприятия</p>
+        <h2>Архив стартов</h2>
+      </div>
+      <div class="past-list">
+        <a href="event.html"><time>08 июля 2026</time><strong>3 этап соревнований «ТЫЩА В МЫТИЩАХ-2026»</strong><span>Мытищи →</span></a>
+        <a href="event.html"><time>05 июля 2026</time><strong>Семейный фестиваль #ЦБНАСПОРТЕ</strong><span>Москва →</span></a>
+        <a href="event.html"><time>30 июня 2026</time><strong>Чемпионат ФСО России по служебному двоеборью</strong><span>Московская область →</span></a>
+      </div>
+    </section>
+
+    <section class="section sports-section" id="sports">
+      <div class="section-head">
+        <p class="label pink">Виды спорта</p>
+        <h2>Найдите свое направление</h2>
+        <p>Категории помогают быстро отфильтровать календарь и перейти к подходящим стартам.</p>
+      </div>
+      <div class="sports-grid sports-grid-full">
+        <button class="sport-card" type="button" data-sport="ski"><img src="assets/images/legacy/sports-original/1.jpg" alt=""><strong>Лыжные гонки</strong></button>
+        <button class="sport-card" type="button" data-sport="ski"><img src="assets/images/legacy/sports-original/2.jpg" alt=""><strong>Лыжероллеры</strong></button>
+        <button class="sport-card" type="button" data-sport="run"><img src="assets/images/legacy/sports-original/3.jpg" alt=""><strong>Trail Running</strong></button>
+        <button class="sport-card" type="button" data-sport="ski"><img src="assets/images/legacy/sports-original/4.jpg" alt=""><strong>Биатлон</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/5.jpg" alt=""><strong>Полиатлон</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/6.png" alt=""><strong>Конькобежный спорт</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/7.jpg" alt=""><strong>Скандинавская ходьба</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/8.jpg" alt=""><strong>Спортивная ходьба</strong></button>
+        <button class="sport-card" type="button" data-sport="run"><img src="assets/images/legacy/sports-original/9.jpg" alt=""><strong>Легкая атлетика</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/10.jpg" alt=""><strong>Многоборье ГТО</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/11.jpg" alt=""><strong>Плавание</strong></button>
+        <button class="sport-card" type="button" data-sport="bike"><img src="assets/images/legacy/sports-original/12.jpg" alt=""><strong>Велогонки</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/13.jpg" alt=""><strong>Спартакиады</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/14.jpg" alt=""><strong>Автогонки</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/16.jpg" alt=""><strong>Подвижные игры</strong></button>
+        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/15.jpg" alt=""><strong>Игровые виды спорта</strong></button>
+      </div>
+    </section>
+
+    <section class="section trust-section" id="trust">
+      <div class="section-head">
+        <p class="label">Почему доверяют нам</p>
+        <h2>Полный цикл без компромиссов</h2>
+        <p>От концепции и программы до точного хронометража и оборудования соревновательной зоны.</p>
+      </div>
+      <div class="trust-grid">
+        <article><strong>01</strong><h3>Качественно</h3><p>Многолетний опыт и индивидуальный подход к профессиональным и любительским стартам.</p></article>
+        <article><strong>02</strong><h3>Продуктивно</h3><p>Квалифицированные судьи, тренеры и инструкторы с профильным образованием.</p></article>
+        <article><strong>03</strong><h3>Комплексно</h3><p>Создание концепции и программы мероприятий различного уровня.</p></article>
+        <article><strong>04</strong><h3>Надежно</h3><p>Точный, оперативный хронометраж и соблюдение принципа fair play.</p></article>
+        <article><strong>05</strong><h3>Практично</h3><p>Подготовка трасс и профессиональное оборудование соревновательных зон.</p></article>
+        <article><strong>06</strong><h3>Выгодно</h3><p>Гибкий подход к формированию стоимости услуг.</p></article>
+      </div>
+    </section>
+
+    <section class="section partners-section" id="partners">
+      <div class="section-head partners-head">
+        <div>
+          <p class="label blue">Наши партнеры</p>
+          <h2>Вместе создаём большие старты</h2>
+        </div>
+      </div>
+      <div class="partner-carousel">
+        <div class="partner-strip" aria-label="Партнеры ARTA Sport" tabindex="0">
+          <a href="https://www.lukoil.ru/" target="_blank" rel="noopener" title="ПАО «ЛУКОЙЛ»"><img src="assets/images/legacy/partners/original/lukoil.jpg" alt="ЛУКОЙЛ"></a>
+          <a href="https://mrg.gazprom.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/gazprom.png" alt="Газпром межрегионгаз"></a>
+          <a href="https://www.rzd.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/rzhd.png" alt="РЖД"></a>
+          <a href="https://www.sintecgroup.ru/" target="_blank" rel="noopener" title="SINTEC Group"><img src="assets/images/legacy/partners/original/sintec.png" alt="SINTEC Group"></a>
+          <a href="https://www.rosneft.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/rosneft.png" alt="Роснефть"></a>
+          <a href="https://www.sibur.ru/" target="_blank" rel="noopener" title="СИБУР"><img src="assets/images/legacy/partners/original/sibur.jpg" alt="СИБУР"></a>
+          <a href="https://minenergo.gov.ru/" target="_blank" rel="noopener" title="Минэнерго России"><img src="assets/images/legacy/partners/original/minenergo.jpg" alt="Минэнерго России"></a>
+          <a href="https://mil.ru/" target="_blank" rel="noopener" title="Минобороны России"><img src="assets/images/legacy/partners/original/minoborony.jpg" alt="Минобороны России"></a>
+          <a href="https://www.nalog.gov.ru/rn77/" target="_blank" rel="noopener" title="ФНС России"><img src="assets/images/legacy/partners/original/fns.png" alt="ФНС России"></a>
+          <a href="https://valeshi.ru/" target="_blank" rel="noopener" title="Валеши"><img src="assets/images/legacy/partners/original/valeshi.png" alt="Валеши"></a>
+          <a href="https://t.me/s/skifactory" target="_blank" rel="noopener" title="УРАЛХИМ SKI FACTORY"><img src="assets/images/legacy/partners/original/uralhim.png" alt="УРАЛХИМ SKI FACTORY"></a>
+          <a href="https://parkpatriot.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/Patriot.png" alt="Парк Патриот"></a>
+          <a href="https://www.sportmaster.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/sportmaster.jpg" alt="Спортмастер"></a>
+          <a href="https://bionovashop.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/BIONOVA.jpg" alt="BIONOVA"></a>
+        </div>
+        <div class="partner-controls" aria-label="Управление каруселью партнеров">
+          <button type="button" data-partner-scroll="prev" aria-label="Предыдущие партнеры">‹</button>
+          <button type="button" data-partner-scroll="next" aria-label="Следующие партнеры">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section account-preview" id="account">
+      <div class="account-copy">
+        <p class="label">Личный кабинет</p>
+        <h2>Регистрация, документы и семья в одном месте</h2>
+        <p>Прототип поддерживает автозаполнение профиля, зависимые профили детей, загрузку страховки и передачу оплаченного слота.</p>
+        <a class="primary-btn" href="lk.html">Открыть личный кабинет</a>
+      </div>
+      <div class="preview-account-card">
+        <div class="profile-line">
+          <span>ВД</span>
+          <div><strong>Васильев Дмитрий</strong><small>Мужчина · 49 лет · fendervik@gmail.com</small></div>
+        </div>
+        <div class="account-list">
+          <div><strong>3</strong><span>будущих старта</span></div>
+          <div><strong>18</strong><span>баллов участия</span></div>
+          <div><strong>2</strong><span>детских профиля</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="section-head">
+        <p class="label blue">Новости и статьи</p>
+        <h2>Будьте в курсе спортивных событий</h2>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="assets/images/diz1/imports/1440WLight/6dd98ca0acaa339e158726df226104416d0648b6.png" alt="Участники на финише">
+          <div><time>06 июня 2026</time><h3>ПОЛУМАРАФОН ЛОСЬ входит в календарь МФЛРД</h3><p>Новый лыжероллерный старт пополняет программу межрегионального фестиваля.</p></div>
+        </article>
+        <article class="news-card">
+          <img src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Спортивная площадка">
+          <div><time>26 мая 2026</time><h3>Весенний лыжероллерный полумарафон возвращается</h3><p>Старт снова пройдет на своей родной площадке — в парке «Патриот».</p></div>
+        </article>
+        <article class="news-card">
+          <img src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png" alt="Спортсмены">
+          <div><time>06 мая 2026</time><h3>Гонки фестиваля пройдут в Обнинске</h3><p>10 мая состоится очередной этап Межрегионального фестиваля лыжероллерных дисциплин.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Готовы к новым достижениям?</h2>
+      <p>Выберите старт, заполните заявку из профиля и оплатите слот без лишних шагов.</p>
+      <a class="light-btn" href="#events">Начать сейчас</a>
+    </section>
+  </main>
+
+  <footer class="site-footer full-footer" id="contacts">
+    <div class="footer-brand">
+      <img class="logo-img footer-logo" src="assets/images/diz1/logo_1.png" alt="Arta Sport">
+    </div>
+    <nav>
+      <strong>Мероприятия</strong>
+      <a href="#events">Предстоящие</a>
+      <a href="#event-info">Рейтинги и зачеты</a>
+      <a href="#past-events">Прошедшие</a>
+    </nav>
+    <nav>
+      <strong>Компания</strong>
+      <a href="offers.html">Наши предложения</a>
+      <a href="#partners">Наши партнеры</a>
+      <a href="lk.html">Личный кабинет</a>
+      <a href="about.html">О компании</a>
+    </nav>
+    <nav class="footer-contact">
+      <strong>Контакты</strong>
+      <a href="tel:+79166363710">+7 916 636-37-10</a>
+      <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+      <p>Москва</p>
+    </nav>
+    <nav class="footer-social-column">
+      <strong>Мы в соцсетях</strong>
+      <div class="footer-social"><a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a><a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a></div>
+    </nav>
+    <div class="footer-legal">
+      <p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
+      <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

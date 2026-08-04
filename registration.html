@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация и вход — ARTA Sport</title>
+  <meta name="description" content="Создание аккаунта участника и вход в личный кабинет ARTA Sport.">
+  <link rel="stylesheet" href="assets/css/site.css"><link rel="stylesheet" href="assets/css/internal.css">
+</head>
+<body class="inner-page auth-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="ARTA Sport"></a>
+    <nav class="desktop-nav"><a href="about.html">О нас</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+    <div class="account-menu">
+      <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
+      <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
+    </div>
+    <a class="header-cta" href="index.html">На главную</a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  </header>
+  <nav class="mobile-menu"><a href="index.html">Главная</a><a href="about.html">О нас</a><a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+
+  <main class="auth-layout">
+    <aside class="auth-story"><div class="auth-story-content"><span class="page-kicker">Личный кабинет участника</span><h1>Ваши старты — в одном месте</h1><p>Регистрируйтесь, храните документы, управляйте семейными профилями и следите за результатами.</p></div></aside>
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-tabs" role="tablist"><button class="js-auth-tab is-active" type="button" data-panel="register" aria-selected="true">Создать аккаунт</button><button class="js-auth-tab" type="button" data-panel="login" aria-selected="false">Войти</button></div>
+        <div class="js-auth-panel" data-panel="register"><div class="auth-heading"><span class="page-kicker">Новый участник</span><h2>Регистрация</h2></div><form class="ui-form js-demo-form"><label>Имя<input type="text" required></label><label>Фамилия<input type="text" required></label><label>Email<input type="email" required></label><label>Телефон<input type="tel" required></label><label>Пароль<input type="password" required></label><label class="auth-check"><input type="checkbox" required><span>Согласен на обработку данных</span></label><button class="ui-button" type="submit">Создать аккаунт</button><p class="form-success is-hidden">Аккаунт создан. <a href="lk.html">Перейти в кабинет →</a></p></form></div>
+        <div class="js-auth-panel is-hidden" data-panel="login"><div class="auth-heading"><span class="page-kicker">С возвращением</span><h2>Вход</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><label>Пароль<input type="password" required></label><button class="js-reset-link" type="button">Забыли пароль?</button><button class="ui-button" type="submit">Войти</button><p class="form-success is-hidden"><a href="lk.html">Перейти в личный кабинет →</a></p></form></div>
+        <div class="js-auth-panel is-hidden" data-panel="reset"><div class="auth-heading"><span class="page-kicker">Восстановление доступа</span><h2>Сброс пароля</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><button class="ui-button" type="submit">Отправить ссылку</button><button class="js-login-link" type="button">Вернуться ко входу</button><p class="form-success is-hidden">Инструкция отправлена на указанный email.</p></form></div>
+      </div>
+    </section>
+  </main>
+  <footer class="inner-footer full-footer">
+    <div class="footer-brand"><img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport"></div>
+    <nav><strong>Участникам</strong><a href="index.html#events">Мероприятия</a><a href="registration.html">Регистрация</a><a href="lk.html">Личный кабинет</a></nav>
+    <nav><strong>Компания</strong><a href="offers.html">Наши предложения</a><a href="index.html#partners">Наши партнеры</a><a href="about.html">О нас</a></nav>
+    <nav class="footer-contact"><strong>Контакты</strong><a href="tel:+79166363710">+7 916 636-37-10</a><a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a><p>Москва</p></nav>
+    <nav class="footer-social-column"><strong>Мы в соцсетях</strong><div class="footer-social"><a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a><a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a></div></nav>
+    <div class="footer-legal"><p>© АНО «АРТА-СПОРТ», 2016–2026.</p><p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p></div>
+  </footer>
+  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
+</body>
+</html>
