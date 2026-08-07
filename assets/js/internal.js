@@ -12,6 +12,69 @@ $(function () {
     $('.menu-toggle').attr('aria-expanded', 'false');
   });
 
+  /* Mobile submenu toggle (for pages that use internal.js) */
+  $(document).on('click', '.mobile-sub-toggle', function () {
+    const expanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', String(!expanded));
+    $(this).next('.mobile-submenu').toggleClass('is-open', !expanded);
+  });
+
+  /* Desktop dropdown: hover opens immediately, mouseleave closes after a short delay */
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    $('.nav-dropdown').each(function () {
+      var $item = $(this);
+      var closeTimer = null;
+      $item.on('mouseenter', function () {
+        if (closeTimer) clearTimeout(closeTimer);
+        $item.addClass('is-open');
+        $item.find('.nav-dropdown-toggle').attr('aria-expanded', 'true');
+      }).on('mouseleave', function () {
+        closeTimer = setTimeout(function () {
+          $item.removeClass('is-open');
+          $item.find('.nav-dropdown-toggle').attr('aria-expanded', 'false');
+        }, 180);
+      });
+    });
+  }
+
+  $('.nav-dropdown .nav-dropdown-toggle').on('focus', function () {
+    $(this).attr('aria-expanded', 'true');
+  }).on('blur', function () {
+    $(this).attr('aria-expanded', 'false');
+  });
+
+  $(document).on('keydown', '.nav-dropdown .nav-dropdown-toggle', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      $(this).trigger('click');
+    }
+  });
+
+  /* Click handler for desktop dropdown in pages using internal.js */
+  $('.nav-dropdown .nav-dropdown-toggle').on('click', function (e) {
+    if (e.metaKey || e.ctrlKey || e.which === 2) return;
+    e.preventDefault();
+    var $parent = $(this).closest('.nav-dropdown');
+    var isOpen = $parent.hasClass('is-open');
+    $('.nav-dropdown').not($parent).removeClass('is-open');
+    $parent.toggleClass('is-open', !isOpen);
+    $(this).attr('aria-expanded', String(!isOpen));
+  });
+
+  $(document).on('click', function (e) {
+    if ($(e.target).closest('.nav-dropdown').length === 0) {
+      $('.nav-dropdown').removeClass('is-open');
+      $('.nav-dropdown .nav-dropdown-toggle').attr('aria-expanded', 'false');
+    }
+  });
+
+  $(document).on('keydown', function (event) {
+    if (event.key === 'Escape') {
+      $('.nav-dropdown').removeClass('is-open');
+      $('.nav-dropdown .nav-dropdown-toggle').attr('aria-expanded', 'false');
+    }
+  });
+
   /* Shared personal-account dropdown in the public header. */
   document.querySelectorAll('.account-icon').forEach(function (button) {
     button.addEventListener('click', function (event) {

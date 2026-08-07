@@ -1,7 +1,22 @@
 <!-- CMS template: shared site header. Replace the static copies in pages when integrating. -->
 <header class="site-header">
   <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="ARTA Sport"></a>
-  <nav class="desktop-nav" aria-label="Основная навигация"><a href="about.html">О нас</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+  <form class="header-search" action="#" method="get">
+    <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+  </form>
+  <nav class="desktop-nav" aria-label="Основная навигация">
+    <a href="index.html#events">Мероприятия</a>
+    <div class="nav-dropdown">
+      <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="offers.html" role="menuitem">Наши предложения</a>
+        <a href="about.html" role="menuitem">О нас</a>
+      </div>
+    </div>
+    <a href="index.html#news">Новости</a>
+    <a href="index.html#contacts">Контакты</a>
+  </nav>
+  <button class="search-btn" type="button" aria-label="Поиск"></button>
   <div class="account-menu">
     <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
     <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
@@ -9,4 +24,19 @@
   <a class="header-cta" href="registration.html">Регистрация</a>
   <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
 </header>
-<nav class="mobile-menu" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="about.html">О нас</a><a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a><a href="registration.html">Регистрация</a><a href="lk.html">Личный кабинет</a></nav>
+<nav class="mobile-menu" aria-label="Мобильная навигация">
+  <div class="mobile-search">
+    <form class="mobile-search-form" action="#" method="get">
+      <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+    </form>
+  </div>
+  <a href="index.html">Главная</a>
+  <a href="index.html#events">Мероприятия</a>
+  <div class="mobile-item mobile-has-sub">
+    <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
+      <div class="mobile-submenu">
+        <a href="offers.html">Наши предложения</a>
+        <a href="about.html">О нас</a>
+      </div>
+  </div>
+  <a href="index.html#partners">Наши партнеры</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a><a href="registration.html">Регистрация</a><a href="lk.html">Личный кабинет</a></nav>

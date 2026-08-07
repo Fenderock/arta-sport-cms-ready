@@ -1,5 +1,5 @@
 /* Public home page: catalogue, filters, menus and registration demo. */
-﻿$(function () {
+$(function () {
   if (!$('body').hasClass('home-page')) return;
   const regions = [
     'Москва', 'Санкт-Петербург', 'Московская область', 'Ленинградская область',
@@ -121,6 +121,20 @@
       status: 'past',
       price: 2400,
       image: 'assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png'
+    },
+    {
+      id: 'ural-trail',
+      title: 'Ural Mountain Trail',
+      sport: 'run',
+      sportName: 'Трейл',
+      region: 'Свердловская область',
+      date: '2026-04-12T09:00:00',
+      place: 'Екатеринбург',
+      participants: '650+',
+      seats: 0,
+      status: 'past',
+      price: 2100,
+      image: 'assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png'
     }
   ];
 
@@ -154,18 +168,67 @@
     $('#toast').stop(true, true).text(message).fadeIn(160).delay(2300).fadeOut(220);
   }
 
+  /* Custom Select Logic */
+  $(document).on('click', '.select-trigger', function (e) {
+    e.stopPropagation();
+    const $parent = $(this).closest('.custom-select');
+    const isOpen = $parent.hasClass('is-open');
+    
+    // Close all other selects
+    $('.custom-select').removeClass('is-open');
+    
+    if (!isOpen) {
+      $parent.addClass('is-open');
+    }
+  });
+
+  $(document).on('click', '.select-options li', function () {
+    const $li = $(this);
+    const $select = $li.closest('.custom-select');
+    const value = $li.data('value');
+    const text = $li.text();
+    const filterType = $select.data('filter');
+
+    // Update UI
+    $select.find('.select-trigger').text(text);
+    $select.find('li').removeClass('is-selected');
+    $li.addClass('is-selected');
+    $select.removeClass('is-open');
+
+    // Store value for filtering logic
+    $select.data('current-value', value);
+
+    renderEvents();
+  });
+
+  // Close custom selects when clicking outside
+  $(document).on('click', function () {
+    $('.custom-select').removeClass('is-open');
+  });
+
   /* Apply the public catalogue filters. */
   function filteredEvents() {
-    const sport = $('#sportFilter').val();
-    const region = $('#regionFilter').val();
-    const status = $('#statusFilter').val();
+    const sport = $('.custom-select[data-filter="sport"]').data('current-value') || 'all';
+    const region = $('.custom-select[data-filter="region"]').data('current-value') || 'all';
+    const year = $('.custom-select[data-filter="year"]').data('current-value') || 'all';
+    // Get status from the active toggle button
+    const status = $('.status-btn.is-active').data('status') || 'upcoming';
 
     return events.filter((event) => {
+      const eventYear = new Date(event.date).getFullYear().toString();
       return (sport === 'all' || event.sport === sport)
         && (region === 'all' || event.region === region)
+        && (year === 'all' || eventYear === year)
         && (status === 'all' || event.status === status);
     });
   }
+
+  /* Handle status toggle buttons click */
+  $(document).on('click', '.status-btn', function () {
+    $('.status-btn').removeClass('is-active');
+    $(this).addClass('is-active');
+    renderEvents();
+  });
 
   /* Build one reusable event card. */
   function eventCard(event) {
@@ -175,7 +238,7 @@
       : `<button class="primary-btn js-register" type="button" data-event="${event.id}">Регистрация</button>`;
 
     return `
-      <article class="event-card">
+      <article class="event-card" data-event-href="event.html" role="link" tabindex="0">
         <img class="event-image" src="${event.image}" alt="${event.title}">
         <div class="event-body">
           <span class="event-badge">${event.sportName}</span>
@@ -198,6 +261,27 @@
   function renderEvents() {
     const html = filteredEvents().map(eventCard).join('');
     $('#eventGrid').html(html || '<div class="empty">По выбранным фильтрам событий нет.</div>');
+  }
+
+  $(document).on('click', '.event-card', function (clickEvent) {
+    if ($(clickEvent.target).closest('a, button, input, select, textarea, label').length) return;
+    window.location.href = $(this).data('event-href') || 'event.html';
+  });
+
+  $(document).on('keydown', '.event-card', function (keyEvent) {
+    if (keyEvent.target !== this || (keyEvent.key !== 'Enter' && keyEvent.key !== ' ')) return;
+    keyEvent.preventDefault();
+    window.location.href = $(this).data('event-href') || 'event.html';
+  });
+
+  function renderPastEvents() {
+    // Filter only past events and map them to cards
+    const pastHtml = events
+      .filter(e => e.status === 'past')
+      .map(eventCard)
+      .join('');
+    
+    $('#pastEventGrid').html(pastHtml || '<div class="empty">Архив пока пуст.</div>');
   }
 
   function updateHeader() {
@@ -268,6 +352,7 @@
 
   regions.forEach((region) => $('#regionFilter').append(`<option value="${region}">${region}</option>`));
   renderEvents();
+  renderPastEvents();
   updateHeader();
 
   $(window).on('scroll', updateHeader);
@@ -280,19 +365,95 @@
     $('.account-icon').attr('aria-expanded', 'false');
   });
 
+  $('.search-btn').on('click', function () {
+    var isSearchOpen = !$('.mobile-menu').hasClass('is-search-open');
+    $('.mobile-menu').toggleClass('is-search-open', isSearchOpen);
+    $('.mobile-menu').addClass('is-open');
+    $('.menu-toggle').attr('aria-expanded', 'true');
+    $('.mobile-search-form .search-input').focus();
+  });
+
   $('.mobile-menu a').on('click', function () {
-    $('.mobile-menu').removeClass('is-open');
+    $('.mobile-menu').removeClass('is-open is-search-open');
     $('.menu-toggle').attr('aria-expanded', 'false');
   });
 
   $('.account-icon').on('click', function (event) {
     event.stopPropagation();
-    const isOpen = $('.account-dropdown').nodes
-      ? $('.account-dropdown').nodes[0].classList.contains('is-open')
-      : $('.account-dropdown').hasClass('is-open');
-    $('.account-dropdown').toggleClass('is-open', !isOpen);
+    const $dropdown = $('.account-dropdown');
+    const isOpen = $dropdown.hasClass('is-open');
+    $dropdown.toggleClass('is-open', !isOpen);
     $(this).attr('aria-expanded', String(!isOpen));
     $('.mobile-menu').removeClass('is-open');
+  });
+
+  /* Desktop dropdown: hover opens immediately, mouseleave closes after a short delay */
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    $('.nav-dropdown').each(function () {
+      const $item = $(this);
+      let closeTimer = null;
+      $item.on('mouseenter', function () {
+        if (closeTimer) clearTimeout(closeTimer);
+        $item.addClass('is-open');
+        $item.find('.nav-dropdown-toggle').attr('aria-expanded', 'true');
+      }).on('mouseleave', function () {
+        closeTimer = setTimeout(function () {
+          $item.removeClass('is-open');
+          $item.find('.nav-dropdown-toggle').attr('aria-expanded', 'false');
+        }, 180);
+      });
+    });
+  }
+
+  /* Ensure keyboard focus toggles aria state */
+  $('.nav-dropdown .nav-dropdown-toggle').on('focus', function () {
+    $(this).attr('aria-expanded', 'true');
+  }).on('blur', function () {
+    $(this).attr('aria-expanded', 'false');
+  });
+
+  /* Keyboard: Enter/Space should toggle the menu like click */
+  $(document).on('keydown', '.nav-dropdown .nav-dropdown-toggle', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      $(this).trigger('click');
+    }
+  });
+
+  /* Mobile submenu toggle */
+  $(document).on('click', '.mobile-sub-toggle', function () {
+    const expanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', String(!expanded));
+    $(this).next('.mobile-submenu').toggleClass('is-open', !expanded);
+  });
+
+  /* Click behavior: prevent top-level link navigation so submenu can be used on desktop */
+  $('.nav-dropdown .nav-dropdown-toggle').on('click', function (e) {
+    // if user clicks with modifier (ctrl/cmd) or middle button, allow navigation
+    if (e.metaKey || e.ctrlKey || e.which === 2) return;
+    e.preventDefault();
+    const $parent = $(this).closest('.nav-dropdown');
+    const isOpen = $parent.hasClass('is-open');
+    // toggle open state
+    $('.nav-dropdown').not($parent).removeClass('is-open');
+    $parent.toggleClass('is-open', !isOpen);
+    $(this).attr('aria-expanded', String(!isOpen));
+  });
+
+  // Close dropdown when clicking outside
+  $(document).on('click', function (e) {
+    if ($(e.target).closest('.nav-dropdown').length === 0) {
+      $('.nav-dropdown').removeClass('is-open');
+      $('.nav-dropdown .nav-dropdown-toggle').attr('aria-expanded', 'false');
+    }
+  });
+
+  // Close dropdown on Escape
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      $('.nav-dropdown').removeClass('is-open');
+      $('.nav-dropdown .nav-dropdown-toggle').attr('aria-expanded', 'false');
+    }
   });
 
   /* Manual partner carousel: touch swipe, mouse drag and side arrows. */
@@ -396,10 +557,6 @@
     $('#statusFilter').val('upcoming');
     renderEvents();
     document.querySelector('#events').scrollIntoView({ behavior: 'smooth' });
-  });
-
-  $(document).on('click', '.js-register', function () {
-    registrationModal($(this).data('event'));
   });
 
   $('[data-open-modal="video"]').on('click', function () {
@@ -827,8 +984,17 @@ $(function () {
     toast('Документ загружен');
   });
 
+  // Unified registration handler to avoid duplicate bindings across pages
   $(document).on('click', '.js-register', function () {
-    registrationDrawer($(this).data('event'));
+    const eventId = $(this).data('event');
+    if ($('body').hasClass('home-page')) {
+      registrationModal(eventId);
+    } else if ($('body').hasClass('lk-page')) {
+      registrationDrawer(eventId);
+    } else {
+      // fallback to modal for other pages
+      registrationModal(eventId);
+    }
   });
 
   $(document).on('click', '.js-register-child', function () {
@@ -869,10 +1035,24 @@ $(function () {
     toast('Профиль сохранен');
   });
 
+  $('.feedback-form').on('submit', function (event) {
+    event.preventDefault();
+    const form = this;
+    const $status = $(form).find('.feedback-status');
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      $status.text('Заполните обязательные поля и подтвердите согласие.');
+      return;
+    }
+
+    $status.text('Спасибо! Ваш вопрос принят. Мы свяжемся с вами.');
+    form.reset();
+  });
+
   setInterval(function () {
     $('[data-countdown]').each(function () {
       $(this).text(countdown($(this).data('countdown')));
     });
   }, 60000);
 });
-
