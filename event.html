@@ -10,38 +10,65 @@
 <body class="inner-page">
   <header class="site-header">
     <a class="brand" href="index.html"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="ARTA Sport"></a>
-    <nav class="desktop-nav"><a href="about.html">О нас</a><a href="offers.html">Наши предложения</a><a href="index.html#events" aria-current="page">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+    <form class="header-search" action="#" method="get">
+      <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+    </form>
+    <nav class="desktop-nav">
+      <a href="index.html#events" aria-current="page">Мероприятия</a>
+      <div class="nav-dropdown">
+        <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="offers.html" role="menuitem">Наши предложения</a>
+          <a href="about.html" role="menuitem">О нас</a>
+        </div>
+      </div>
+      <a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a>
+    </nav>
+    <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
       <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
     </div>
     <a class="header-cta" href="registration.html">Регистрация</a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
-  <nav class="mobile-menu"><a href="index.html">Главная</a><a href="about.html">О нас</a><a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a><a href="registration.html">Регистрация</a></nav>
+  <nav class="mobile-menu">
+    <div class="mobile-search">
+      <form class="mobile-search-form" action="#" method="get">
+        <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+      </form>
+    </div>
+    <a href="index.html">Главная</a>
+    <a href="index.html#events">Мероприятия</a>
+    <div class="mobile-item mobile-has-sub">
+      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
+      <div class="mobile-submenu">
+        <a href="offers.html">Наши предложения</a>
+        <a href="about.html">О нас</a>
+      </div>
+    </div>
+    <a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a><a href="registration.html">Регистрация</a></nav>
 
   <main>
     <section class="image-hero event-image-hero">
       <div class="container image-hero-content">
         <nav class="breadcrumbs"><a href="index.html">Главная</a><span>→</span><a href="index.html#events">События</a></nav>
         <span class="page-kicker">Регистрация скоро откроется</span>
-        <h1 class="page-title">Этап МФЛРД 2026 — «С нами все»</h1>
+        <h1 class="page-title">Этап МФЛРД 2026 — «С&nbsp;нами все»</h1>
         <p class="page-lead">Традиционные соревнования по лыжероллерам и роликовым конькам.</p>
         <div class="event-meta"><span>08 августа 2026</span><span>11:00 МСК</span><span>Москва · ОБЛК «Юго-Восток»</span></div>
       </div>
+      <div class="countdown-card js-countdown" data-target="2026-08-08T11:00:00+03:00">
+        <strong class="countdown-title"><span aria-hidden="true">⏱</span>До старта</strong>
+        <div class="countdown-values"><span><strong data-time>00</strong><small>дней</small></span><span><strong data-time>00</strong><small>часов</small></span><span><strong data-time>00</strong><small>минут</small></span><span><strong data-time>00</strong><small>секунд</small></span></div>
+      </div>
     </section>
-
-    <div class="container countdown-card js-countdown" data-target="2026-08-08T11:00:00+03:00">
-      <strong>До старта</strong>
-      <div class="countdown-values"><span><strong data-time>00</strong><small>дней</small></span><span><strong data-time>00</strong><small>часов</small></span><span><strong data-time>00</strong><small>минут</small></span><span><strong data-time>00</strong><small>секунд</small></span></div>
-      <a class="ui-button" href="registration.html">Регистрация →</a>
-    </div>
 
     <section class="page-section">
       <div class="container content-layout">
         <article>
-          <section class="content-block"><span class="page-kicker">О мероприятии</span><h2>Скорость, техника и атмосфера большого старта</h2><p>К участию приглашаются профессиональные спортсмены и любители активного отдыха. Старт состоится на специализированной трассе ОБЛК «Юго-Восток».</p><div class="fact-cards"><div><strong>2</strong><span>дисциплины</span></div><div><strong>10+</strong><span>возрастных групп</span></div><div><strong>1</strong><span>спортивный праздник</span></div></div></section>
-          <section class="content-block"><span class="page-kicker">Расписание</span><h2>Программа дня</h2><div class="program-list"><div class="program-row"><time>09:00</time><div><strong>Выдача стартовых номеров</strong><small>Регистрационная зона</small></div></div><div class="program-row"><time>10:30</time><div><strong>Открытие соревнований</strong><small>Стартовый городок</small></div></div><div class="program-row"><time>11:00</time><div><strong>Первый старт</strong><small>Лыжероллеры и роликовые коньки</small></div></div><div class="program-row"><time>15:30</time><div><strong>Награждение победителей</strong><small>Главная сцена</small></div></div></div></section>
-          <section class="content-block"><span class="page-kicker">Участникам</span><h2>Документы</h2><div class="document-list"><div class="document-row"><span>PDF</span><div><strong>Положение о соревнованиях</strong><small>Будет опубликовано позднее</small></div><b>Скоро</b></div><div class="document-row"><span>PDF</span><div><strong>Регламент мероприятия</strong><small>Будет опубликован позднее</small></div><b>Скоро</b></div><div class="document-row"><span>XLS</span><div><strong>Стартовый протокол</strong><small>Появится после регистрации</small></div><b>Скоро</b></div></div></section>
+          <section class="content-block"><span class="page-kicker">О мероприятии</span><h2>О мероприятии</h2><p>К участию приглашаются профессиональные спортсмены и любители активного отдыха. Старт состоится на специализированной трассе ОБЛК «Юго-Восток».</p><div class="fact-cards"><div><strong>2</strong><span>дисциплины</span></div><div><strong>10+</strong><span>возрастных групп</span></div></div></section>
+          <section class="content-block"><span class="page-kicker">Расписание</span><h2>Расписание</h2><div class="program-list"><div class="program-row"><time>09:00</time><div><strong>Выдача стартовых номеров</strong><small>Регистрационная зона</small></div></div><div class="program-row"><time>10:30</time><div><strong>Открытие соревнований</strong><small>Стартовый городок</small></div></div><div class="program-row"><time>11:00</time><div><strong>Первый старт</strong><small>Лыжероллеры и роликовые коньки</small></div></div><div class="program-row"><time>15:30</time><div><strong>Награждение победителей</strong><small>Главная сцена</small></div></div></div></section>
+          <section class="content-block"><span class="page-kicker">Участникам</span><h2>Участникам</h2><div class="document-list"><div class="document-row"><span>PDF</span><div><strong>Положение о соревнованиях</strong><small>Будет опубликовано позднее</small></div><b>Скоро</b></div><div class="document-row"><span>PDF</span><div><strong>Регламент мероприятия</strong><small>Будет опубликовано позднее</small></div><b>Скоро</b></div><div class="document-row"><span>XLS</span><div><strong>Стартовый протокол</strong><small>Появится после регистрации</small></div><b>Скоро</b></div></div></section>
         </article>
         <aside>
           <section class="side-card"><span class="page-kicker">Регистрация</span><h3>Создайте профиль участника</h3><p>Профиль ускоряет подачу заявки и сохраняет документы.</p><a class="ui-button" href="registration.html">Создать аккаунт</a></section>

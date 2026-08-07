@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мероприятия — ARTA Sport</title>
+  <meta name="description" content="Предстоящие и прошедшие спортивные мероприятия ARTA Sport.">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/internal.css">
+</head>
+<body class="inner-page events-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
+    <form class="header-search" action="#" method="get"><input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту"></form>
+    <nav class="desktop-nav" aria-label="Основная навигация"><a href="events.html" aria-current="page">Мероприятия</a><div class="nav-dropdown"><a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a><div class="nav-dropdown-menu" role="menu"><a href="offers.html" role="menuitem">Наши предложения</a><a href="about.html" role="menuitem">О нас</a></div></div><a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a></nav>
+    <button class="search-btn" type="button" aria-label="Поиск"></button>
+    <div class="account-menu"><button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button><div class="account-dropdown"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div></div>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  </header>
+  <nav class="mobile-menu" aria-label="Мобильная навигация"><div class="mobile-search"><form class="mobile-search-form" action="#" method="get"><input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту"></form></div><a href="index.html">Главная</a><a href="events.html">Мероприятия</a><a href="offers.html">Наши предложения</a><a href="about.html">О нас</a><a href="contacts.html">Контакты</a><a href="lk.html">Личный кабинет</a></nav>
+  <main>
+    <section class="events-page-hero"><div class="container"><nav class="breadcrumbs"><a href="index.html">Главная</a><span>→</span><span>Мероприятия</span></nav><span class="page-kicker">Календарь ARTA Sport</span><h1 class="page-title">Мероприятия</h1><p class="page-lead">Предстоящие старты и архив прошедших спортивных мероприятий.</p></div></section>
+    <section class="page-section events-catalogue"><div class="container">
+      <form class="filters" id="eventsPageFilters">
+        <div class="filter-group"><span class="filter-label">Вид спорта</span><div class="custom-select" data-filter="sport"><button type="button" class="select-trigger">Все</button><ul class="select-options"><li data-value="all" class="is-selected">Все</li><li data-value="run">Бег</li><li data-value="bike">Велоспорт</li><li data-value="ski">Лыжи и лыжероллеры</li><li data-value="multi">Другие</li></ul></div></div>
+        <div class="filter-group"><span class="filter-label">Год</span><div class="custom-select" data-filter="year"><button type="button" class="select-trigger">Все годы</button><ul class="select-options"><li data-value="all" class="is-selected">Все годы</li><li data-value="2026">2026</li></ul></div></div>
+        <label>Статус<div class="status-toggle" role="group" aria-label="Фильтр по статусу"><button type="button" class="status-btn is-active" data-status="upcoming">Предстоящие</button><button type="button" class="status-btn" data-status="past">Прошедшие</button></div></label>
+      </form>
+      <div class="events-results-head"><h2 id="eventsResultTitle">Предстоящие мероприятия</h2><span id="eventsResultCount"></span></div>
+      <div class="event-grid" id="eventsPageGrid"></div>
+    </div></section>
+  </main>
+  <footer class="inner-footer full-footer"><div class="footer-brand"><img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport"></div><nav><strong>Участникам</strong><a href="events.html">Мероприятия</a><a href="registration.html">Регистрация</a><a href="lk.html">Личный кабинет</a></nav><nav><strong>Компания</strong><a href="offers.html">Наши предложения</a><a href="index.html#partners">Наши партнеры</a><a href="about.html">О нас</a></nav><nav class="footer-contact"><strong>Контакты</strong><a href="tel:+79166363710">+7 916 636-37-10</a><a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a><p>Москва</p></nav><nav class="footer-social-column"><strong>Мы в соцсетях</strong><div class="footer-social"><a href="https://vk.com/arta_sport" target="_blank" rel="noopener"><img src="assets/images/social/vk.svg" alt="ВКонтакте"></a></div></nav><div class="footer-legal"><p>© АНО «АРТА-СПОРТ», 2016–2026.</p></div></footer>
+  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/events.js"></script><script src="assets/js/animations.js"></script>
+</body>
+</html>

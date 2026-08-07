@@ -11,14 +11,44 @@
 <body class="inner-page">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
-    <nav class="desktop-nav"><a href="about.html">О нас</a><a href="offers.html" aria-current="page">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+    <form class="header-search" action="#" method="get">
+      <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+    </form>
+    <nav class="desktop-nav">
+      <a href="index.html#events">Мероприятия</a>
+      <div class="nav-dropdown">
+        <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="offers.html" role="menuitem">Наши предложения</a>
+          <a href="about.html" role="menuitem">О нас</a>
+        </div>
+      </div>
+      <a href="index.html#news">Новости</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
       <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
     </div>
     <a class="header-cta" href="#request">Оставить заявку</a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
-  <nav class="mobile-menu"><a href="index.html">Главная</a><a href="about.html">О нас</a><a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a><a href="#request">Оставить заявку</a></nav>
+  <nav class="mobile-menu">
+    <div class="mobile-search">
+      <form class="mobile-search-form" action="#" method="get">
+        <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+      </form>
+    </div>
+    <a href="index.html">Главная</a>
+    <a href="index.html#events">Мероприятия</a>
+    <div class="mobile-item mobile-has-sub">
+      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
+      <div class="mobile-submenu">
+        <a href="offers.html">Наши предложения</a>
+        <a href="about.html">О нас</a>
+      </div>
+    </div>
+    <a href="index.html#partners">Наши партнеры</a><a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a><a href="#request">Оставить заявку</a></nav>
 
   <main>
     <section class="offers-hero">
@@ -30,7 +60,7 @@
       </div>
     </section>
 
-    <section class="page-section">
+    <section class="page-section offers-catalog-section">
       <div class="container offers-grid">
         <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/event-1.jpg" alt="Организация спортивного мероприятия"><span>01</span><h2>Организация спортивно-массовых мероприятий</h2><p>Профессиональные и любительские соревнования на московских и региональных площадках.</p><ul><li>Персональный менеджер и сценарий</li><li>Площадка и безопасность</li><li>Хронометраж и судейство</li></ul><a class="ui-button" href="service-event-organization.html">Подробнее →</a></article>
         <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/athletics.jpg" alt="Занятия спортивного клуба"><span>02</span><h2>Спортивный клуб «Арта-Спорт»</h2><p>Физкультурно-оздоровительные и учебно-тренировочные занятия по циклическим и игровым видам спорта.</p><ul><li>Теория лыжного спорта</li><li>Обучение технике</li><li>Контрольные старты</li></ul><a class="ui-button secondary" href="#request">Подробнее →</a></article>
@@ -43,7 +73,7 @@
 
     <section class="page-section alt" id="request">
       <div class="container contact-panel">
-        <div><span class="page-kicker">Бесплатный расчёт</span><h2>Обсудим мероприятие?</h2><a href="tel:+79166363710">+7 916 636-37-10</a></div>
+        <div><span class="page-kicker">Бесплатный расчёт</span><h2>Бесплатный расчёт</h2><a href="tel:+79166363710">+7 916 636-37-10</a></div>
         <form class="ui-form js-demo-form">
           <label>Имя<input type="text" name="name"></label><label>Телефон<input type="tel" name="phone" required></label>
           <label class="full">Комментарий<textarea name="message"></textarea></label>

@@ -10,14 +10,43 @@
 <body class="inner-page">
   <header class="site-header">
     <a class="brand" href="index.html"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="ARTA Sport"></a>
-    <nav class="desktop-nav"><a href="about.html">О нас</a><a href="offers.html" aria-current="page">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+    <form class="header-search" action="#" method="get">
+      <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+    </form>
+    <nav class="desktop-nav">
+      <a href="index.html#events">Мероприятия</a>
+      <div class="nav-dropdown">
+        <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="offers.html" role="menuitem">Наши предложения</a>
+          <a href="about.html" role="menuitem">О нас</a>
+        </div>
+      </div>
+      <a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a>
+    </nav>
+    <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
       <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
     </div>
     <a class="header-cta" href="#request">Узнать стоимость</a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
-  <nav class="mobile-menu"><a href="index.html">Главная</a><a href="about.html">О нас</a><a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a><a href="#request">Узнать стоимость</a></nav>
+  <nav class="mobile-menu">
+    <div class="mobile-search">
+      <form class="mobile-search-form" action="#" method="get">
+        <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+      </form>
+    </div>
+    <a href="index.html">Главная</a>
+    <a href="index.html#events">Мероприятия</a>
+    <div class="mobile-item mobile-has-sub">
+      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
+      <div class="mobile-submenu">
+        <a href="offers.html">Наши предложения</a>
+        <a href="about.html">О нас</a>
+      </div>
+    </div>
+    <a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a><a href="#request">Узнать стоимость</a></nav>
 
   <main>
     <section class="image-hero service-image-hero"><div class="container image-hero-content"><nav class="breadcrumbs"><a href="index.html">Главная</a><span>→</span><a href="offers.html">Наши предложения</a></nav><span class="page-kicker">Полный цикл организации</span><h1 class="page-title">Организация профессиональных и любительских спортивно-массовых мероприятий</h1><p class="page-lead">Проведение спортивных праздников и соревнований любого уровня в Москве и регионах.</p><a class="ui-button" href="#request">Узнать стоимость →</a></div></section>
@@ -49,14 +78,14 @@
 
     <section class="page-section alt" id="request">
       <div class="container service-consultation">
-        <div><span class="page-kicker">Подтверждённая экспертиза</span><h2>Закажите бесплатный расчёт стоимости</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 916 636-37-10</a><a class="diploma-link" href="assets/documents/diplom-match-tv.pdf" target="_blank">Диплом Академии Матч ТВ →</a></div>
+        <div><span class="page-kicker">Подтверждённая экспертиза</span><h2>Подтверждённая экспертиза</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 916 636-37-10</a><a class="diploma-link" href="assets/documents/diplom-match-tv.pdf" target="_blank">Диплом Академии Матч ТВ →</a></div>
         <form class="ui-form js-demo-form"><label>Имя<input type="text" name="name" required></label><label>Телефон<input type="tel" name="phone" required></label><button class="ui-button full" type="submit">Отправить</button><p class="form-success full is-hidden">Спасибо! Заявка принята.</p></form>
       </div>
     </section>
 
     <section class="page-section">
       <div class="container experience-layout">
-        <div><span class="page-kicker">Работаем с 2002 года</span><h2>Более 1000 мероприятий различного уровня</h2><img src="assets/images/legacy/services/event-organization/event-2.jpg" alt="Спортивное мероприятие ARTA Sport"></div>
+        <div><span class="page-kicker">Работаем с 2002 года</span><h2>Работаем с 2002 года</h2><img src="assets/images/legacy/services/event-organization/event-2.jpg" alt="Спортивное мероприятие ARTA Sport"></div>
         <ol class="event-formats">
           <li><h3>Соревнования различного уровня</h3><ul><li>от муниципального уровня до всероссийского масштаба;</li><li>спартакиады, чемпионаты, первенства, кубковые, классификационные, отборочные, показательные, массовые и зачетные соревнования;</li><li>личные, лично-командные и командные;</li><li>открытые, закрытые и матчевые.</li></ul></li>
           <li><h3>Физкультурно-спортивные фестивали и праздники</h3><p>На закрытых и открытых площадках, в парках и на природе.</p></li>
@@ -68,26 +97,26 @@
     </section>
 
     <section class="page-section alt service-sports">
-      <div class="container"><span class="page-kicker">Арсенал</span><h2>Спортивные дисциплины</h2><div class="service-sports-grid">
+      <div class="container"><span class="page-kicker">Арсенал</span><h2>Арсенал</h2><div class="service-sports-grid">
         <div><img src="assets/images/legacy/sports-original/1.jpg" alt=""><span>Лыжные гонки</span></div><div><img src="assets/images/legacy/sports-original/2.jpg" alt=""><span>Лыжероллеры</span></div><div><img src="assets/images/legacy/sports-original/3.jpg" alt=""><span>Trail Running</span></div><div><img src="assets/images/legacy/sports-original/4.jpg" alt=""><span>Биатлон</span></div><div><img src="assets/images/legacy/sports-original/5.jpg" alt=""><span>Полиатлон</span></div><div><img src="assets/images/legacy/sports-original/6.png" alt=""><span>Конькобежный спорт</span></div><div><img src="assets/images/legacy/sports-original/7.jpg" alt=""><span>Nordic walking</span></div><div><img src="assets/images/legacy/sports-original/8.jpg" alt=""><span>Спортивная ходьба</span></div><div><img src="assets/images/legacy/sports-original/9.jpg" alt=""><span>Легкая атлетика</span></div><div><img src="assets/images/legacy/sports-original/10.jpg" alt=""><span>Многоборье ГТО</span></div><div><img src="assets/images/legacy/sports-original/11.jpg" alt=""><span>Плавание</span></div><div><img src="assets/images/legacy/sports-original/12.jpg" alt=""><span>Велогонки</span></div><div><img src="assets/images/legacy/sports-original/13.jpg" alt=""><span>Спартакиады</span></div><div><img src="assets/images/legacy/sports-original/14.jpg" alt=""><span>Автогонки</span></div><div><img src="assets/images/legacy/sports-original/16.jpg" alt=""><span>Подвижные игры</span></div><div><img src="assets/images/legacy/sports-original/15.jpg" alt=""><span>Игровые виды спорта</span></div>
       </div></div>
     </section>
 
     <section class="page-section">
-      <div class="container"><span class="page-kicker">Почему доверяют нам</span><h2>Надёжная организация на каждом этапе</h2><div class="feature-grid"><article class="feature-card"><span>01</span><h3>Качественно</h3><p>Многолетний опыт, высокий уровень качества и индивидуальный подход.</p></article><article class="feature-card"><span>02</span><h3>Продуктивно</h3><p>Квалифицированные судьи, тренеры и инструкторы с профильным образованием.</p></article><article class="feature-card"><span>03</span><h3>Комплексно</h3><p>Создание концепции и программы мероприятий различного уровня.</p></article><article class="feature-card"><span>04</span><h3>Надёжно</h3><p>Точный, надежный и оперативный хронометраж.</p></article><article class="feature-card"><span>05</span><h3>Практично</h3><p>Подготовка лыжных трасс и оборудование соревновательных зон.</p></article><article class="feature-card"><span>06</span><h3>Выгодно</h3><p>Гибкий подход к формированию стоимости услуг.</p></article><article class="feature-card"><span>07</span><h3>Объективно</h3><p>Принцип fair play и гарантия отличного настроения.</p></article></div></div>
+      <div class="container"><span class="page-kicker">Почему доверяют нам</span><h2>Почему доверяют нам</h2><div class="feature-grid"><article class="feature-card"><span>01</span><h3>Качественно</h3><p>Многолетний опыт, высокий уровень качества и индивидуальный подход.</p></article><article class="feature-card"><span>02</span><h3>Продуктивно</h3><p>Квалифицированные судьи, тренеры и инструкторы с профильным образованием.</p></article><article class="feature-card"><span>03</span><h3>Комплексно</h3><p>Создание концепции и программы мероприятий различного уровня.</p></article><article class="feature-card"><span>04</span><h3>Надёжно</h3><p>Точный, надежный и оперативный хронометраж.</p></article><article class="feature-card"><span>05</span><h3>Практично</h3><p>Подготовка лыжных трасс и оборудование соревновательных зон.</p></article><article class="feature-card"><span>06</span><h3>Выгодно</h3><p>Гибкий подход к формированию стоимости услуг.</p></article><article class="feature-card"><span>07</span><h3>Объективно</h3><p>Принцип fair play и гарантия отличного настроения.</p></article></div></div>
     </section>
 
     <section class="page-section alt">
-      <div class="container"><span class="page-kicker">Отзывы</span><h2>Что говорят участники</h2><div class="reviews-grid"><blockquote><p>Очень нравится, когда комментирует соревнования лично Ирина Анатольевна!</p><footer><strong>Виктория</strong><time>25.11.2021</time></footer></blockquote><blockquote><p>Отличная организация соревнований!</p><footer><strong>Ольга</strong><time>25.11.2021</time></footer></blockquote><blockquote><p>Спасибо команде Арта-Спорт за чудесный фестиваль лыжероллерных дисциплин 2021!</p><footer><strong>Михаил</strong><time>30.10.2021</time></footer></blockquote></div><a class="ui-button secondary" href="#service-order">Оставить отзыв</a></div>
+      <div class="container"><span class="page-kicker">Отзывы</span><h2>Отзывы</h2><div class="reviews-grid"><blockquote><p>Очень нравится, когда комментирует соревнования лично Ирина Анатольевна!</p><footer><strong>Виктория</strong><time>25.11.2021</time></footer></blockquote><blockquote><p>Отличная организация соревнований!</p><footer><strong>Ольга</strong><time>25.11.2021</time></footer></blockquote><blockquote><p>Спасибо команде Арта-Спорт за чудесный фестиваль лыжероллерных дисциплин 2021!</p><footer><strong>Михаил</strong><time>30.10.2021</time></footer></blockquote></div><a class="ui-button secondary" href="#service-order">Оставить отзыв</a></div>
     </section>
 
     <section class="page-section">
-      <div class="container"><span class="page-kicker">Архив</span><h2>Прошедшие мероприятия</h2><div class="service-past-events"><a href="event.html"><time>24 июня 2026</time><strong>2 этап соревнований «ТЫЩА В МЫТИЩАХ-2026»</strong><span>Мытищи →</span></a><a href="event.html"><time>21 июня 2026</time><strong>Открытые соревнования «Медицинская тройка»</strong><span>Московская область →</span></a><a href="event.html"><time>21 июня 2026</time><strong>Кубок «Wilier Trophy Cup 2026»</strong><span>ОУСЦ «Планерная» →</span></a></div></div>
+      <div class="container"><span class="page-kicker">Архив</span><h2>Архив</h2><div class="service-past-events"><a href="event.html"><time>24 июня 2026</time><strong>2 этап соревнований «ТЫЩА В МЫТИЩАХ-2026»</strong><span>Мытищи →</span></a><a href="event.html"><time>21 июня 2026</time><strong>Открытые соревнования «Медицинская тройка»</strong><span>Московская область →</span></a><a href="event.html"><time>21 июня 2026</time><strong>Кубок «Wilier Trophy Cup 2026»</strong><span>ОУСЦ «Планерная» →</span></a></div></div>
     </section>
 
     <section class="page-section alt" id="service-order">
       <div class="container service-order-layout">
-        <div><span class="page-kicker">Заказать услугу</span><h2>Организация профессиональных и любительских спортивно-массовых мероприятий</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 916 636-37-10</a></div>
+        <div><span class="page-kicker">Заказать услугу</span><h2>Заказать услугу</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 916 636-37-10</a></div>
         <form class="ui-form js-demo-form"><label>Имя<input type="text" required></label><label>Телефон<input type="tel" required></label><button class="ui-button full" type="submit">Отправить</button><p class="form-success full is-hidden">Спасибо! Заявка принята.</p></form>
       </div>
       <div class="container other-offers"><h3>Другие предложения</h3><div><a href="offers.html">Спортивный клуб «Арта-Спорт» →</a><a href="offers.html">Подготовка лыжных трасс →</a><a href="offers.html">Онлайн-регистрация на мероприятия →</a><a href="offers.html">Аренда судейского оборудования →</a><a href="offers.html">Подготовка лыжного инвентаря →</a></div></div>

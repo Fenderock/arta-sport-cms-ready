@@ -10,23 +10,53 @@
 <body class="inner-page auth-page">
   <header class="site-header">
     <a class="brand" href="index.html"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="ARTA Sport"></a>
-    <nav class="desktop-nav"><a href="about.html">О нас</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+    <form class="header-search" action="#" method="get">
+      <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+    </form>
+    <nav class="desktop-nav">
+      <a href="index.html#events">Мероприятия</a>
+      <div class="nav-dropdown">
+        <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="offers.html" role="menuitem">Наши предложения</a>
+          <a href="about.html" role="menuitem">О нас</a>
+        </div>
+      </div>
+      <a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a>
+    </nav>
+    <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
       <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
     </div>
     <a class="header-cta" href="index.html">На главную</a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
-  <nav class="mobile-menu"><a href="index.html">Главная</a><a href="about.html">О нас</a><a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a></nav>
+  <nav class="mobile-menu">
+    <div class="mobile-search">
+      <form class="mobile-search-form" action="#" method="get">
+        <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+      </form>
+    </div>
+    <a href="index.html">Главная</a>
+    <a href="index.html#events">Мероприятия</a>
+    <div class="mobile-item mobile-has-sub">
+      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
+      <div class="mobile-submenu">
+        <a href="offers.html">Наши предложения</a>
+        <a href="about.html">О нас</a>
+      </div>
+    </div>
+    <a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#news">Новости</a><a href="contacts.html">Контакты</a></nav>
 
   <main class="auth-layout">
     <aside class="auth-story"><div class="auth-story-content"><span class="page-kicker">Личный кабинет участника</span><h1>Ваши старты — в одном месте</h1><p>Регистрируйтесь, храните документы, управляйте семейными профилями и следите за результатами.</p></div></aside>
     <section class="auth-panel">
       <div class="auth-card">
         <div class="auth-tabs" role="tablist"><button class="js-auth-tab is-active" type="button" data-panel="register" aria-selected="true">Создать аккаунт</button><button class="js-auth-tab" type="button" data-panel="login" aria-selected="false">Войти</button></div>
-        <div class="js-auth-panel" data-panel="register"><div class="auth-heading"><span class="page-kicker">Новый участник</span><h2>Регистрация</h2></div><form class="ui-form js-demo-form"><label>Имя<input type="text" required></label><label>Фамилия<input type="text" required></label><label>Email<input type="email" required></label><label>Телефон<input type="tel" required></label><label>Пароль<input type="password" required></label><label class="auth-check"><input type="checkbox" required><span>Согласен на обработку данных</span></label><button class="ui-button" type="submit">Создать аккаунт</button><p class="form-success is-hidden">Аккаунт создан. <a href="lk.html">Перейти в кабинет →</a></p></form></div>
-        <div class="js-auth-panel is-hidden" data-panel="login"><div class="auth-heading"><span class="page-kicker">С возвращением</span><h2>Вход</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><label>Пароль<input type="password" required></label><button class="js-reset-link" type="button">Забыли пароль?</button><button class="ui-button" type="submit">Войти</button><p class="form-success is-hidden"><a href="lk.html">Перейти в личный кабинет →</a></p></form></div>
-        <div class="js-auth-panel is-hidden" data-panel="reset"><div class="auth-heading"><span class="page-kicker">Восстановление доступа</span><h2>Сброс пароля</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><button class="ui-button" type="submit">Отправить ссылку</button><button class="js-login-link" type="button">Вернуться ко входу</button><p class="form-success is-hidden">Инструкция отправлена на указанный email.</p></form></div>
+        <div class="js-auth-panel" data-panel="register"><div class="auth-heading"><span class="page-kicker">Новый участник</span><h2>Новый участник</h2></div><form class="ui-form js-demo-form"><label>Имя<input type="text" required></label><label>Фамилия<input type="text" required></label><label>Email<input type="email" required></label><label>Телефон<input type="tel" required></label><label>Пароль<input type="password" required></label><label class="auth-check"><input type="checkbox" required><span>Согласен на обработку данных</span></label><button class="ui-button" type="submit">Создать аккаунт</button><p class="form-success is-hidden">Аккаунт создан. <a href="lk.html">Перейти в кабинет →</a></p></form></div>
+          <div class="js-auth-panel is-hidden" data-panel="login"><div class="auth-heading"><span class="page-kicker">С возвращением</span><h2>С возвращением</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><label>Пароль<input type="password" required></label><button class="js-reset-link" type="button">Забыли пароль?</button><button class="ui-button" type="submit">Войти</button><p class="form-success is-hidden"><a href="lk.html">Перейти в личный кабинет →</a></p></form></div>
+        <div class="js-auth-panel is-hidden" data-panel="reset"><div class="auth-heading"><span class="page-kicker">Восстановление доступа</span><h2>Восстановление доступа</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><button class="ui-button" type="submit">Отправить ссылку</button><button class="js-login-link" type="button">Вернуться ко входу</button><p class="form-success is-hidden">Инструкция отправлена на указанный email.</p></form></div>
+          <div class="js-auth-panel is-hidden" data-panel="reset"><div class="auth-heading"><span class="page-kicker">Восстановление доступа</span><h2>Восстановление доступа</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><button class="ui-button" type="submit">Отправить ссылку</button><button class="js-login-link" type="button">Вернуться ко входу</button><p class="form-success is-hidden">Инструкция отправлена на указанный email.</p></form></div>
       </div>
     </section>
   </main>

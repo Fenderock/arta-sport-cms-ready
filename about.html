@@ -4,16 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>О нас — ARTA Sport</title>
-  <meta name="description" content="АРТА-СПОРТ организует профессиональные и массовые спортивные мероприятия с 2002 года.">
+  <meta name="description" content="Компания ARTA Sport: организация спортивных мероприятий, электронный хронометраж и развитие массового спорта.">
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/internal.css">
 </head>
 <body class="inner-page">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
+    <form class="header-search" action="#" method="get">
+      <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+    </form>
     <nav class="desktop-nav" aria-label="Основная навигация">
-      <a href="about.html" aria-current="page">О нас</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a>
+      <a href="#events">Мероприятия</a>
+      <div class="nav-dropdown">
+        <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="offers.html" role="menuitem">Наши предложения</a>
+          <a href="about.html" role="menuitem">О нас</a>
+        </div>
+      </div>
+      <a href="#news">Новости</a><a href="contacts.html">Контакты</a>
     </nav>
+    <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
       <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
@@ -22,61 +34,47 @@
     <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
   <nav class="mobile-menu" aria-label="Мобильная навигация">
-    <a href="index.html">Главная</a><a href="about.html">О нас</a><a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="index.html#events">Мероприятия</a><a href="index.html#news">Новости</a><a href="index.html#contacts">Контакты</a><a href="registration.html">Личный кабинет</a>
+    <div class="mobile-search">
+      <form class="mobile-search-form" action="#" method="get">
+        <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+      </form>
+    </div>
+    <a href="index.html">Главная</a>
+    <a href="#events">Мероприятия</a>
+    <div class="mobile-item mobile-has-sub">
+      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
+      <div class="mobile-submenu">
+        <a href="offers.html">Наши предложения</a>
+        <a href="about.html">О нас</a>
+      </div>
+    </div>
+    <a href="index.html#partners">Наши партнеры</a><a href="#news">Новости</a><a href="contacts.html">Контакты</a><a href="registration.html">Личный кабинет</a>
   </nav>
 
   <main>
-    <section class="about-hero">
+    <section class="page-section about-text-page">
       <div class="container">
         <nav class="breadcrumbs"><a href="index.html">Главная</a><span>→</span><span>О нас</span></nav>
-        <div class="about-hero-grid">
-          <div>
-            <span class="page-kicker">Организация спортивных событий</span>
-            <h1 class="page-title">Делаем спорт точным, честным и доступным</h1>
-            <p class="page-lead">АРТА-СПОРТ организует соревнования различного уровня и отвечает за качество на каждом этапе — от подготовки площадки до публикации результатов.</p>
-          </div>
-          <div class="about-year"><div><strong>2002</strong><span>год начала нашей работы</span></div></div>
-        </div>
-      </div>
-    </section>
+        <h1 class="page-title">О нас</h1>
+        <article class="about-text-block">
+          <h2>Компания ARTA Sport:</h2>
+          <ul>
+            <li>занимается организацией и проведением спортивных мероприятий различного уровня по лыжным гонкам, лёгкой атлетике, лыжероллерам, велогонкам, комплексу ГТО и другим видам спорта;</li>
+            <li>это гарантия высокого уровня предоставляемых услуг и обеспечение качественного проведения мероприятий;</li>
+            <li>это обслуживание мероприятий высококвалифицированными специалистами, имеющими большой опыт в данной сфере услуг;</li>
+            <li>это современные профессиональные технологии, использование которых поможет провести ваше мероприятие на высочайшем организационном уровне;</li>
+            <li>это проведение спортивных соревнований в соответствии с правилами по виду спорта.</li>
+          </ul>
 
-    <section class="page-section">
-      <div class="container">
-        <span class="page-kicker">Компания ARTA Sport</span>
-        <h2>Профессиональный подход к каждому старту</h2>
-        <div class="feature-grid">
-          <article class="feature-card"><span>01</span><h3>Полный цикл</h3><p>Организация соревнований по лыжным гонкам, лёгкой атлетике, лыжероллерам, велоспорту, ГТО и другим дисциплинам.</p></article>
-          <article class="feature-card"><span>02</span><h3>Опытная команда</h3><p>Квалифицированные судьи, тренеры и технические специалисты с большим практическим опытом.</p></article>
-          <article class="feature-card"><span>03</span><h3>Современные технологии</h3><p>Электронный хронометраж, компьютерная обработка данных и оперативная публикация результатов.</p></article>
-          <article class="feature-card"><span>04</span><h3>По правилам спорта</h3><p>Каждое соревнование проводится в соответствии с регламентом и правилами выбранной дисциплины.</p></article>
-          <article class="feature-card"><span>05</span><h3>Массовый спорт</h3><p>Создаём условия, в которых профессионалы и любители чувствуют себя частью одного большого события.</p></article>
-          <article class="feature-card"><span>06</span><h3>Fair play</h3><p>Честное судейство, прозрачные протоколы и одинаково внимательное отношение ко всем участникам.</p></article>
-        </div>
-      </div>
-    </section>
+          <h2>Услуги электронного хронометража:</h2>
+          <p>С его помощью оптимизируется организационный процесс проведения соревнований, позволяющий гарантировать абсолютную надёжность и точность измерений. Также Timing ARTA Sport предоставляет услугу компьютерной обработки результатов — оперативное предоставление необходимой информации. В режиме реального времени обеспечивается взаимодействие системы обработки информации с внешними по отношению к ней процессами в темпе, соизмеримом со скоростью протекания этих процессов.</p>
 
-    <section class="page-section alt">
-      <div class="container timing-banner">
-        <div class="timing-banner-media"></div>
-        <div class="timing-banner-copy">
-          <span class="page-kicker">Timing ARTA Sport</span>
-          <h2>Абсолютная точность</h2>
-          <p>Надёжные измерения, компьютерная обработка результатов и информация о прохождении дистанции в реальном времени.</p>
-          <a class="ui-button" href="offers.html">Наши предложения →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="container contact-panel">
-        <div><span class="page-kicker">Связаться с нами</span><h2>Задать вопрос</h2><a href="tel:+79166363710">+7 916 636-37-10</a></div>
-        <form class="ui-form js-demo-form">
-          <label>Имя<input type="text" name="name"></label>
-          <label>Email<input type="email" name="email" required></label>
-          <label class="full">Комментарий<textarea name="message" required></textarea></label>
-          <button class="ui-button full" type="submit">Отправить вопрос</button>
-          <p class="form-success full is-hidden">Спасибо! Вопрос принят.</p>
-        </form>
+          <h2>Цели, которые мы преследуем:</h2>
+          <ul>
+            <li>развитие массового спорта в стране;</li>
+            <li>пропаганда здорового образа жизни.</li>
+          </ul>
+        </article>
       </div>
     </section>
   </main>
