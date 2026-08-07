@@ -1,0 +1,7 @@
+Patch plan for replacing H2 with label text
+- index.html: several section-heads
+- about.html: company/timing/contact
+- event.html: content-blocks
+- offers.html: free-calculation
+- registration.html: auth panels
+- service-event-organization.html: multiple containers
