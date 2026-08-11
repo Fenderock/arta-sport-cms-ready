@@ -206,23 +206,6 @@ $(function () {
     $('.custom-select').removeClass('is-open');
   });
 
-  /* Apply the public catalogue filters. */
-  function filteredEvents() {
-    const sport = $('.custom-select[data-filter="sport"]').data('current-value') || 'all';
-    const region = $('.custom-select[data-filter="region"]').data('current-value') || 'all';
-    const year = $('.custom-select[data-filter="year"]').data('current-value') || 'all';
-    // Get status from the active toggle button
-    const status = $('.status-btn.is-active').data('status') || 'upcoming';
-
-    return events.filter((event) => {
-      const eventYear = new Date(event.date).getFullYear().toString();
-      return (sport === 'all' || event.sport === sport)
-        && (region === 'all' || event.region === region)
-        && (year === 'all' || eventYear === year)
-        && (status === 'all' || event.status === status);
-    });
-  }
-
   /* Handle status toggle buttons click */
   $(document).on('click', '.status-btn', function () {
     $('.status-btn').removeClass('is-active');
@@ -230,37 +213,26 @@ $(function () {
     renderEvents();
   });
 
-  /* Build one reusable event card. */
-  function eventCard(event) {
-    const seatsClass = event.seats <= 20 && event.status === 'upcoming' ? 'low' : '';
-    const action = event.status === 'past'
-      ? '<button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button>'
-      : `<button class="primary-btn js-register" type="button" data-event="${event.id}">Регистрация</button>`;
-
-    return `
-      <article class="event-card" data-event-href="event.html" role="link" tabindex="0">
-        <img class="event-image" src="${event.image}" alt="${event.title}">
-        <div class="event-body">
-          <span class="event-badge">${event.sportName}</span>
-          <h3><a href="event.html">${event.title}</a></h3>
-          <div class="event-meta">
-            <span>Дата: ${formatDate(event.date)}</span>
-            <span>Место: ${event.region}, ${event.place}</span>
-            <span>Участников: ${event.participants}</span>
-          </div>
-          <div class="event-footer">
-            <div class="timer">До старта: <strong data-countdown="${event.date}">${countdown(event.date)}</strong></div>
-            <div class="seats is-temporarily-hidden ${seatsClass}">${event.status === 'past' ? 'Регистрация закрыта' : `Осталось мест: ${event.seats}`}</div>
-            ${action}
-          </div>
-        </div>
-      </article>
-    `;
-  }
-
   function renderEvents() {
-    const html = filteredEvents().map(eventCard).join('');
-    $('#eventGrid').html(html || '<div class="empty">По выбранным фильтрам событий нет.</div>');
+    const sport = $('.custom-select[data-filter="sport"]').data('current-value') || 'all';
+    const region = $('.custom-select[data-filter="region"]').data('current-value') || 'all';
+    const year = $('.custom-select[data-filter="year"]').data('current-value') || 'all';
+    const status = $('.status-btn.is-active').data('status') || 'upcoming';
+    let visible = 0;
+    $('#eventGrid .event-card').each(function () {
+      const card = $(this);
+      const show = (sport === 'all' || card.data('sport') === sport)
+        && (region === 'all' || card.data('region') === region)
+        && (year === 'all' || String(card.data('year')) === year)
+        && card.data('status') === status;
+      card.toggle(show);
+      if (show) {
+        visible += 1;
+        card.find('[data-countdown]').text(countdown(card.find('[data-countdown]').data('countdown')));
+      }
+    });
+    $('#eventGrid .empty').remove();
+    if (!visible) $('#eventGrid').append('<div class="empty">По выбранным фильтрам событий нет.</div>');
   }
 
   $(document).on('click', '.event-card', function (clickEvent) {
@@ -275,13 +247,7 @@ $(function () {
   });
 
   function renderPastEvents() {
-    // Filter only past events and map them to cards
-    const pastHtml = events
-      .filter(e => e.status === 'past')
-      .map(eventCard)
-      .join('');
-    
-    $('#pastEventGrid').html(pastHtml || '<div class="empty">Архив пока пуст.</div>');
+    $('#pastEventGrid .event-card').show();
   }
 
   function updateHeader() {
@@ -602,6 +568,12 @@ $(function () {
 
   $(document).on('change input', '#modalEvent, #modalPerson, #promoCode', updatePrice);
 
+  $(document).on('click', '.home-page .js-register', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    registrationModal($(this).data('event'));
+  });
+
   $(document).on('submit', '#registrationForm', function (event) {
     event.preventDefault();
     closeModal();
@@ -882,6 +854,36 @@ $(function () {
     `);
   }
 
+  function profileDrawer() {
+    openDrawer('Изменить профиль', [
+      '<form class="drawer-form" id="profileDrawerForm">',
+      '<label>Фамилия *<input type="text" value="Васильев" required></label>',
+      '<label>Имя *<input type="text" value="Дмитрий" required></label>',
+      '<label>Отчество *<input type="text" value="Сергеевич" required></label>',
+      '<label>Пол *<select required><option value="male" selected>Мужчина</option><option value="female">Женщина</option></select></label>',
+      '<label>Дата рождения *<input type="date" value="1977-04-12" required></label>',
+      '<label>Телефон *<input type="tel" value="+7 900 123-45-67" required></label>',
+      '<label>Email *<input type="email" value="fendervik@gmail.com" required></label>',
+      '<label>Страна<input type="text" value="Россия"></label>',
+      '<label>Город / населенный пункт<input type="text" value="Москва"></label>',
+      '<label>Организация / клуб<input type="text" placeholder="Название организации или клуба"></label>',
+      '<label>Экстренный контакт<input type="text" placeholder="Имя и телефон"></label>',
+      '<button class="primary-btn" type="submit">Сохранить</button>',
+      '</form>'
+    ].join(''));
+  }
+
+  function passwordDrawer() {
+    openDrawer('Смена пароля', [
+      '<form class="drawer-form" id="passwordDrawerForm">',
+      '<label>Текущий пароль<input type="password" required autocomplete="current-password"></label>',
+      '<label>Новый пароль<input type="password" required autocomplete="new-password"></label>',
+      '<label>Повторите новый пароль<input type="password" required autocomplete="new-password"></label>',
+      '<button class="primary-btn" type="submit">Обновить пароль</button>',
+      '</form>'
+    ].join(''));
+  }
+
   function openDrawer(title, body) {
     $('#drawerTitle').text(title);
     $('#drawerBody').html(body);
@@ -963,6 +965,14 @@ $(function () {
     registrationDrawer();
   });
 
+  $('[data-open-drawer="profile"]').on('click', function () {
+    profileDrawer();
+  });
+
+  $('[data-open-drawer="password"]').on('click', function () {
+    passwordDrawer();
+  });
+
   $(document).on('click', '[data-close-drawer]', closeDrawer);
 
   $(document).on('keydown', function (event) {
@@ -1030,9 +1040,16 @@ $(function () {
     toast('Приглашение на передачу слота отправлено');
   });
 
-  $('#profileForm').on('submit', function (event) {
+  $(document).on('submit', '#profileDrawerForm', function (event) {
     event.preventDefault();
+    closeDrawer();
     toast('Профиль сохранен');
+  });
+
+  $(document).on('submit', '#passwordDrawerForm', function (event) {
+    event.preventDefault();
+    closeDrawer();
+    toast('Пароль обновлен');
   });
 
   $('.feedback-form').on('submit', function (event) {
