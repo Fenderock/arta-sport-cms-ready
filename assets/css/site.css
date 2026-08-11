@@ -1,4 +1,38 @@
-﻿/* Design tokens: shared colors, radii and shadows. */
+﻿/* Local Inter font: Cyrillic and Latin subsets, no network dependency. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter/inter-cyrillic-400-normal.woff2") format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter/inter-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+  src: url("../fonts/inter/inter-cyrillic-700-normal.woff2") format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+  src: url("../fonts/inter/inter-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Design tokens: shared colors, radii and shadows. */
 :root {
   --bg: #f8fafc;
   --ink: #0f172a;
@@ -21,18 +55,6 @@
   padding: 110px 40px;
   color: #fff;
   background: linear-gradient(108deg, #29212c 0%, #12233a 32%, #082945 100%);
-}
-
-.feedback-section::after {
-  content: "";
-  position: absolute;
-  top: -5%;
-  right: 5.5%;
-  width: 8px;
-  height: 112%;
-  background: var(--feedback-orange);
-  transform: rotate(13deg);
-  transform-origin: top center;
 }
 
 .feedback-shell {
@@ -167,14 +189,12 @@
 
 @media (max-width: 980px) {
   .feedback-section { padding: 80px 28px; }
-  .feedback-section::after { right: 2%; }
   .feedback-shell { grid-template-columns: 1fr; gap: 48px; }
   .feedback-copy > p br { display: none; }
 }
 
 @media (max-width: 560px) {
   .feedback-section { padding: 68px 18px; }
-  .feedback-section::after { display: none; }
   .feedback-copy h2 { font-size: 48px; }
   .feedback-form { grid-template-columns: 1fr; padding: 24px 18px; border-radius: 20px; }
   .feedback-field,
@@ -313,6 +333,20 @@ a {
   backdrop-filter: blur(14px);
 }
 
+.header-phone {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  color: currentColor;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: -.01em;
+}
+
+.header-phone:hover,
+.header-phone:focus-visible {
+  color: var(--orange);
+}
+
 .logo-img {
   display: block;
   width: 170px;
@@ -412,21 +446,6 @@ a {
   color: var(--orange);
 }
 
-/* Hide the dropdown toggle text on pointer hover (visual effect only).
-   Keep this inside a hover-capable media query so keyboard/touch users aren't affected. */
-@media (hover: hover) and (pointer: fine) {
-  .nav-dropdown .nav-dropdown-toggle {
-    transition: opacity .14s ease, transform .14s ease;
-    display: inline-block;
-  }
-
-  .nav-dropdown:hover .nav-dropdown-toggle {
-    opacity: 0;
-    transform: translateY(-4px);
-    pointer-events: none;
-  }
-}
-
 /* Mobile submenu */
 .mobile-item .mobile-submenu {
   display: none;
@@ -503,12 +522,25 @@ a {
 }
 
 @media (max-width: 500px) {
+  .site-header {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+
+  .site-header .logo-img {
+    width: 130px;
+  }
+
+  .header-phone {
+    font-size: 12px;
+  }
+
   .header-search {
     display: none;
   }
 
   .search-btn {
-    display: grid;
+    display: none;
   }
 
   .mobile-search {
@@ -2450,4 +2482,257 @@ h3 {
   background: #f8fafc;
   color: var(--ink);
   font-weight: 700;
+}
+
+/* Profile settings belong to the Profile view, not the cabinet navigation. */
+.lk-page .profile-summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.lk-page .profile-summary-actions .ghost-btn {
+  grid-column: auto;
+  justify-self: auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 719px) {
+  .lk-page .profile-summary-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+/* ==========================================================================
+   Unified public-site design system
+   One shell, type scale and spacing rhythm for every public page.
+   ========================================================================== */
+:root {
+  --page-width: 1180px;
+  --page-gutter: clamp(18px, 4vw, 40px);
+  --section-space: 88px;
+  --section-space-mobile: 56px;
+  --header-height: 86px;
+  --card-radius: 18px;
+  --card-padding: 28px;
+  --text-size: 16px;
+  --text-line: 1.65;
+}
+
+body:not(.lk-page) {
+  color: var(--ink);
+  background: var(--bg);
+  font-size: var(--text-size);
+  line-height: var(--text-line);
+  -webkit-font-smoothing: antialiased;
+}
+
+body:not(.lk-page) button,
+body:not(.lk-page) input,
+body:not(.lk-page) select,
+body:not(.lk-page) textarea {
+  font-family: inherit;
+}
+
+body:not(.lk-page) .site-header {
+  position: sticky;
+  top: 0;
+  right: auto;
+  left: auto;
+  min-height: var(--header-height);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-inline: max(var(--page-gutter), calc((100% - 1400px) / 2));
+  color: #fff;
+  background: #0d1729;
+  box-shadow: 0 1px 0 rgba(255,255,255,.1);
+}
+
+body:not(.lk-page) .site-header.is-scrolled {
+  background: #0d1729;
+  box-shadow: 0 8px 24px rgba(15,23,42,.18);
+}
+
+body:not(.lk-page) .site-header .logo-img {
+  width: 170px;
+}
+
+body:not(.lk-page) .desktop-nav {
+  gap: 26px;
+}
+
+body:not(.lk-page) .desktop-nav a,
+body:not(.lk-page) .nav-dropdown-toggle {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.home-page .section {
+  width: min(var(--page-width), calc(100% - (var(--page-gutter) * 2)));
+  padding: var(--section-space) 0;
+}
+
+.section-head {
+  margin-bottom: 44px;
+}
+
+.section-head h2 {
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+}
+
+.event-card h3,
+.events-page .event-card h3 {
+  font-size: 21px;
+  line-height: 1.2;
+  letter-spacing: -.015em;
+}
+
+.event-card .event-meta,
+.events-page .event-card .event-meta {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.event-card .primary-btn,
+.events-page .event-card .primary-btn {
+  min-height: 46px;
+  border-radius: 999px;
+  font-size: 16px;
+}
+
+.full-footer,
+.full-footer.inner-footer {
+  padding-inline: max(var(--page-gutter), calc((100% - var(--page-width)) / 2));
+}
+
+.full-footer nav,
+.full-footer p,
+.full-footer a {
+  font-size: 14px;
+}
+
+@media (max-width: 719px) {
+  :root {
+    --header-height: 74px;
+  }
+
+  body:not(.lk-page) .site-header {
+    padding-inline: 16px;
+  }
+
+  body:not(.lk-page) .site-header .logo-img {
+    width: 138px;
+  }
+
+  .home-page .hero {
+    min-height: calc(100svh - var(--header-height));
+    padding: 52px 18px 44px;
+  }
+
+  .home-page .hero-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-page .hero h1 {
+    margin-bottom: 18px;
+    font-size: clamp(32px, 9.6vw, 42px);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+  }
+
+  .home-page .hero-text {
+    width: 100%;
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .home-page .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 340px;
+    margin-inline: auto;
+  }
+
+  .home-page .hero-actions .glass-btn,
+  .home-page .hero-actions .primary-btn {
+    width: 100%;
+  }
+
+  .home-page .hero-stats {
+    gap: 10px;
+    margin-top: 40px;
+  }
+
+  .home-page .hero-stats strong {
+    font-size: 26px;
+  }
+
+  .home-page .hero-stats span {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .home-page .section {
+    width: min(var(--page-width), calc(100% - 36px));
+    padding: var(--section-space-mobile) 0;
+  }
+
+  .section-head {
+    margin-bottom: 30px;
+  }
+}
+
+/* Original full-width home sections. */
+.home-page .sports-section {
+  width: 100%;
+  max-width: none;
+  padding: 80px 18px;
+}
+
+.home-page .trust-section {
+  width: 100%;
+  max-width: none;
+  padding: 80px 18px;
+}
+
+.home-page .trust-section .section-head {
+  margin-bottom: 42px;
+}
+
+@media (max-width: 500px) {
+  body:not(.lk-page) .site-header {
+    gap: 6px;
+    padding-inline: 10px;
+  }
+
+  body:not(.lk-page) .site-header .brand {
+    display: grid;
+    place-items: center;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 42px;
+  }
+
+  body:not(.lk-page) .site-header .logo-img {
+    content: url("../images/diz1/logo-mark-mobile.png");
+    width: 34px;
+    height: auto;
+    transform: none;
+  }
+
+  body:not(.lk-page) .search-btn {
+    display: grid;
+    flex: 0 0 44px;
+  }
+
+  body:not(.lk-page) .menu-toggle {
+    flex: 0 0 44px;
+  }
 }

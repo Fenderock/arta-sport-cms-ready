@@ -88,10 +88,6 @@
   filter: none;
 }
 
-.inner-page .site-header .desktop-nav a {
-  color: #fff;
-}
-
 .inner-page .site-header .desktop-nav a[aria-current="page"] {
   color: #ff7043;
 }
@@ -329,12 +325,6 @@
   font-weight: 900;
 }
 
-.offer-card h2 {
-  margin-top: 24px;
-  font-size: 30px;
-  line-height: 1.12;
-}
-
 .offer-card p {
   color: var(--muted);
   line-height: 1.6;
@@ -506,6 +496,161 @@
   .events-page-hero { padding: 112px 0 52px; }
   .events-page .event-grid { grid-template-columns: 1fr; }
   .events-results-head { align-items: start; flex-direction: column; }
+}
+
+/* Unified internal-page rhythm. These rules intentionally come last so
+   page-specific legacy styles share the same shell without changing content. */
+.inner-page .container {
+  width: min(var(--page-width), calc(100% - (var(--page-gutter) * 2)));
+  max-width: none;
+}
+
+.inner-page main {
+  font-size: var(--text-size);
+  line-height: var(--text-line);
+}
+
+.inner-page .page-section {
+  padding: var(--section-space) 0;
+}
+
+.inner-page .page-section.about-text-page {
+  padding: 92px 0;
+}
+
+.inner-page .page-section.offers-catalog-section {
+  padding: 0;
+}
+
+.inner-page .about-hero,
+.inner-page .offers-hero,
+.inner-page .events-page-hero,
+.inner-page .contacts-hero {
+  padding: 72px 0;
+}
+
+.inner-page .image-hero {
+  min-height: 620px;
+  padding: 72px 0;
+}
+
+.inner-page .breadcrumbs {
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.inner-page .page-title {
+  margin: 18px 0 0;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+.inner-page .page-section h2,
+.inner-page .events-results-head h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+.inner-page .page-lead {
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.inner-page .feature-card,
+.inner-page .goal-card,
+.inner-page .offer-card,
+.inner-page .side-card,
+.inner-page .contacts-person-card,
+.inner-page .requisite-card,
+.inner-page .auth-card {
+  border-radius: var(--card-radius);
+}
+
+.inner-page .feature-card,
+.inner-page .goal-card,
+.inner-page .side-card,
+.inner-page .contacts-person-card,
+.inner-page .requisite-card {
+  padding: var(--card-padding);
+}
+
+.inner-page .ui-button,
+.inner-page .primary-btn,
+.inner-page .header-cta {
+  min-height: 48px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.inner-page .ui-form {
+  gap: 16px;
+}
+
+.inner-page .ui-form input,
+.inner-page .ui-form textarea,
+.inner-page .ui-form select {
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.inner-page .content-block + .content-block {
+  margin-top: 64px;
+}
+
+.inner-page .offers-grid,
+.inner-page .feature-grid {
+  margin-top: 40px;
+}
+
+@media (max-width: 719px) {
+  .inner-page .container {
+    width: min(var(--page-width), calc(100% - 36px));
+  }
+
+  .inner-page .page-section {
+    padding: var(--section-space-mobile) 0;
+  }
+
+  .inner-page .page-section.about-text-page {
+    padding: 72px 0;
+  }
+
+  .inner-page .page-section.offers-catalog-section {
+    padding: 0;
+  }
+
+  .inner-page .about-hero,
+  .inner-page .offers-hero,
+  .inner-page .events-page-hero,
+  .inner-page .contacts-hero {
+    padding: 52px 0;
+  }
+
+  .inner-page .image-hero {
+    min-height: 540px;
+    padding: 52px 0;
+  }
+
+  .inner-page .page-title {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .inner-page .page-lead {
+    font-size: 17px;
+  }
+
+  .inner-page .feature-card,
+  .inner-page .goal-card,
+  .inner-page .side-card,
+  .inner-page .contacts-person-card,
+  .inner-page .requisite-card {
+    padding: 22px;
+  }
 }
 
 /* Countdown */
