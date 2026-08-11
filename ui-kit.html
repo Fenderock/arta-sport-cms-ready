@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI-kit и дизайн-система — ARTA Sport</title>
+  <meta name="description" content="Компоненты, токены и правила интерфейса ARTA Sport.">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/internal.css">
+  <link rel="stylesheet" href="assets/css/ui-kit.css">
+</head>
+<body class="ui-kit-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
+    <nav class="desktop-nav" aria-label="Навигация UI-kit"><a href="index.html">Вернуться на сайт</a><a href="docs/DESIGN-SYSTEM.md">Спецификация</a></nav>
+    <a class="header-phone" href="tel:+79166363710">+7 916 636-37-10</a>
+  </header>
+  <main>
+    <section class="ui-kit-hero">
+      <div class="ui-kit-shell">
+        <h1>ARTA Sport UI-kit</h1>
+        <p>Единый набор визуальных токенов и интерфейсных компонентов для главной, внутренних страниц, мероприятий и личного кабинета.</p>
+      </div>
+    </section>
+    <div class="ui-kit-shell ui-kit-main">
+      <section class="ui-kit-section">
+        <h2>Цвета</h2>
+        <div class="ui-kit-grid ui-kit-colors">
+          <div class="ui-swatch"><div class="ui-swatch-color" style="background:#0f172a"></div><div class="ui-swatch-label"><strong>Ink</strong>#0F172A</div></div>
+          <div class="ui-swatch"><div class="ui-swatch-color" style="background:#EA5424"></div><div class="ui-swatch-label"><strong>Orange</strong>#EA5424</div></div>
+          <div class="ui-swatch"><div class="ui-swatch-color" style="background:#64748b"></div><div class="ui-swatch-label"><strong>Muted</strong>#64748B</div></div>
+          <div class="ui-swatch"><div class="ui-swatch-color" style="background:#e2e8f0"></div><div class="ui-swatch-label"><strong>Line</strong>#E2E8F0</div></div>
+          <div class="ui-swatch"><div class="ui-swatch-color" style="background:#f8fafc"></div><div class="ui-swatch-label"><strong>Background</strong>#F8FAFC</div></div>
+          <div class="ui-swatch"><div class="ui-swatch-color" style="background:#ffffff"></div><div class="ui-swatch-label"><strong>Card</strong>#FFFFFF</div></div>
+        </div>
+      </section>
+      <section class="ui-kit-section">
+        <h2>Типографика</h2>
+        <div class="ui-type-sample ui-type-h1">Заголовок H1</div>
+        <div class="ui-type-sample ui-type-h2">Заголовок H2</div>
+        <div class="ui-type-sample ui-type-h3">Заголовок H3 в карточке</div>
+        <div class="ui-type-sample">Основной текст — Inter 400, 16–19 px. Акцентный текст использует начертания 700–900.</div>
+      </section>
+      <section class="ui-kit-section">
+        <h2>Кнопки</h2>
+        <div class="ui-kit-actions">
+          <button class="ui-kit-button" type="button">Регистрация</button>
+          <button class="ui-kit-button secondary" type="button">Подробнее →</button>
+          <button class="ui-kit-button dark" type="button">Личный кабинет</button>
+        </div>
+      </section>
+      <section class="ui-kit-section">
+        <h2>Поля формы</h2>
+        <div class="ui-kit-grid">
+          <div class="ui-kit-field"><label for="kit-name">Имя</label><input id="kit-name" type="text" placeholder="Как к вам обращаться"></div>
+          <div class="ui-kit-field"><label for="kit-email">Электронная почта</label><input id="kit-email" type="email" placeholder="mail@example.ru"></div>
+          <div class="ui-kit-field"><label for="kit-type">Тип мероприятия</label><select id="kit-type"><option>Лыжные гонки</option><option>Бег</option></select></div>
+        </div>
+      </section>
+      <section class="ui-kit-section">
+        <h2>Карточки</h2>
+        <div class="ui-kit-grid">
+          <article class="ui-kit-card"><span class="ui-kit-badge">Лыжероллеры</span><h3>Тульская гонка преследования</h3><p>Дата, место, число участников и основное действие размещаются в единой иерархии.</p></article>
+          <article class="ui-kit-card"><span class="ui-kit-badge">Услуга</span><h3>Организация спортивных мероприятий</h3><p>Белый фон, тонкая граница, скругление 18 px и спокойная тень.</p></article>
+          <article class="ui-kit-card"><span class="ui-kit-badge">Состояние</span><h3>Фокус и наведение</h3><p>Интерактивные элементы сохраняют контраст и получают видимое состояние фокуса.</p></article>
+        </div>
+      </section>
+      <section class="ui-kit-section">
+        <h2>Правила применения</h2>
+        <div class="ui-kit-note">Новые страницы подключают общие <strong>site.css</strong> и <strong>internal.css</strong>. Компоненты не получают локальные копии стилей, шапка и подвал используются без расхождений.</div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer full-footer" id="contacts">
+    <div class="footer-brand">
+      <img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport">
+    </div>
+    <nav>
+      <strong>Участникам</strong>
+      <a href="events.html">Мероприятия</a>
+      <a href="registration.html">Регистрация</a>
+      <a href="lk.html">Личный кабинет</a>
+    </nav>
+    <nav>
+      <strong>Компания</strong>
+      <a href="offers.html">Наши предложения</a>
+      <a href="index.html#partners">Наши партнеры</a>
+      <a href="about.html">О нас</a>
+    </nav>
+    <nav class="footer-contact">
+      <strong>Контакты</strong>
+      <a href="tel:+79166363710">+7 916 636-37-10</a>
+      <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+      <p>Москва</p>
+    </nav>
+    <nav class="footer-social-column">
+      <strong>Мы в соцсетях</strong>
+      <div class="footer-social">
+        <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
+        <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
+        <a href="https://t.me/skicalendar" target="_blank" rel="noopener" aria-label="Telegram-канал ARTA Sport"><img src="assets/images/social/telegram.svg" alt=""></a>
+      </div>
+    </nav>
+    <div class="footer-legal">
+      <p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
+      <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
+    </div>
+  </footer>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/internal.js"></script>
+</body>
+</html>

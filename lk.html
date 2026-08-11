@@ -11,6 +11,7 @@
     <a class="brand" href="index.html" aria-label="ARTA Sport">
       <img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport">
     </a>
+    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 916 636-37-10</a>
     <button class="menu-btn" type="button" aria-label="Открыть меню">☰</button>
   </header>
 
@@ -23,20 +24,18 @@
 
       <nav class="side-nav">
         <button class="side-link is-active" type="button" data-view="profile"><span class="nav-ico">P</span><span>Профиль</span></button>
-        <button class="side-link" type="button" data-view="documents"><span class="nav-ico">DOC</span><span>Документы</span></button>
         <button class="side-link" type="button" data-view="registrations"><span class="nav-ico">REG</span><span>Регистрации</span></button>
         <button class="side-link" type="button" data-view="orders"><span class="nav-ico">PAY</span><span>Заказы</span></button>
-        <button class="side-link" type="button" data-view="ratings"><span class="nav-ico">TOP</span><span>Оценки</span></button>
-        <button class="side-link" type="button" data-view="championships"><span class="nav-ico">CUP</span><span>Мои чемпионаты</span></button>
-        <button class="side-link" type="button" data-view="teams"><span class="nav-ico">TM</span><span>Команды</span></button>
-        <button class="side-link" type="button" data-view="clubs"><span class="nav-ico">CLB</span><span>Мои клубы</span></button>
-        <button class="side-link" type="button" data-view="training"><span class="nav-ico">TRN</span><span>Тренировки</span></button>
+        <button class="side-link" type="button" data-view="documents"><span class="nav-ico">DOC</span><span>Документы</span></button>
+        <button class="side-link" type="button" data-view="ratings"><span class="nav-ico">TOP</span><span>Результаты</span></button>
         <button class="side-link" type="button" data-view="family"><span class="nav-ico">FAM</span><span>Семья</span></button>
+        <button class="side-link is-temporarily-hidden" type="button" data-view="championships"><span class="nav-ico">CUP</span><span>Мои чемпионаты</span></button>
+        <button class="side-link is-temporarily-hidden" type="button" data-view="teams"><span class="nav-ico">TM</span><span>Команды</span></button>
+        <button class="side-link is-temporarily-hidden" type="button" data-view="clubs"><span class="nav-ico">CLB</span><span>Мои клубы</span></button>
+        <button class="side-link is-temporarily-hidden" type="button" data-view="training"><span class="nav-ico">TRN</span><span>Тренировки</span></button>
       </nav>
 
       <div class="side-footer">
-        <button class="side-link" type="button" data-view="edit"><span class="nav-ico">ED</span><span>Изменить профиль</span></button>
-        <button class="side-link" type="button" data-view="password"><span class="nav-ico">KEY</span><span>Смена пароля</span></button>
         <a class="side-link muted" href="index.html"><span class="nav-ico">←</span><span>На сайт</span></a>
       </div>
     </aside>
@@ -45,7 +44,7 @@
       <a class="back-home" href="index.html">← На главную страницу</a>
 
       <section class="view is-visible" id="profile" data-view-panel="profile">
-        <div class="page-kicker">Личный кабинет</div>
+
         <h1>Мой профиль</h1>
 
         <article class="profile-summary">
@@ -54,7 +53,10 @@
             <h2>Васильев Дмитрий Сергеевич</h2>
             <p>Мужчина · 49 лет · fendervik@gmail.com</p>
           </div>
-          <button class="ghost-btn" type="button" data-view-target="edit">Редактировать</button>
+          <div class="profile-summary-actions" aria-label="Настройки профиля">
+            <button class="ghost-btn" type="button" data-open-drawer="profile">Изменить профиль</button>
+            <button class="ghost-btn" type="button" data-open-drawer="password">Смена пароля</button>
+          </div>
         </article>
 
         <section class="metrics-grid">
@@ -158,32 +160,6 @@
         <div class="family-list" id="dependentList"></div>
       </section>
 
-      <section class="view" id="edit" data-view-panel="edit">
-        <h1>Изменить профиль</h1>
-        <form class="profile-form" id="profileForm">
-          <label>Фамилия *<input type="text" value="Васильев" required></label>
-          <label>Имя *<input type="text" value="Дмитрий" required></label>
-          <label>Отчество *<input type="text" value="Сергеевич" required></label>
-          <label>Пол *<select required><option value="male" selected>Мужчина</option><option value="female">Женщина</option></select></label>
-          <label>Дата рождения *<input type="date" value="1977-04-12" required></label>
-          <label>Телефон *<input type="tel" value="+7 900 123-45-67" required></label>
-          <label>Email *<input type="email" value="fendervik@gmail.com" required></label>
-          <label>Страна<input type="text" value="Россия"></label>
-          <label>Город / населенный пункт<input type="text" value="Москва"></label>
-          <label>Организация / клуб<input type="text" placeholder="Название организации или клуба"></label>
-          <label>Экстренный контакт<input type="text" placeholder="Имя и телефон"></label>
-          <button class="primary-btn" type="submit">Сохранить</button>
-        </form>
-      </section>
-
-      <section class="view" id="password" data-view-panel="password">
-        <h1>Смена пароля</h1>
-        <form class="profile-form">
-          <label>Текущий пароль<input type="password"></label>
-          <label>Новый пароль<input type="password"></label>
-          <button class="primary-btn" type="button">Обновить пароль</button>
-        </form>
-      </section>
     </main>
   </div>
 
@@ -197,6 +173,42 @@
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer full-footer" id="contacts">
+    <div class="footer-brand">
+      <img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport">
+    </div>
+    <nav>
+      <strong>Участникам</strong>
+      <a href="events.html">Мероприятия</a>
+      <a href="registration.html">Регистрация</a>
+      <a href="lk.html">Личный кабинет</a>
+    </nav>
+    <nav>
+      <strong>Компания</strong>
+      <a href="offers.html">Наши предложения</a>
+      <a href="index.html#partners">Наши партнеры</a>
+      <a href="about.html">О нас</a>
+    </nav>
+    <nav class="footer-contact">
+      <strong>Контакты</strong>
+      <a href="tel:+79166363710">+7 916 636-37-10</a>
+      <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+      <p>Москва</p>
+    </nav>
+    <nav class="footer-social-column">
+      <strong>Мы в соцсетях</strong>
+      <div class="footer-social">
+        <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
+        <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
+        <a href="https://t.me/skicalendar" target="_blank" rel="noopener" aria-label="Telegram-канал ARTA Sport"><img src="assets/images/social/telegram.svg" alt=""></a>
+      </div>
+    </nav>
+    <div class="footer-legal">
+      <p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
+      <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
+    </div>
+  </footer>
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/site.js"></script>
