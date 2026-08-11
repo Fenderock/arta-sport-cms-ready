@@ -776,10 +776,26 @@ a {
   inset: 0;
 }
 
+.hero-media video,
 .hero-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-video { display: block; }
+.hero-poster { display: none; object-position: center 42%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+  .hero-poster { display: block; }
+}
+
+@media (max-width: 719px) {
+  .hero-video { display: none; }
+  .hero-poster { display: block; }
 }
 
 .hero-overlay {
@@ -1910,6 +1926,7 @@ h3 {
     background: #0f172a;
   }
 
+  .hero-media video,
   .hero-media img {
     object-position: center 38%;
   }
