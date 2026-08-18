@@ -1908,7 +1908,7 @@ h3 {
   .news-grid,
   .info-grid,
   .trust-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .info-section .section-head {
@@ -2528,7 +2528,7 @@ h3 {
    One shell, type scale and spacing rhythm for every public page.
    ========================================================================== */
 :root {
-  --page-width: 1180px;
+  --page-width: 1400px;
   --page-gutter: clamp(18px, 4vw, 40px);
   --section-space: 64px;
   --section-space-mobile: 32px;
