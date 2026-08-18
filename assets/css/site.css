@@ -1343,7 +1343,7 @@ h3 {
 .trust-section {
   width: 100%;
   max-width: none;
-  background: #0f172a;
+  background: #2c384e;
   color: #ffffff;
 }
 
@@ -1567,7 +1567,7 @@ h3 {
   display: grid;
   gap: 28px;
   padding: 48px 18px;
-  background: #0f172a;
+  background: #2c384e;
   color: #ffffff;
 }
 
@@ -1924,7 +1924,7 @@ h3 {
 /* Stable hero composition on ultra-wide desktop monitors. */
 @media (min-width: 1800px) and (min-aspect-ratio: 2 / 1) {
   .hero-media {
-    background: #0f172a;
+    background: #2c384e;
   }
 
   .hero-media video,
@@ -1946,7 +1946,7 @@ h3 {
 /* Personal cabinet shared page styles */
 :root {
   --bg: #f8fafc;
-  --ink: #0f172a;
+  --ink: #2c384e;
   --muted: #64748b;
   --line: #e2e8f0;
   --card: #ffffff;
@@ -2004,7 +2004,7 @@ h3 {
   padding: 22px 16px;
   background:
     linear-gradient(180deg, rgba(15, 23, 42, .96), rgba(15, 23, 42, .92)),
-    #0f172a;
+    #2c384e;
   color: #ffffff;
   transform: translateX(-105%);
   transition: transform .22s ease;
@@ -2449,7 +2449,7 @@ h3 {
 @media (max-width: 719px) {
   .lk-page .mobile-header {
     border-bottom: 1px solid rgba(255, 255, 255, .12);
-    background: #0f172a;
+    background: #2c384e;
     color: #ffffff;
     box-shadow: 0 10px 26px rgba(15, 23, 42, .22);
     backdrop-filter: none;
