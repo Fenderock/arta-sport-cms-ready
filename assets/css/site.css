@@ -763,7 +763,7 @@ a {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(1040px, 100%);
+  width: min(1400px, 100%);
 }
 
 .hero-pill {
