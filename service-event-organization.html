@@ -14,21 +14,25 @@
       <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
     </form>
     <nav class="desktop-nav">
-      <a href="index.html#events">Мероприятия</a>
+      <div class="nav-dropdown events-nav-dropdown">
+        <a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Мероприятия</a>
+        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="index.html#news" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
+      </div>
       <div class="nav-dropdown">
         <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
         <div class="nav-dropdown-menu" role="menu">
           <a href="offers.html" role="menuitem">Наши предложения</a>
           <a href="about.html" role="menuitem">О нас</a>
+        <a href="partners.html" role="menuitem">Наши партнеры</a>
         </div>
       </div>
-      <a href="contacts.html">Контакты</a>
+      <div class="nav-dropdown contacts-nav-dropdown"><a href="contacts.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div>
     </nav>
-    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 916 636-37-10</a>
+    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
     <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
-      <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
+      <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Мои регистрации</a></div>
     </div>
     <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
@@ -39,15 +43,16 @@
       </form>
     </div>
     <a href="index.html">Главная</a>
-    <a href="index.html#events">Мероприятия</a>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="index.html#news">Новости</a><a href="event.html">МФЛРД</a></div></div>
     <div class="mobile-item mobile-has-sub">
       <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
       <div class="mobile-submenu">
         <a href="offers.html">Наши предложения</a>
         <a href="about.html">О нас</a>
+        <a href="partners.html">Наши партнеры</a>
       </div>
     </div>
-    <a href="index.html#partners">Наши партнеры</a><a href="offers.html">Наши предложения</a><a href="contacts.html">Контакты</a><a href="#request">Узнать стоимость</a></nav>
+    <a href="offers.html">Наши предложения</a><div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div><a href="#request">Узнать стоимость</a></nav>
 
   <main>
     <section class="image-hero service-image-hero"><div class="container image-hero-content"><nav class="breadcrumbs"><a href="index.html">Главная</a><span>→</span><a href="offers.html">Наши предложения</a></nav><h1 class="page-title">Организация профессиональных и любительских спортивно-массовых мероприятий</h1><p class="page-lead">Проведение спортивных праздников и соревнований любого уровня в Москве и регионах.</p><a class="ui-button" href="#request">Узнать стоимость →</a></div></section>
@@ -79,7 +84,7 @@
 
     <section class="page-section alt" id="request">
       <div class="container service-consultation">
-        <div><h2>Подтверждённая экспертиза</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 916 636-37-10</a><a class="diploma-link" href="assets/documents/diplom-match-tv.pdf" target="_blank">Диплом Академии Матч ТВ →</a></div>
+        <div><h2>Подтверждённая экспертиза</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 (916) 636-37-10</a><a class="diploma-link" href="assets/documents/diplom-match-tv.pdf" target="_blank">Диплом Академии Матч ТВ →</a></div>
         <form class="ui-form js-demo-form"><label>Имя<input type="text" name="name" required></label><label>Телефон<input type="tel" name="phone" required></label><button class="ui-button full" type="submit">Отправить</button><p class="form-success full is-hidden">Спасибо! Заявка принята.</p></form>
       </div>
     </section>
@@ -117,7 +122,7 @@
 
     <section class="page-section alt" id="service-order">
       <div class="container service-order-layout">
-        <div><h2>Заказать услугу</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 916 636-37-10</a></div>
+        <div><h2>Заказать услугу</h2><p>Телефон для консультации:</p><a class="service-phone" href="tel:+79166363710">+7 (916) 636-37-10</a></div>
         <form class="ui-form js-demo-form"><label>Имя<input type="text" required></label><label>Телефон<input type="tel" required></label><button class="ui-button full" type="submit">Отправить</button><p class="form-success full is-hidden">Спасибо! Заявка принята.</p></form>
       </div>
       <div class="container other-offers"><h3>Другие предложения</h3><div><a href="offers.html">Спортивный клуб «Арта-Спорт» →</a><a href="offers.html">Подготовка лыжных трасс →</a><a href="offers.html">Онлайн-регистрация на мероприятия →</a><a href="offers.html">Аренда судейского оборудования →</a><a href="offers.html">Подготовка лыжного инвентаря →</a></div></div>
@@ -136,12 +141,12 @@
     <nav>
       <strong>Компания</strong>
       <a href="offers.html">Наши предложения</a>
-      <a href="index.html#partners">Наши партнеры</a>
+      <a href="partners.html">Наши партнеры</a>
       <a href="about.html">О нас</a>
     </nav>
     <nav class="footer-contact">
       <strong>Контакты</strong>
-      <a href="tel:+79166363710">+7 916 636-37-10</a>
+      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
       <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
       <p>Москва</p>
     </nav>

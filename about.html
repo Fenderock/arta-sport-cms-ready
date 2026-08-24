@@ -15,21 +15,25 @@
       <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
     </form>
     <nav class="desktop-nav" aria-label="Основная навигация">
-      <a href="events.html">Мероприятия</a>
+      <div class="nav-dropdown events-nav-dropdown">
+        <a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Мероприятия</a>
+        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="index.html#news" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
+      </div>
       <div class="nav-dropdown">
         <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
         <div class="nav-dropdown-menu" role="menu">
           <a href="offers.html" role="menuitem">Наши предложения</a>
           <a href="about.html" role="menuitem">О нас</a>
+        <a href="partners.html" role="menuitem">Наши партнеры</a>
         </div>
       </div>
-      <a href="contacts.html">Контакты</a>
+      <div class="nav-dropdown contacts-nav-dropdown"><a href="contacts.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div>
     </nav>
-    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 916 636-37-10</a>
+    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
     <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button>
-      <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Регистрации</a></div>
+      <div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Мои регистрации</a></div>
     </div>
 
     <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
@@ -41,15 +45,16 @@
       </form>
     </div>
     <a href="index.html">Главная</a>
-    <a href="#events">Мероприятия</a>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="index.html#news">Новости</a><a href="event.html">МФЛРД</a></div></div>
     <div class="mobile-item mobile-has-sub">
       <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
       <div class="mobile-submenu">
         <a href="offers.html">Наши предложения</a>
         <a href="about.html">О нас</a>
+        <a href="partners.html">Наши партнеры</a>
       </div>
     </div>
-    <a href="index.html#partners">Наши партнеры</a><a href="contacts.html">Контакты</a><a href="registration.html">Личный кабинет</a>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div><a href="registration.html">Личный кабинет</a>
   </nav>
 
   <main>
@@ -93,12 +98,12 @@
     <nav>
       <strong>Компания</strong>
       <a href="offers.html">Наши предложения</a>
-      <a href="index.html#partners">Наши партнеры</a>
+      <a href="partners.html">Наши партнеры</a>
       <a href="about.html">О нас</a>
     </nav>
     <nav class="footer-contact">
       <strong>Контакты</strong>
-      <a href="tel:+79166363710">+7 916 636-37-10</a>
+      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
       <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
       <p>Москва</p>
     </nav>

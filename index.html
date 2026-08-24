@@ -16,17 +16,26 @@
       <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
     </form>
     <nav class="desktop-nav" aria-label="Основная навигация">
-      <a href="events.html">Мероприятия</a>
+      <div class="nav-dropdown events-nav-dropdown">
+        <a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Мероприятия</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a>
+          <a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a>
+          <a href="index.html#news" role="menuitem">Новости</a>
+          <a href="event.html" role="menuitem">МФЛРД</a>
+        </div>
+      </div>
       <div class="nav-dropdown">
         <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
         <div class="nav-dropdown-menu" role="menu">
           <a href="offers.html" role="menuitem">Наши предложения</a>
           <a href="about.html" role="menuitem">О нас</a>
+        <a href="partners.html" role="menuitem">Наши партнеры</a>
         </div>
       </div>
-      <a href="contacts.html">Контакты</a>
+      <div class="nav-dropdown contacts-nav-dropdown"><a href="contacts.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div>
     </nav>
-    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 916 636-37-10</a>
+    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
     <button class="search-btn" type="button" aria-label="Поиск"></button>
     <div class="account-menu">
       <button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false">
@@ -36,7 +45,7 @@
         <a class="account-primary" href="lk.html">Открыть личный кабинет</a>
         <a href="lk.html#profile">Профиль</a>
         <a href="lk.html#documents">Документы</a>
-        <a href="lk.html#registrations">Регистрации</a>
+        <a href="lk.html#registrations">Мои регистрации</a>
       </div>
     </div>
     <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
@@ -49,17 +58,24 @@
       </form>
     </div>
     <div class="mobile-item mobile-has-sub">
+      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button>
+      <div class="mobile-submenu">
+        <a href="events.html?status=upcoming">Предстоящие мероприятия</a>
+        <a href="events.html?status=past">Прошедшие мероприятия</a>
+        <a href="index.html#news">Новости</a>
+        <a href="event.html">МФЛРД</a>
+      </div>
+    </div>
+    <div class="mobile-item mobile-has-sub">
       <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
       <div class="mobile-submenu">
         <a href="offers.html">Наши предложения</a>
         <a href="about.html">О нас</a>
+        <a href="partners.html">Наши партнеры</a>
       </div>
     </div>
-    <a href="#partners">Наши партнеры</a>
-    <a href="events.html">Мероприятия</a>
-    <a href="#event-info">Информация по мероприятиям</a>
-    <a href="#past-events">Прошедшие мероприятия</a>
-    <a href="contacts.html">Контакты</a>
+    <a href="partners.html">Наши партнеры</a>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div>
     <a href="lk.html">Личный кабинет</a>
   </nav>
 
@@ -138,15 +154,17 @@
       </form>
 
       <div class="event-grid" id="eventGrid">
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Москва" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Этап МФЛРД 2026 — «С НАМИ ВСЕ»"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап МФЛРД 2026 — «С НАМИ ВСЕ»</a></h3><div class="event-meta"><span>Дата: 8 августа 2026 г.</span><span>Место: Москва, ОБЛК «Юго-Восток»</span><span>Участников: 500+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-08-08T11:00:00">—</strong></div><div class="seats is-temporarily-hidden">Осталось мест: 42</div><button class="primary-btn js-register" type="button" data-event="mflrd-2026">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Тульская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png" alt="Тульская гонка преследования"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Тульская гонка преследования</a></h3><div class="event-meta"><span>Дата: 22 августа 2026 г.</span><span>Место: Тульская область, Лыжероллерный центр «Веденино»</span><span>Участников: 400+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-08-22T10:00:00">—</strong></div><div class="seats is-temporarily-hidden">Осталось мест: 126</div><button class="primary-btn js-register" type="button" data-event="tula-pursuit">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Московская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png" alt="4 этап «ТЫЩА В МЫТИЩАХ-2026»"><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">4 этап «ТЫЩА В МЫТИЩАХ-2026»</a></h3><div class="event-meta"><span>Дата: 26 августа 2026 г.</span><span>Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span><span>Участников: 600+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-08-26T18:00:00">—</strong></div><div class="seats is-temporarily-hidden">Осталось мест: 8</div><button class="primary-btn js-register" type="button" data-event="mytishchi-1000">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="bike" data-region="Московская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png" alt="ЯСПОРТ ХС RACE 2026"><div class="event-body"><span class="event-badge">Маунтинбайк</span><h3><a href="event.html">ЯСПОРТ ХС RACE 2026</a></h3><div class="event-meta"><span>Дата: 30 августа 2026 г.</span><span>Место: Московская область, Одинцовский округ, Парк Малевича</span><span>Участников: 800+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-08-30T10:00:00">—</strong></div><div class="seats is-temporarily-hidden">Осталось мест: 310</div><button class="primary-btn js-register" type="button" data-event="xsport-xc">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Калужская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png" alt="Этап Фестиваля лыжероллерных дисциплин 2026"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап Фестиваля лыжероллерных дисциплин 2026</a></h3><div class="event-meta"><span>Дата: 5 сентября 2026 г.</span><span>Место: Калужская область, Обнинск, лыжероллерная трасса</span><span>Участников: 500+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-09-05T10:00:00">—</strong></div><div class="seats is-temporarily-hidden">Осталось мест: 74</div><button class="primary-btn js-register" type="button" data-event="obninsk-festival">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Алтайский край" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Altai Trail Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Altai Trail Run</a></h3><div class="event-meta"><span>Дата: 2 августа 2026 г.</span><span>Место: Алтайский край, Манжерок</span><span>Участников: 1400+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-08-02T07:00:00">—</strong></div><div class="seats is-temporarily-hidden">Осталось мест: 19</div><button class="primary-btn js-register" type="button" data-event="altai-trail-run">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Карелия" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Karelia Ski Sprint"><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span>Дата: 15 февраля 2026 г.</span><span>Место: Карелия, Петрозаводск</span><span>Участников: 900+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-02-15T11:00:00">—</strong></div><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Новосибирская область" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Siberian Frost Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span>Дата: 1 марта 2026 г.</span><span>Место: Новосибирская область, Михайловская набережная</span><span>Участников: 1800+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-03-01T10:00:00">—</strong></div><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Свердловская область" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Ural Mountain Trail"><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span>Дата: 12 апреля 2026 г.</span><span>Место: Свердловская область, Екатеринбург</span><span>Участников: 650+</span></div><div class="event-footer"><div class="timer">До старта: <strong data-countdown="2026-04-12T09:00:00">—</strong></div><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Москва" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Этап МФЛРД 2026 — «С НАМИ ВСЕ»"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап МФЛРД 2026 — «С НАМИ ВСЕ»</a></h3><div class="event-meta"><span class="event-date">Дата: 8 августа 2026 г.</span><span class="event-place">Место: Москва, ОБЛК «Юго-Восток»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-08T11:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 42</div><button class="primary-btn js-register" type="button" data-event="mflrd-2026">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Тульская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png" alt="Тульская гонка преследования"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Тульская гонка преследования</a></h3><div class="event-meta"><span class="event-date">Дата: 22 августа 2026 г.</span><span class="event-place">Место: Тульская область, Лыжероллерный центр «Веденино»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-22T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 126</div><button class="primary-btn js-register" type="button" data-event="tula-pursuit">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Московская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png" alt="4 этап «ТЫЩА В МЫТИЩАХ-2026»"><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">4 этап «ТЫЩА В МЫТИЩАХ-2026»</a></h3><div class="event-meta"><span class="event-date">Дата: 26 августа 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-26T18:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 8</div><button class="primary-btn js-register" type="button" data-event="mytishchi-1000">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="bike" data-region="Московская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png" alt="ЯСПОРТ ХС RACE 2026"><div class="event-body"><span class="event-badge">Маунтинбайк</span><h3><a href="event.html">ЯСПОРТ ХС RACE 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 30 августа 2026 г.</span><span class="event-place">Место: Московская область, Одинцовский округ, Парк Малевича</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-30T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 310</div><button class="primary-btn js-register" type="button" data-event="xsport-xc">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Калужская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png" alt="Этап Фестиваля лыжероллерных дисциплин 2026"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап Фестиваля лыжероллерных дисциплин 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Калужская область, Обнинск, лыжероллерная трасса</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-09-05T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 74</div><button class="primary-btn js-register" type="button" data-event="obninsk-festival">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Алтайский край" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Altai Trail Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Altai Trail Run</a></h3><div class="event-meta"><span class="event-date">Дата: 2 августа 2026 г.</span><span class="event-place">Место: Алтайский край, Манжерок</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-02T07:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 19</div><button class="primary-btn js-register" type="button" data-event="altai-trail-run">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="multi" data-region="Москва" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/event-1.jpg" alt="Туристический слет среди многодетных семей города Москвы"><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Туристический слет среди многодетных семей города Москвы</a></h3><div class="event-meta"><span class="event-date">Дата: 23 августа 2026 г.</span><span class="event-place">Место: Москва, ВАО</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-23T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 120</div><button class="primary-btn js-register" type="button" data-event="family-tourist-festival">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Архангельская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Гонки на лыжероллерах и роликовых коньках"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Гонки на лыжероллерах и роликовых коньках</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Архангельская область, д. Малые Карелы, л/с им. В. С. Кузина</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-09-05T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 90</div><button class="primary-btn js-register" type="button" data-event="roller-race">Регистрация</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Карелия" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Karelia Ski Sprint"><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span class="event-date">Дата: 15 февраля 2026 г.</span><span class="event-place">Место: Карелия, Петрозаводск</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-02-15T11:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Новосибирская область" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Siberian Frost Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span class="event-date">Дата: 1 марта 2026 г.</span><span class="event-place">Место: Новосибирская область, Михайловская набережная</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-03-01T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Свердловская область" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Ural Mountain Trail"><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span class="event-date">Дата: 12 апреля 2026 г.</span><span class="event-place">Место: Свердловская область, Екатеринбург</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-04-12T09:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
       </div>
 
       <div class="section-more">
@@ -154,6 +172,7 @@
       </div>
     </section>
 
+    <!-- Временно скрыта секция «Информация по мероприятиям».
     <section class="section info-section" id="event-info">
       <div class="section-head">
         <p class="label blue">Информация по мероприятиям</p>
@@ -166,6 +185,7 @@
         <a class="info-card" href="event.html"><time>15 февраля 2025</time><h3>Рейтинг лыжников-гонщиков в Нововоронино</h3><p>Московская область, городской округ Пушкинский</p><span>Открыть →</span></a>
       </div>
     </section>
+    -->
 
     <section class="section past-section" id="past-events">
       <div class="section-head">
@@ -174,9 +194,10 @@
         <p>архив стартов</p>
       </div>
       <div class="event-grid" id="pastEventGrid">
-        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Karelia Ski Sprint"><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span>Дата: 15 февраля 2026 г.</span><span>Место: Карелия, Петрозаводск</span><span>Участников: 900+</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Siberian Frost Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span>Дата: 1 марта 2026 г.</span><span>Место: Новосибирская область, Михайловская набережная</span><span>Участников: 1800+</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Ural Mountain Trail"><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span>Дата: 12 апреля 2026 г.</span><span>Место: Свердловская область, Екатеринбург</span><span>Участников: 650+</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Karelia Ski Sprint"><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span class="event-date">Дата: 15 февраля 2026 г.</span><span class="event-place">Место: Карелия, Петрозаводск</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Siberian Frost Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span class="event-date">Дата: 1 марта 2026 г.</span><span class="event-place">Место: Новосибирская область, Михайловская набережная</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Ural Mountain Trail"><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span class="event-date">Дата: 12 апреля 2026 г.</span><span class="event-place">Место: Свердловская область, Екатеринбург</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
+        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/event-3.jpg" alt="Семейный фестиваль #ЦБНАСПОРТЕ"><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Семейный фестиваль #ЦБНАСПОРТЕ</a></h3><div class="event-meta"><span class="event-date">Дата: 5 июля 2026 г.</span><span class="event-place">Место: Москва, стадион «Воробьевы горы»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результат</button></div></div></article>
       </div>
 
       <div class="section-more">
@@ -223,6 +244,32 @@
         <article><strong>04</strong><h3>Надежно</h3><p>Точный, оперативный хронометраж и соблюдение принципа fair play.</p></article>
         <article><strong>05</strong><h3>Практично</h3><p>Подготовка трасс и профессиональное оборудование соревновательных зон.</p></article>
         <article><strong>06</strong><h3>Выгодно</h3><p>Гибкий подход к формированию стоимости услуг.</p></article>
+        <article><strong>07</strong><h3>Технологично</h3><p>Современные системы регистрации, хронометража и подготовки итоговых протоколов.</p></article>
+        <article><strong>08</strong><h3>Ответственно</h3><p>Контроль каждого этапа подготовки и сопровождение мероприятия до его завершения.</p></article>
+      </div>
+    </section>
+
+    <section class="section locations-section" id="start-locations">
+      <div class="section-head">
+        <p class="label blue">География стартов</p>
+        <h2>Карта локаций</h2>
+        <p>Площадки, на которых проходили мероприятия ARTA Sport.</p>
+      </div>
+      <div class="locations-map-card">
+        <iframe
+          class="locations-map"
+          src="https://yandex.ru/map-widget/v1/?ll=54.386000%2C58.245000&z=4&l=map&pt=34.346900,61.784900,pm2rdm~82.920400,55.030200,pm2rdm~60.597500,56.838900,pm2rdm"
+          title="Яндекс Карта локаций стартов ARTA Sport"
+          loading="lazy"
+          allowfullscreen></iframe>
+        <div class="locations-map-footer">
+          <ul class="locations-list" aria-label="Локации прошедших стартов">
+            <li><span></span>Петрозаводск</li>
+            <li><span></span>Новосибирск</li>
+            <li><span></span>Екатеринбург</li>
+          </ul>
+          <a class="map-open-link" href="https://yandex.ru/maps/?ll=54.386000%2C58.245000&z=4&pt=34.346900,61.784900,pm2rdm~82.920400,55.030200,pm2rdm~60.597500,56.838900,pm2rdm" target="_blank" rel="noopener">Открыть в Яндекс Картах →</a>
+        </div>
       </div>
     </section>
 
@@ -312,7 +359,7 @@
         <h2 id="feedback-title">Задать<br>вопрос</h2>
         <p>Оставьте сообщение — команда ARTA Sport<br class="desktop-only"> свяжется с вами и поможет разобраться.</p>
         <address class="feedback-contacts">
-          <a class="feedback-phone" href="tel:+79166363710">+7 916 636-37-10</a>
+          <a class="feedback-phone" href="tel:+79166363710">+7 (916) 636-37-10</a>
           <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
           <span>Москва</span>
         </address>
@@ -329,7 +376,7 @@
         </div>
         <div class="feedback-field feedback-phone-field">
           <label for="feedback-phone">Телефон</label>
-          <input id="feedback-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 999 000-00-00">
+          <input id="feedback-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (999) 000-00-00">
         </div>
         <div class="feedback-field feedback-comment">
           <label for="feedback-comment">Комментарий <span aria-hidden="true">*</span></label>
@@ -358,12 +405,12 @@
     <nav>
       <strong>Компания</strong>
       <a href="offers.html">Наши предложения</a>
-      <a href="index.html#partners">Наши партнеры</a>
+      <a href="partners.html">Наши партнеры</a>
       <a href="about.html">О нас</a>
     </nav>
     <nav class="footer-contact">
       <strong>Контакты</strong>
-      <a href="tel:+79166363710">+7 916 636-37-10</a>
+      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
       <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
       <p>Москва</p>
     </nav>

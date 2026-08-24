@@ -11,7 +11,7 @@
     <a class="brand" href="index.html" aria-label="ARTA Sport">
       <img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport">
     </a>
-    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 916 636-37-10</a>
+    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
     <button class="menu-btn" type="button" aria-label="Открыть меню">☰</button>
   </header>
 
@@ -24,11 +24,12 @@
 
       <nav class="side-nav">
         <button class="side-link is-active" type="button" data-view="profile"><span class="nav-ico">P</span><span>Профиль</span></button>
-        <button class="side-link" type="button" data-view="registrations"><span class="nav-ico">REG</span><span>Регистрации</span></button>
-        <button class="side-link" type="button" data-view="orders"><span class="nav-ico">PAY</span><span>Заказы</span></button>
+        <button class="side-link" type="button" data-view="registrations"><span class="nav-ico">REG</span><span>Мои регистрации</span></button>
+        <button class="side-link" type="button" data-view="orders"><span class="nav-ico">PAY</span><span>Мои заказы</span></button>
         <button class="side-link" type="button" data-view="documents"><span class="nav-ico">DOC</span><span>Документы</span></button>
         <button class="side-link" type="button" data-view="ratings"><span class="nav-ico">TOP</span><span>Результаты</span></button>
         <button class="side-link" type="button" data-view="family"><span class="nav-ico">FAM</span><span>Семья</span></button>
+        <button class="side-link" type="button" data-view="promocodes"><span class="nav-ico">%</span><span>Мои промокоды</span></button>
         <button class="side-link is-temporarily-hidden" type="button" data-view="championships"><span class="nav-ico">CUP</span><span>Мои чемпионаты</span></button>
         <button class="side-link is-temporarily-hidden" type="button" data-view="teams"><span class="nav-ico">TM</span><span>Команды</span></button>
         <button class="side-link is-temporarily-hidden" type="button" data-view="clubs"><span class="nav-ico">CLB</span><span>Мои клубы</span></button>
@@ -45,7 +46,9 @@
 
       <section class="view is-visible" id="profile" data-view-panel="profile">
 
-        <h1>Мой профиль</h1>
+        <div class="section-head">
+          <div><h2>Мой профиль</h2></div>
+        </div>
 
         <article class="profile-summary">
           <div class="avatar">ВД</div>
@@ -59,7 +62,7 @@
           </div>
         </article>
 
-        <section class="metrics-grid">
+        <section class="metrics-grid is-temporarily-hidden">
           <article class="metric-link" data-my-registrations role="button" tabindex="0"><strong id="futureStartsCount">0</strong><span>будущих старта</span></article>
           <article><strong>2</strong><span>детских профиля</span></article>
           <article class="metric-action metric-link" data-potential-registrations role="button" tabindex="0">
@@ -100,7 +103,7 @@
 
       <section class="view" id="documents" data-view-panel="documents">
         <div class="section-head">
-          <div><h1>Документы</h1></div>
+          <div><h2>Документы</h2></div>
         </div>
         <div class="document-grid">
           <article class="document-card">
@@ -118,8 +121,8 @@
 
       <section class="view" id="registrations" data-view-panel="registrations">
         <div class="section-head">
-          <div><h1>Регистрации</h1></div>
-          <button class="primary-btn" type="button" data-open-drawer="registration">Новая регистрация</button>
+          <div><h2>Мои регистрации</h2></div>
+          <a class="primary-btn" href="events.html?status=upcoming">Предстоящие мероприятия</a>
         </div>
         <form class="filters" id="eventFilters">
           <label>Вид спорта<select id="sportFilter"><option value="all">Все</option><option value="run">Бег</option><option value="ski">Лыжи</option><option value="bike">Велоспорт</option></select></label>
@@ -130,21 +133,21 @@
       </section>
 
       <section class="view" id="orders" data-view-panel="orders">
-        <div class="section-head"><div><h1>Заказы</h1></div></div>
+        <div class="section-head"><div><h2>Мои заказы</h2></div></div>
         <div class="order-list" id="ordersList"></div>
       </section>
 
       <section class="view" id="ratings" data-view-panel="ratings">
-        <div class="section-head"><div><h1>Оценки</h1></div></div>
+        <div class="section-head"><div><h2>Мои результаты</h2></div></div>
         <div class="result-list" id="resultList"></div>
       </section>
 
-      <section class="view" id="championships" data-view-panel="championships"><h1>Мои чемпионаты</h1><div class="empty-state">Вы пока не состоите в чемпионатах. После регистрации серия появится здесь.</div></section>
-      <section class="view" id="teams" data-view-panel="teams"><h1>Команды</h1><div class="empty-state">Создавайте команды для эстафет и корпоративных стартов.</div></section>
-      <section class="view" id="clubs" data-view-panel="clubs"><h1>Мои клубы</h1><div class="empty-state">Добавьте спортивный клуб, чтобы получать клубные скидки.</div></section>
+      <section class="view" id="championships" data-view-panel="championships"><h2>Мои чемпионаты</h2><div class="empty-state">Вы пока не состоите в чемпионатах. После регистрации серия появится здесь.</div></section>
+      <section class="view" id="teams" data-view-panel="teams"><h2>Команды</h2><div class="empty-state">Создавайте команды для эстафет и корпоративных стартов.</div></section>
+      <section class="view" id="clubs" data-view-panel="clubs"><h2>Мои клубы</h2><div class="empty-state">Добавьте спортивный клуб, чтобы получать клубные скидки.</div></section>
 
       <section class="view" id="training" data-view-panel="training">
-        <h1>Тренировки</h1>
+        <h2>Тренировки</h2>
         <div class="training-grid">
           <article class="mini-panel"><h3>Беговая подготовка</h3><p>Вторник и четверг · 19:30</p><button class="ghost-btn" type="button">Записаться</button></article>
           <article class="mini-panel"><h3>Велогруппа</h3><p>Суббота · 08:00</p><button class="ghost-btn" type="button">Записаться</button></article>
@@ -153,10 +156,16 @@
 
       <section class="view" id="family" data-view-panel="family">
         <div class="section-head">
-          <div><h1>Семья</h1></div>
+          <div><h2>Семья</h2></div>
           <button class="primary-btn" type="button" data-open-drawer="dependent">Добавить ребенка</button>
         </div>
+        <p class="family-intro">Когда ребенок создаст собственный личный кабинет, его спортивную историю можно будет перенести без потери регистраций и результатов.</p>
         <div class="family-list" id="dependentList"></div>
+      </section>
+
+      <section class="view" id="promocodes" data-view-panel="promocodes">
+        <div class="section-head"><div><h2>Мои промокоды</h2></div></div>
+        <div class="empty-state">У вас пока нет активных промокодов. Доступные промокоды появятся в этом разделе.</div>
       </section>
 
     </main>
@@ -186,12 +195,12 @@
     <nav>
       <strong>Компания</strong>
       <a href="offers.html">Наши предложения</a>
-      <a href="index.html#partners">Наши партнеры</a>
+      <a href="partners.html">Наши партнеры</a>
       <a href="about.html">О нас</a>
     </nav>
     <nav class="footer-contact">
       <strong>Контакты</strong>
-      <a href="tel:+79166363710">+7 916 636-37-10</a>
+      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
       <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
       <p>Москва</p>
     </nav>

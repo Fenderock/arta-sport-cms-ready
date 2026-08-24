@@ -12,20 +12,25 @@
 - `about.html` — о компании;
 - `contacts.html` — контакты;
 - `offers.html` — наши предложения;
-- `service-event-organization.html` — первое предложение.
+- `partners.html` — наши партнёры;
+- `service-event-organization.html` — первое предложение;
+- `ui-kit.html` — дизайн-система и UI-kit.
 
 ## Структура
 
 - `assets/css/site.css` — исходная дизайн-система Diz1 и компоненты главной/кабинета;
 - `assets/css/internal.css` — общие компоненты внутренних страниц;
+- `assets/css/ui-kit.css` — оформление страницы UI-kit;
+- `assets/fonts/inter/` — локальные файлы шрифта Inter для кириллицы и латиницы;
 - `assets/js/site.js` — интерактив главной и личного кабинета;
 - `assets/js/internal.js` — общий интерактив внутренних страниц;
+- `assets/js/events.js` — фильтрация каталога мероприятий;
 - `assets/js/animations.js` — общая система ненавязчивых анимаций;
 - `assets/js/jquery.min.js` — локальная копия jQuery;
 - `includes/` — шаблоны head, header/navigation, footer и scripts для CMS;
 - `docs/` — дизайн-система и рекомендации по интеграции.
 
-Для просмотра откройте `index.html`. Сервер и установка зависимостей не требуются.
+Для просмотра откройте `index.html` двойным кликом. Сервер, установка зависимостей и сборка не требуются.
 
 ## Важные правила интеграции
 
