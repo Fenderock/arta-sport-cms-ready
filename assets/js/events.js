@@ -2,25 +2,36 @@ $(function () {
   if (!$('body').hasClass('events-page')) return;
 
   let status = 'upcoming';
+
+  const requestedStatus = new URLSearchParams(window.location.search).get('status');
+  if (requestedStatus === 'upcoming' || requestedStatus === 'past') {
+    status = requestedStatus;
+    $('.status-btn').removeClass('is-active');
+    $('.status-btn[data-status="' + status + '"]').addClass('is-active');
+  }
   const selected = { sport: 'all', year: 'all' };
+  const pageSize = 8;
 
   function render() {
     let visible = 0;
+    let matched = 0;
 
     $('#eventsPageGrid .event-card').each(function () {
       const card = $(this);
-      const show = card.data('status') === status
+      const matches = card.data('status') === status
         && (selected.sport === 'all' || card.data('sport') === selected.sport)
         && (selected.year === 'all' || String(card.data('year')) === selected.year);
+      const show = matches && matched < pageSize;
 
       card.toggle(show);
+      if (matches) matched += 1;
       if (show) visible += 1;
     });
 
     $('#eventsResultTitle').text(status === 'upcoming' ? 'Предстоящие мероприятия' : 'Прошедшие мероприятия');
-    $('#eventsResultCount').text(`Найдено: ${visible}`);
+    $('#eventsResultCount').text(matched > pageSize ? `Показано: ${visible} из ${matched}` : `Найдено: ${matched}`);
     $('#eventsPageGrid .empty').remove();
-    if (!visible) $('#eventsPageGrid').append('<div class="empty">По выбранным фильтрам мероприятий нет.</div>');
+    if (!matched) $('#eventsPageGrid').append('<div class="empty">По выбранным фильтрам мероприятий нет.</div>');
   }
 
   $('.events-page .select-trigger').on('click', function (event) {

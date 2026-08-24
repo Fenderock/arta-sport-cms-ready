@@ -157,7 +157,9 @@ $(function () {
     const days = Math.floor(diff / 86400000);
     const hours = Math.floor((diff % 86400000) / 3600000);
     const minutes = Math.floor((diff % 3600000) / 60000);
-    return `${days} дн ${hours} ч ${minutes} мин`;
+    const seconds = Math.floor((diff % 60000) / 1000);
+    const pad = (number) => String(number).padStart(2, '0');
+    return `${days} дн ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
   }
 
   function rub(value) {
@@ -584,7 +586,7 @@ $(function () {
     $('[data-countdown]').each(function () {
       $(this).text(countdown($(this).data('countdown')));
     });
-  }, 60000);
+  }, 1000);
 });
 
 /* Personal cabinet shared page scripts */
@@ -610,16 +612,43 @@ $(function () {
   ];
 
   const events = [
-    { id: 'e1', title: 'ARTA City Run 10K', sport: 'run', sportName: 'Бег', region: 'Москва', place: 'Лужники', date: '2026-05-17T09:00:00', month: 'Май 2026', status: 'upcoming', seats: 42, price: 2600, paid: true },
-    { id: 'e2', title: 'Vologda Ski Classic', sport: 'ski', sportName: 'Лыжи', region: 'Вологодская область', place: 'Кирики-Улита', date: '2026-05-24T10:30:00', month: 'Май 2026', status: 'upcoming', seats: 8, price: 2100, paid: false },
-    { id: 'e3', title: 'Northern Bike Gran Fondo', sport: 'bike', sportName: 'Велоспорт', region: 'Санкт-Петербург', place: 'Приморский маршрут', date: '2026-06-07T08:00:00', month: 'Июнь 2026', status: 'upcoming', seats: 126, price: 3900, paid: true },
-    { id: 'e4', title: 'Kazan Night Half Marathon', sport: 'run', sportName: 'Бег', region: 'Татарстан', place: 'Кремлевская набережная', date: '2026-06-20T21:00:00', month: 'Июнь 2026', status: 'upcoming', seats: 310, price: 3200, paid: false },
+    { id: 'e1', title: 'ARTA City Run 10K', sport: 'run', sportName: 'Бег', region: 'Москва', place: 'Лужники', date: '2026-09-17T09:00:00', month: 'Сентябрь 2026', status: 'upcoming', seats: 42, price: 2600, paid: true },
+    { id: 'e2', title: 'Vologda Ski Classic', sport: 'ski', sportName: 'Лыжи', region: 'Вологодская область', place: 'Кирики-Улита', date: '2026-09-24T10:30:00', month: 'Сентябрь 2026', status: 'upcoming', seats: 8, price: 2100, paid: false },
+    { id: 'e3', title: 'Northern Bike Gran Fondo', sport: 'bike', sportName: 'Велоспорт', region: 'Санкт-Петербург', place: 'Приморский маршрут', date: '2026-10-07T08:00:00', month: 'Октябрь 2026', status: 'upcoming', seats: 126, price: 3900, paid: true },
+    { id: 'e4', title: 'Kazan Night Half Marathon', sport: 'run', sportName: 'Бег', region: 'Татарстан', place: 'Кремлевская набережная', date: '2026-10-20T21:00:00', month: 'Октябрь 2026', status: 'upcoming', seats: 310, price: 3200, paid: false },
     { id: 'e5', title: 'Karelia Ski Sprint', sport: 'ski', sportName: 'Лыжи', region: 'Карелия', place: 'Петрозаводск', date: '2026-02-15T11:00:00', month: 'Февраль 2026', status: 'past', seats: 0, price: 1800, paid: true, result: '00:54:18' },
     { id: 'e6', title: 'Siberian Frost Run', sport: 'run', sportName: 'Бег', region: 'Новосибирская область', place: 'Михайловская набережная', date: '2026-03-01T10:00:00', month: 'Март 2026', status: 'past', seats: 0, price: 2400, paid: true, result: '01:48:34' }
   ];
 
+  const orders = [
+    { id: 'o4', type: 'purchase', date: '2026-08-18', month: 'Август 2026', title: 'ARTA City Run 10K', description: 'Приобретен слот · 10 км', amount: 2600, document: 'Чек № 18426' },
+    { id: 'o3', type: 'transfer', date: '2026-07-29', month: 'Июль 2026', title: 'Northern Bike Gran Fondo', description: 'Слот передан участнику Анне Васильевой', amount: 0 },
+    { id: 'o2', type: 'refund', date: '2026-06-12', month: 'Июнь 2026', title: 'Vologda Ski Classic', description: 'Возврат после отмены мероприятия', amount: 2100, document: 'Документ о возврате' },
+    { id: 'o1', type: 'purchase', date: '2026-05-03', month: 'Май 2026', title: 'Karelia Ski Sprint', description: 'Приобретен слот · лыжная гонка', amount: 1800, document: 'Чек № 15608' }
+  ];
+
+  const publishedResults = [
+    {
+      eventId: 'e6',
+      protocol: 'Итоговый протокол',
+      published: '2 марта 2026',
+      participants: [
+        { name: 'Васильев Дмитрий Сергеевич', profile: 'Основной профиль', bib: '184', distance: '21,1 км', place: '47 место', result: '01:48:34' }
+      ]
+    },
+    {
+      eventId: 'e5',
+      protocol: 'Итоговый протокол',
+      published: '16 февраля 2026',
+      participants: [
+        { name: 'Васильев Дмитрий Сергеевич', profile: 'Основной профиль', bib: '96', distance: '15 км', place: '32 место', result: '00:54:18' },
+        { name: 'Васильева Анна', profile: 'Семья', bib: '312', distance: '3 км', place: '8 место', result: '00:14:52' }
+      ]
+    }
+  ];
+
   const sportLabel = { run: 'RUN', ski: 'SKI', bike: 'BIKE' };
-  let calendarScope = 'all';
+  let calendarScope = 'mine';
 
   function rub(value) {
     return `${Math.max(0, value).toLocaleString('ru-RU')} ₽`;
@@ -629,13 +658,16 @@ $(function () {
     return new Date(date).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
   }
 
-  function countdown(date) {
+  function countdown(date, status) {
+    if (status === 'past') return 'Старт прошел';
     const diff = new Date(date).getTime() - Date.now();
-    if (diff <= 0) return 'старт прошел';
+    if (diff <= 0) return 'Старт прошел';
     const days = Math.floor(diff / 86400000);
     const hours = Math.floor((diff % 86400000) / 3600000);
     const minutes = Math.floor((diff % 3600000) / 60000);
-    return `${days} дн ${hours} ч ${minutes} мин`;
+    const seconds = Math.floor((diff % 60000) / 1000);
+    const time = [hours, minutes, seconds].map((value) => String(value).padStart(2, '0')).join(':');
+    return `${days} дн ${time}`;
   }
 
   function toast(message) {
@@ -694,7 +726,7 @@ $(function () {
           </div>
         </div>
         <div class="event-actions">
-          <div class="timer"><small>До старта</small><strong data-countdown="${item.date}">${countdown(item.date)}</strong></div>
+          <div class="timer"><small>${item.status === 'past' ? 'Статус' : 'До старта'}</small><strong data-countdown="${item.date}" data-event-status="${item.status}">${countdown(item.date, item.status)}</strong></div>
           ${action}
         </div>
       </article>
@@ -736,7 +768,7 @@ $(function () {
       <div class="start-item">
         <strong>${item.title}</strong>
         <p>${eventDate(item.date)} · ${item.region}, ${item.place}</p>
-        <button class="ghost-btn js-transfer" type="button" data-event="${item.id}">Передать слот</button>
+        <button class="ghost-btn" type="button" data-my-registrations>Открыть в моих регистрациях</button>
       </div>
     `).join(''));
 
@@ -748,27 +780,72 @@ $(function () {
       </div>
     `).join(''));
 
-    $('#ordersList').html(events.filter((item) => item.paid).map((item) => `
-      <article class="order-item">
-        <div>
-          <h3>${item.title}</h3>
-          <p class="event-subtitle">${eventDate(item.date)} · оплачено ${rub(item.price)}</p>
+    const orderGroups = orders.reduce((groups, item) => {
+      groups[item.month] = groups[item.month] || [];
+      groups[item.month].push(item);
+      return groups;
+    }, {});
+
+    const orderLabels = {
+      purchase: 'Приобретен слот',
+      transfer: 'Передан слот',
+      refund: 'Возврат средств'
+    };
+
+    $('#ordersList').html(Object.keys(orderGroups).map((month) => `
+      <section class="order-month">
+        <h2 class="order-month-title">${month}</h2>
+        <div class="order-month-list">
+          ${orderGroups[month].map((item) => `
+            <article class="order-item order-item--${item.type}">
+              <div class="order-main">
+                <span class="order-kind">${orderLabels[item.type]}</span>
+                <h3>${item.title}</h3>
+                <p class="event-subtitle">${eventDate(item.date)} · ${item.description}</p>
+              </div>
+              <div class="order-details">
+                ${item.amount ? `<strong class="order-amount">${item.type === 'refund' ? '+' : ''}${rub(item.amount)}</strong>` : ''}
+                ${item.document ? `<button class="order-document" type="button" data-order-document="${item.document}">${item.document}</button>` : '<span class="order-note">Без денежной операции</span>'}
+              </div>
+            </article>
+          `).join('')}
         </div>
-        <div class="event-actions">
-          ${item.status === 'upcoming' ? `<button class="ghost-btn js-transfer" type="button" data-event="${item.id}">Передать слот</button>` : '<span class="pill">Завершен</span>'}
-        </div>
-      </article>
+      </section>
     `).join(''));
 
-    $('#resultList').html(past.map((item) => `
-      <article class="result-item">
-        <div>
-          <h3>${item.title}</h3>
-          <p class="event-subtitle">${item.sportName} · ${item.region}</p>
-        </div>
-        <a href="#">${item.result}</a>
-      </article>
-    `).join(''));
+    const resultsHtml = publishedResults.map((resultGroup) => {
+      const item = events.find((eventItem) => eventItem.id === resultGroup.eventId && eventItem.paid);
+      if (!item) return '';
+
+      return `
+        <article class="result-event">
+          <header class="result-event-head">
+            <div>
+              <span class="result-published">Протокол опубликован · ${resultGroup.published}</span>
+              <h3>${item.title}</h3>
+              <p class="event-subtitle">${eventDate(item.date)} · ${item.region}, ${item.place}</p>
+            </div>
+            <a class="ghost-btn result-protocol" href="#" data-protocol="${item.title}">${resultGroup.protocol}</a>
+          </header>
+          <div class="result-participants">
+            ${resultGroup.participants.map((participant) => `
+              <div class="result-person">
+                <div class="result-person-name">
+                  <strong>${participant.name}</strong>
+                  <span>${participant.profile}</span>
+                </div>
+                <span>№ ${participant.bib}</span>
+                <span>${participant.distance}</span>
+                <strong>${participant.place}</strong>
+                <strong class="result-time">${participant.result}</strong>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    $('#resultList').html(resultsHtml || '<div class="empty-state">Опубликованных протоколов по приобретенным слотам пока нет.</div>');
 
     renderFamily();
   }
@@ -776,9 +853,15 @@ $(function () {
   function renderFamily() {
     $('#dependentList').html(children.map((child) => `
       <article class="family-item">
-        <h3>${child.name}</h3>
-        <p>${child.age} лет · ${child.birth}</p>
-        <button class="ghost-btn js-register-child" type="button" data-child="${child.id}">Зарегистрировать на старт</button>
+        <div class="family-person">
+          <h3>${child.name}</h3>
+          <p>${child.age} лет · ${child.birth}</p>
+          ${child.transferPending ? '<span class="family-transfer-status">Приглашение отправлено</span>' : ''}
+        </div>
+        <div class="family-actions">
+          <button class="ghost-btn js-register-child" type="button" data-child="${child.id}">Зарегистрировать на старт</button>
+          <button class="ghost-btn js-transfer-history" type="button" data-child="${child.id}" ${child.transferPending ? 'disabled' : ''}>Передать историю в личный кабинет</button>
+        </div>
       </article>
     `).join(''));
   }
@@ -854,20 +937,41 @@ $(function () {
     `);
   }
 
+  function historyTransferDrawer(childId) {
+    const child = children.find((item) => item.id === childId);
+    if (!child) return;
+
+    openDrawer('Передать историю в личный кабинет', `
+      <p class="helper-text">После подтверждения приглашения спортивный профиль ${child.name} будет привязан к самостоятельному аккаунту.</p>
+      <div class="history-transfer-summary">
+        <strong>Перейдут в новый кабинет</strong>
+        <p>Регистрации, результаты, протоколы и документы участника.</p>
+        <strong>Останутся у плательщика</strong>
+        <p>Заказы, чеки, возвраты и другие финансовые документы.</p>
+      </div>
+      <form class="drawer-form" id="historyTransferForm" data-child="${child.id}">
+        <label>Email нового личного кабинета<input type="email" required autocomplete="email" placeholder="athlete@example.com"></label>
+        <label class="agree"><input type="checkbox" required> Подтверждаю передачу спортивной истории владельцу нового аккаунта</label>
+        <button class="primary-btn" type="submit">Отправить приглашение</button>
+      </form>
+    `);
+  }
+
   function profileDrawer() {
     openDrawer('Изменить профиль', [
       '<form class="drawer-form" id="profileDrawerForm">',
       '<label>Фамилия *<input type="text" value="Васильев" required></label>',
       '<label>Имя *<input type="text" value="Дмитрий" required></label>',
-      '<label>Отчество *<input type="text" value="Сергеевич" required></label>',
+      '<label>Отчество<input type="text" value="Сергеевич"></label>',
       '<label>Пол *<select required><option value="male" selected>Мужчина</option><option value="female">Женщина</option></select></label>',
       '<label>Дата рождения *<input type="date" value="1977-04-12" required></label>',
-      '<label>Телефон *<input type="tel" value="+7 900 123-45-67" required></label>',
+      '<label>Телефон *<input type="tel" value="+7 (900) 123-45-67" required></label>',
       '<label>Email *<input type="email" value="fendervik@gmail.com" required></label>',
       '<label>Страна<input type="text" value="Россия"></label>',
       '<label>Город / населенный пункт<input type="text" value="Москва"></label>',
       '<label>Организация / клуб<input type="text" placeholder="Название организации или клуба"></label>',
-      '<label>Экстренный контакт<input type="text" placeholder="Имя и телефон"></label>',
+      '<label>Экстренный контакт — имя<input type="text" autocomplete="name" placeholder="Имя контактного лица"></label>',
+      '<label>Экстренный контакт — телефон<input type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (999) 000-00-00"></label>',
       '<button class="primary-btn" type="submit">Сохранить</button>',
       '</form>'
     ].join(''));
@@ -910,7 +1014,7 @@ $(function () {
   $('.side-link[data-view], [data-view-target]').on('click', function () {
     const view = $(this).data('view') || $(this).data('view-target');
     if (view === 'registrations') {
-      calendarScope = 'all';
+      calendarScope = 'mine';
       renderCalendar();
     }
     setView(view);
@@ -1011,8 +1115,21 @@ $(function () {
     registrationDrawer(undefined, $(this).data('child'));
   });
 
+  $(document).on('click', '.js-transfer-history', function () {
+    historyTransferDrawer($(this).data('child'));
+  });
+
   $(document).on('click', '.js-transfer', function () {
     transferDrawer($(this).data('event'));
+  });
+
+  $(document).on('click', '[data-order-document]', function () {
+    toast(`${$(this).data('order-document')} прикреплен к заказу`);
+  });
+
+  $(document).on('click', '[data-protocol]', function (event) {
+    event.preventDefault();
+    toast(`Открываем протокол: ${$(this).data('protocol')}`);
   });
 
   $(document).on('input change', '#regEvent, #regPerson, #regPromo', updateRegistrationPrice);
@@ -1032,6 +1149,15 @@ $(function () {
     renderFamily();
     closeDrawer();
     toast('Зависимый профиль добавлен');
+  });
+
+  $(document).on('submit', '#historyTransferForm', function (event) {
+    event.preventDefault();
+    const child = children.find((item) => item.id === $(this).data('child'));
+    if (child) child.transferPending = true;
+    renderFamily();
+    closeDrawer();
+    toast('Приглашение на перенос истории отправлено');
   });
 
   $(document).on('submit', '#transferForm', function (event) {
@@ -1069,7 +1195,7 @@ $(function () {
 
   setInterval(function () {
     $('[data-countdown]').each(function () {
-      $(this).text(countdown($(this).data('countdown')));
+      $(this).text(countdown($(this).data('countdown'), $(this).data('event-status')));
     });
-  }, 60000);
+  }, 1000);
 });
