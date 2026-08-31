@@ -163,4 +163,65 @@ $(function () {
     updateCountdown();
     window.setInterval(updateCountdown, 1000);
   });
+
+  /* Event participants: total count and list by age groups (demo data, replace with CMS data). */
+  var participantsByGroup = {
+    'all': 'Все группы',
+    '12-14': '12–14 лет',
+    '15-17': '15–17 лет',
+    '18-29': '18–29 лет',
+    '30-39': '30–39 лет',
+    '40-49': '40–49 лет',
+    '50+': '50+'
+  };
+
+  var participants = [
+    { name: 'Васильев Дмитрий Сергеевич', bib: '184', group: '30-39', city: 'Москва' },
+    { name: 'Васильева Анна', bib: '312', group: '30-39', city: 'Москва' },
+    { name: 'Смирнов Артем', bib: '021', group: '15-17', city: 'Химки' },
+    { name: 'Кузнецова Ольга', bib: '045', group: '18-29', city: 'Мытищи' },
+    { name: 'Соколов Игорь Петрович', bib: '102', group: '50+', city: 'Королёв' },
+    { name: 'Лебедева Мария', bib: '058', group: '12-14', city: 'Балашиха' },
+    { name: 'Громов Павел', bib: '210', group: '40-49', city: 'Люберцы' },
+    { name: 'Никитин Семён', bib: '077', group: '15-17', city: 'Подольск' },
+    { name: 'Орлова Елена', bib: '156', group: '40-49', city: 'Москва' },
+    { name: 'Захаров Роман', bib: '233', group: '18-29', city: 'Одинцово' },
+    { name: 'Морозова Татьяна Ивановна', bib: '301', group: '50+', city: 'Пушкино' },
+    { name: 'Волков Артём', bib: '012', group: '12-14', city: 'Москва' }
+  ];
+
+  var $participantsApp = $('#participantsApp');
+
+  if ($participantsApp.length) {
+    function renderParticipants(activeGroup) {
+      var rows = participants.filter(function (item) {
+        return activeGroup === 'all' || item.group === activeGroup;
+      });
+
+      var tabs = Object.keys(participantsByGroup).map(function (key) {
+        var count = key === 'all' ? participants.length : participants.filter(function (item) { return item.group === key; }).length;
+        return '<button class="participants-tab' + (key === activeGroup ? ' is-active' : '') + '" type="button" data-group="' + key + '">' +
+          participantsByGroup[key] + '<span>' + count + '</span></button>';
+      }).join('');
+
+      var list = rows.length ? rows.map(function (item, index) {
+        return '<div class="participant-row"><span class="participant-num">' + (index + 1) + '</span>' +
+          '<strong class="participant-name">' + item.name + '</strong>' +
+          '<span class="participant-city">' + item.city + '</span>' +
+          '<span class="participant-bib">№ ' + item.bib + '</span></div>';
+      }).join('') : '<p class="participant-empty">В этой группе пока нет зарегистрированных участников.</p>';
+
+      $participantsApp.html(
+        '<div class="participants-total"><strong>' + participants.length + '</strong><span>зарегистрированных участников</span></div>' +
+        '<div class="participants-tabs" role="tablist">' + tabs + '</div>' +
+        '<div class="participants-list">' + list + '</div>'
+      );
+    }
+
+    $participantsApp.on('click', '.participants-tab', function () {
+      renderParticipants($(this).data('group'));
+    });
+
+    renderParticipants('all');
+  }
 });
