@@ -22,7 +22,7 @@
     try { window.localStorage.removeItem(AUTH_KEY); } catch (error) {}
     updateHeader();
     window.location.href = 'index.html';
-  });
+  }, true); // Capture runs before the dropdown stops click propagation.
   document.addEventListener('DOMContentLoaded', function () {
     updateHeader();
     if (document.body.classList.contains('lk-page') && !isAuthed()) {
