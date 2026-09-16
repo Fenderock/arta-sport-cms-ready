@@ -1,0 +1,5 @@
+/* Offline export: native hidden states, no generated page content. */
+[hidden] { display: none !important; }
+.news-detail-header, .event-card, .document-card { min-width: 0; }
+html:not(.local-ui) .lk-page .view { display: block; }
+html:not(.local-ui) .lk-page .view + .view { margin-top: 32px; }

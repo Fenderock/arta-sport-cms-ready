@@ -38,3 +38,21 @@
   .ui-kit-section { padding: 22px 18px; }
   .ui-kit-grid, .ui-kit-colors { grid-template-columns: 1fr; }
 }
+
+/* Documentation surfaces; these rules do not change the site pages. */
+.kit-links { display:flex; flex-wrap:wrap; gap:16px; margin-top:24px; }
+.kit-links a { color:#fff; text-decoration:underline; text-underline-offset:4px; }
+.kit-table-wrap { overflow-x:auto; }
+.kit-table { width:100%; border-collapse:collapse; text-align:left; font-size:16px; }
+.kit-table th,.kit-table td { padding:12px; border-bottom:1px solid var(--line); vertical-align:top; overflow-wrap:anywhere; }
+.kit-table th { background:var(--bg); }
+.kit-code { padding:20px; background:var(--ink); color:#fff; border-radius:12px; overflow-x:auto; font-size:14px; }
+.kit-surface { padding:20px; border:1px solid var(--orange); border-radius:var(--radius); }
+.kit-surface-white { background:#fff; }.kit-surface-warm { background:#fffaf7; }.kit-surface-account { background:linear-gradient(135deg,#fff7ed,#fff); }
+.kit-example-narrow { max-width:360px; }.kit-space-top { margin-top:20px; }
+.kit-error { color:#b42318; font-size:14px; }.ui-kit-field [aria-invalid="true"] { border:2px solid #b42318; }
+.ui-kit-page button:disabled,.ui-kit-page input:disabled { opacity:.5; cursor:not-allowed; }
+.ui-kit-page a:focus-visible,.ui-kit-page button:focus-visible,.kit-details summary:focus-visible { outline:3px solid var(--orange); outline-offset:4px; }
+.kit-details { padding:18px; border:1px solid var(--line); border-radius:12px; }.kit-details summary { cursor:pointer; font-weight:700; }
+.ui-kit-page .site-header { flex-wrap:wrap; }.ui-kit-page .desktop-nav { display:flex; flex-wrap:wrap; gap:16px; }
+.ui-swatch-label { font-size:14px; }
