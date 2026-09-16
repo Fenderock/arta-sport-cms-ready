@@ -3,3 +3,6 @@
 .news-detail-header, .event-card, .document-card { min-width: 0; }
 html:not(.local-ui) .lk-page .view { display: block; }
 html:not(.local-ui) .lk-page .view + .view { margin-top: 32px; }
+
+/* Original site account header states; markup is stored in HTML. */
+html:not(.auth-member) [data-auth="member"], html.auth-member [data-auth="guest"] { display:none !important; }
