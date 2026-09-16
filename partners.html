@@ -21,7 +21,8 @@
     </nav>
     <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
     <button class="search-btn" type="button" aria-label="Поиск"></button>
-    <div class="account-menu"><button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button><div class="account-dropdown" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Мои регистрации</a></div></div>
+    <div class="account-menu">
+      <a class="account-login-link" data-auth="guest" href="registration.html#registration">Личный кабинет</a><button class="account-icon" data-auth="member" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button><div class="account-dropdown" data-auth="member" aria-label="Меню личного кабинета"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Мои регистрации</a><a class="account-logout" href="index.html">Выйти</a></div></div>
     <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
   <nav class="mobile-menu" aria-label="Мобильная навигация">
@@ -103,6 +104,7 @@
     <div class="footer-legal"><p>© АНО «АРТА-СПОРТ», 2016–2026.</p><p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p></div>
   </footer>
   <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
+<script src="assets/js/auth-state.js"></script>
 <script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
 </body>
 </html>

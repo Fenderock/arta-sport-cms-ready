@@ -18,7 +18,8 @@
         <a href="partners.html" role="menuitem">Наши партнеры</a></div></div><div class="nav-dropdown contacts-nav-dropdown"><a href="contacts.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div></nav>
     <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
     <button class="search-btn" type="button" aria-label="Поиск"></button>
-    <div class="account-menu"><button class="account-icon" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button><div class="account-dropdown"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Мои регистрации</a></div></div>
+    <div class="account-menu">
+      <a class="account-login-link" data-auth="guest" href="registration.html#registration">Личный кабинет</a><button class="account-icon" data-auth="member" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button><div class="account-dropdown" data-auth="member"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Мои регистрации</a><a class="account-logout" href="index.html">Выйти</a></div></div>
     <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </header>
   <nav class="mobile-menu" aria-label="Мобильная навигация"><div class="mobile-search"><form class="mobile-search-form" action="#" method="get"><input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту"></form></div><a href="index.html">Главная</a><div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="news.html">Новости</a><a href="event.html">МФЛРД</a></div></div><a href="offers.html">Наши предложения</a><a href="about.html">О нас</a>
@@ -263,6 +264,7 @@
     </div>
   </footer>
   <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
+<script src="assets/js/auth-state.js"></script>
 <script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
 </body>
 </html>
