@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
   <title>Этап МФЛРД 2026 — ARTA Sport</title>
   <meta name="description" content="Этап МФЛРД 2026 «С нами все» — соревнования по лыжероллерам и роликовым конькам.">
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-800-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css"><link rel="stylesheet" href="assets/css/internal.css">
+<link rel="stylesheet" href="assets/css/local.css">
 </head>
 <body class="inner-page">
   <header class="site-header">
@@ -19,7 +18,7 @@
     <nav class="desktop-nav">
       <div class="nav-dropdown events-nav-dropdown">
         <a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">Мероприятия</a>
-        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="index.html#news" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
+        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="news.html" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
       </div>
       <div class="nav-dropdown">
         <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
@@ -46,7 +45,7 @@
       </form>
     </div>
     <a href="index.html">Главная</a>
-    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="index.html#news">Новости</a><a href="event.html">МФЛРД</a></div></div>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="news.html">Новости</a><a href="event.html">МФЛРД</a></div></div>
     <div class="mobile-item mobile-has-sub">
       <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
       <div class="mobile-submenu">
@@ -77,7 +76,7 @@
         <article>
           <section class="content-block"><h2>О мероприятии</h2><p>К участию приглашаются профессиональные спортсмены и любители активного отдыха. Старт состоится на специализированной трассе ОБЛК «Юго-Восток».</p><div class="fact-cards"><div><strong>2</strong><span>дисциплины</span></div><div><strong>10+</strong><span>возрастных групп</span></div></div></section>
           <section class="content-block"><h2>Расписание</h2><div class="program-list"><div class="program-row"><time>09:00</time><div><strong>Выдача стартовых номеров</strong><small>Регистрационная зона</small></div></div><div class="program-row"><time>10:30</time><div><strong>Открытие соревнований</strong><small>Стартовый городок</small></div></div><div class="program-row"><time>11:00</time><div><strong>Первый старт</strong><small>Лыжероллеры и роликовые коньки</small></div></div><div class="program-row"><time>15:30</time><div><strong>Награждение победителей</strong><small>Главная сцена</small></div></div></div></section>
-          <section class="content-block" id="participants"><h2>Участники</h2><p>Общее количество зарегистрированных участников и список по возрастным группам.</p><div id="participantsApp" class="participants-app"></div></section>
+          <section class="content-block" id="participants"><h2>Участники</h2><p>Общее количество зарегистрированных участников и список по возрастным группам.</p><div id="participantsApp" class="participants-app"><div class="participants-total"><strong>12</strong><span>зарегистрированных участников</span></div><div class="participants-tabs"><button class="participants-tab is-active" type="button" data-group="all">Все группы<span>12</span></button><button class="participants-tab" type="button" data-group="12-14">12–14 лет<span>2</span></button><button class="participants-tab" type="button" data-group="15-17">15–17 лет<span>2</span></button><button class="participants-tab" type="button" data-group="18-29">18–29 лет<span>2</span></button><button class="participants-tab" type="button" data-group="30-39">30–39 лет<span>2</span></button><button class="participants-tab" type="button" data-group="40-49">40–49 лет<span>2</span></button><button class="participants-tab" type="button" data-group="50+">50+<span>2</span></button></div><div class="participants-list"><div class="participant-row" data-group="30-39"><span class="participant-num">1</span><strong class="participant-name">Васильев Дмитрий Сергеевич</strong><span class="participant-city">Москва</span><span class="participant-bib">№ 184</span></div><div class="participant-row" data-group="30-39"><span class="participant-num">2</span><strong class="participant-name">Васильева Анна</strong><span class="participant-city">Москва</span><span class="participant-bib">№ 312</span></div><div class="participant-row" data-group="15-17"><span class="participant-num">3</span><strong class="participant-name">Смирнов Артем</strong><span class="participant-city">Химки</span><span class="participant-bib">№ 021</span></div><div class="participant-row" data-group="18-29"><span class="participant-num">4</span><strong class="participant-name">Кузнецова Ольга</strong><span class="participant-city">Мытищи</span><span class="participant-bib">№ 045</span></div><div class="participant-row" data-group="50+"><span class="participant-num">5</span><strong class="participant-name">Соколов Игорь Петрович</strong><span class="participant-city">Королёв</span><span class="participant-bib">№ 102</span></div><div class="participant-row" data-group="12-14"><span class="participant-num">6</span><strong class="participant-name">Лебедева Мария</strong><span class="participant-city">Балашиха</span><span class="participant-bib">№ 058</span></div><div class="participant-row" data-group="40-49"><span class="participant-num">7</span><strong class="participant-name">Громов Павел</strong><span class="participant-city">Люберцы</span><span class="participant-bib">№ 210</span></div><div class="participant-row" data-group="15-17"><span class="participant-num">8</span><strong class="participant-name">Никитин Семён</strong><span class="participant-city">Подольск</span><span class="participant-bib">№ 077</span></div><div class="participant-row" data-group="40-49"><span class="participant-num">9</span><strong class="participant-name">Орлова Елена</strong><span class="participant-city">Москва</span><span class="participant-bib">№ 156</span></div><div class="participant-row" data-group="18-29"><span class="participant-num">10</span><strong class="participant-name">Захаров Роман</strong><span class="participant-city">Одинцово</span><span class="participant-bib">№ 233</span></div><div class="participant-row" data-group="50+"><span class="participant-num">11</span><strong class="participant-name">Морозова Татьяна Ивановна</strong><span class="participant-city">Пушкино</span><span class="participant-bib">№ 301</span></div><div class="participant-row" data-group="12-14"><span class="participant-num">12</span><strong class="participant-name">Волков Артём</strong><span class="participant-city">Москва</span><span class="participant-bib">№ 012</span></div></div></div></section>
           <section class="content-block"><h2>Участникам</h2><div class="document-list"><div class="document-row"><span>PDF</span><div><strong>Положение о соревнованиях</strong><small>Будет опубликовано позднее</small></div><b>Скоро</b></div><div class="document-row"><span>PDF</span><div><strong>Регламент мероприятия</strong><small>Будет опубликовано позднее</small></div><b>Скоро</b></div><div class="document-row"><span>XLS</span><div><strong>Стартовый протокол</strong><small>Появится после регистрации</small></div><b>Скоро</b></div></div></section>
         </article>
         <aside>
@@ -114,7 +113,7 @@
       <div class="footer-social">
         <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
         <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
-        <a href="https://t.me/skicalendar" target="_blank" rel="noopener" aria-label="Telegram-канал ARTA Sport"><img src="assets/images/social/telegram.svg" alt=""></a>
+
       </div>
     </nav>
     <div class="footer-legal">
@@ -122,6 +121,7 @@
       <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
     </div>
   </footer>
-  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/auth-state.js"></script><script src="assets/js/animations.js"></script>
+  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
+<script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
 </body>
 </html>

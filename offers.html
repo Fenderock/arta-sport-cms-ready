@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
   <title>Наши предложения — ARTA Sport</title>
   <meta name="description" content="Организация мероприятий, подготовка трасс, онлайн-регистрация и профессиональное судейское оборудование.">
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-800-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/internal.css">
+<link rel="stylesheet" href="assets/css/local.css">
 </head>
-<body class="inner-page">
+<body class="inner-page offers-page">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
     <form class="header-search" action="#" method="get">
@@ -20,7 +19,7 @@
     <nav class="desktop-nav">
       <div class="nav-dropdown events-nav-dropdown">
         <a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Мероприятия</a>
-        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="index.html#news" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
+        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="news.html" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
       </div>
       <div class="nav-dropdown">
         <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
@@ -47,7 +46,7 @@
       </form>
     </div>
     <a href="index.html">Главная</a>
-    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="index.html#news">Новости</a><a href="event.html">МФЛРД</a></div></div>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="news.html">Новости</a><a href="event.html">МФЛРД</a></div></div>
     <div class="mobile-item mobile-has-sub">
       <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
       <div class="mobile-submenu">
@@ -56,7 +55,7 @@
         <a href="partners.html">Наши партнеры</a>
       </div>
     </div>
-    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div><a href="#request">Оставить заявку</a></nav>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div><a href="#feedback">Оставить заявку</a></nav>
 
   <main>
     <section class="offers-hero">
@@ -70,25 +69,54 @@
 
     <section class="page-section offers-catalog-section">
       <div class="container offers-grid">
-        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/event-1.jpg" alt="Организация спортивного мероприятия"><span>01</span><h3>Организация спортивно-массовых мероприятий</h3><p>Профессиональные и любительские соревнования на московских и региональных площадках.</p><ul><li>Персональный менеджер и сценарий</li><li>Площадка и безопасность</li><li>Хронометраж и судейство</li></ul><a class="ui-button" href="service-event-organization.html">Подробнее →</a></article>
-        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/athletics.jpg" alt="Занятия спортивного клуба"><span>02</span><h3>Спортивный клуб «Арта-Спорт»</h3><p>Физкультурно-оздоровительные и учебно-тренировочные занятия по циклическим и игровым видам спорта.</p><ul><li>Теория лыжного спорта</li><li>Обучение технике</li><li>Контрольные старты</li></ul><a class="ui-button secondary" href="#request">Подробнее →</a></article>
-        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/ski.jpg" alt="Подготовка лыжной трассы"><span>03</span><h3>Подготовка лыжных трасс</h3><p>Подготовка трасс в Москве и Московской области профессиональной техникой.</p><ul><li>Уплотнение снежного полотна</li><li>Выравнивание трассы</li><li>Нарезание лыжни</li></ul><a class="ui-button secondary" href="#request">Подробнее →</a></article>
-        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/rollers.jpg" alt="Регистрация участников соревнований"><span>04</span><h3>Онлайн-регистрация участников</h3><p>Регистрация для мероприятий любого формата, предварительные списки и приём стартовых взносов.</p><ul><li>Согласование параметров</li><li>Запуск регистрации</li><li>Передача итоговых списков</li></ul><a class="ui-button secondary" href="#request">Подробнее →</a></article>
-        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/biathlon.jpg" alt="Судейское оборудование"><span>05</span><h3>Аренда судейского оборудования</h3><p>Профессиональное оборудование для соревнований и работы судейской бригады.</p><ul><li>Табло ALT-Timing</li><li>Фотофиниш и транспондеры</li><li>Арки и звуковое оборудование</li></ul><a class="ui-button secondary" href="#request">Подробнее →</a></article>
-        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/event-3.jpg" alt="Подготовка лыжного инвентаря"><span>06</span><h3>Подготовка лыжного инвентаря</h3><p>Профессиональная подготовка, обслуживание, ремонт и восстановление лыжного инвентаря.</p><ul><li>Подготовка к соревнованиям</li><li>Ремонт и восстановление</li><li>Прокат инвентаря</li></ul><a class="ui-button secondary" href="#request">Подробнее →</a></article>
+        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/event-1.jpg" alt="Организация спортивного мероприятия"><h3>Организация спортивно-массовых мероприятий</h3><p>Профессиональные и любительские соревнования на московских и региональных площадках.</p><ul><li>Персональный менеджер и сценарий</li><li>Площадка и безопасность</li><li>Хронометраж и судейство</li></ul><a class="ui-button" href="service-event-organization.html">Подробнее →</a></article>
+        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/athletics.jpg" alt="Занятия спортивного клуба"><h3>Спортивный клуб «Арта-Спорт»</h3><p>Физкультурно-оздоровительные и учебно-тренировочные занятия по циклическим и игровым видам спорта.</p><ul><li>Теория лыжного спорта</li><li>Обучение технике</li><li>Контрольные старты</li></ul><a class="ui-button secondary" href="#feedback">Подробнее →</a></article>
+        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/ski.jpg" alt="Подготовка лыжной трассы"><h3>Подготовка лыжных трасс</h3><p>Подготовка трасс в Москве и Московской области профессиональной техникой.</p><ul><li>Уплотнение снежного полотна</li><li>Выравнивание трассы</li><li>Нарезание лыжни</li></ul><a class="ui-button secondary" href="#feedback">Подробнее →</a></article>
+        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/rollers.jpg" alt="Регистрация участников соревнований"><h3>Онлайн-регистрация участников</h3><p>Регистрация для мероприятий любого формата, предварительные списки и приём стартовых взносов.</p><ul><li>Согласование параметров</li><li>Запуск регистрации</li><li>Передача итоговых списков</li></ul><a class="ui-button secondary" href="#feedback">Подробнее →</a></article>
+        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/biathlon.jpg" alt="Судейское оборудование"><h3>Аренда судейского оборудования</h3><p>Профессиональное оборудование для соревнований и работы судейской бригады.</p><ul><li>Табло ALT-Timing</li><li>Фотофиниш и транспондеры</li><li>Арки и звуковое оборудование</li></ul><a class="ui-button secondary" href="#feedback">Подробнее →</a></article>
+        <article class="offer-card"><img class="offer-card-image" src="assets/images/legacy/services/event-organization/event-3.jpg" alt="Подготовка лыжного инвентаря"><h3>Подготовка лыжного инвентаря</h3><p>Профессиональная подготовка, обслуживание, ремонт и восстановление лыжного инвентаря.</p><ul><li>Подготовка к соревнованиям</li><li>Ремонт и восстановление</li><li>Прокат инвентаря</li></ul><a class="ui-button secondary" href="#feedback">Подробнее →</a></article>
       </div>
     </section>
 
-    <section class="page-section alt" id="request">
-      <div class="container contact-panel">
-        <div><h2>Задать вопрос</h2><a href="tel:+79166363710">+7 (916) 636-37-10</a></div>
-        <form class="ui-form js-demo-form">
-          <label>Имя<input type="text" name="name"></label><label>Телефон<input type="tel" name="phone" required></label>
-          <label class="full">Сообщение<textarea name="message"></textarea></label>
-          <button class="ui-button full" type="submit">Отправить заявку</button><p class="form-success full is-hidden">Спасибо! Заявка принята.</p>
-        </form>
+  <section class="feedback-section" id="feedback" aria-labelledby="feedback-title">
+    <div class="feedback-shell">
+      <div class="feedback-copy">
+        <!--<span class="feedback-kicker">Остались вопросы?</span>-->
+        <h3 id="feedback-title">Принимаем заказы на проведение мероприятий</h3>
+        <!--<p>Принимаем заказы на проведение мероприятий.<br class="desktop-only"> Свяжитесь с нами удобным способом.</p>-->
+        <address class="feedback-contacts">
+          <a class="feedback-phone" href="tel:+79166363710">+7 (916) 636-37-10</a>
+          <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+          <span>Москва</span>
+        </address>
       </div>
-    </section>
+
+      <form class="feedback-form" novalidate>
+        <div class="feedback-field">
+          <label for="feedback-name">Имя</label>
+          <input id="feedback-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+        </div>
+        <div class="feedback-field">
+          <label for="feedback-email">Электронная почта <span aria-hidden="true">*</span></label>
+          <input id="feedback-email" name="email" type="email" autocomplete="email" placeholder="mail@example.ru" required>
+        </div>
+        <div class="feedback-field feedback-phone-field">
+          <label for="feedback-phone">Телефон</label>
+          <input id="feedback-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (999) 000-00-00">
+        </div>
+        <div class="feedback-field feedback-comment">
+          <label for="feedback-comment">Сообщение <span aria-hidden="true">*</span></label>
+          <textarea id="feedback-comment" name="comment" placeholder="Напишите свое сообщение" required></textarea>
+        </div>
+        <label class="feedback-consent">
+          <input name="consent" type="checkbox" required>
+          <span>Я даю согласие на обработку и хранение персональных данных</span>
+        </label>
+        <button class="feedback-submit" type="submit"><span>Отправить</span><span aria-hidden="true">↗</span></button>
+        <p class="feedback-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
   </main>
   <footer class="site-footer full-footer" id="contacts">
     <div class="footer-brand">
@@ -117,7 +145,7 @@
       <div class="footer-social">
         <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
         <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
-        <a href="https://t.me/skicalendar" target="_blank" rel="noopener" aria-label="Telegram-канал ARTA Sport"><img src="assets/images/social/telegram.svg" alt=""></a>
+
       </div>
     </nav>
     <div class="footer-legal">
@@ -125,6 +153,8 @@
       <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
     </div>
   </footer>
-  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/auth-state.js"></script><script src="assets/js/animations.js"></script>
+  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
+  <script src="assets/js/feedback.js"></script>
+<script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
 </body>
 </html>

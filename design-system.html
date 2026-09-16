@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
+  <title>Дизайн-система — ARTA Sport</title>
+  <meta name="description" content="Компоненты, токены и правила интерфейса ARTA Sport.">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/internal.css">
+  <link rel="stylesheet" href="assets/css/ui-kit.css">
+<link rel="stylesheet" href="assets/css/local.css">
+</head>
+<body class="ui-kit-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
+    <nav class="desktop-nav" aria-label="Навигация UI-kit"><a href="index.html">Вернуться на сайт</a><a href="design-system.html">Дизайн-система</a><a href="ui-kit.html">UI kit</a></nav>
+  </header>
+  <main>
+ <section class="ui-kit-hero"><div class="ui-kit-shell"><p>ARTA SPORT / ОСНОВЫ ИНТЕРФЕЙСА</p><h1>Дизайн-система</h1><p>Цвета, типографика, сетки и правила компонентов актуальной статической версии сайта.</p><nav class="kit-links"><a href="ui-kit.html">Открыть UI kit →</a><a href="docs/design-tokens.json" download>Токены JSON ↓</a><a href="docs/DESIGN-SYSTEM.md">Спецификация Markdown →</a></nav></div></section>
+ <div class="ui-kit-shell ui-kit-main">
+  <section class="ui-kit-section"><h2>Визуальный язык</h2><p>Шрифт Inter, тёмный сине-серый текст и оранжевые акценты. Карточки с мягкими углами, тонкой рамкой и компактными отступами. Изображения мероприятий заполняют область обложки, логотипы партнёров отображаются целиком.</p><div class="ui-kit-actions"><a class="ui-button" href="index.html">Посмотреть сайт</a><a class="ui-button secondary" href="ui-kit.html">Компоненты</a></div></section>
+  <section class="ui-kit-section"><h2>Токены из текущего CSS</h2><p>Значения соответствуют последним объявлениям <code>:root</code> в <code>site.css</code>. JSON служит справочником, сайт не загружает его при открытии.</p><div class="kit-table-wrap"><table class="kit-table"><thead><tr><th>CSS-переменная</th><th>Значение</th></tr></thead><tbody><tr><td><code>--bg</code></td><td><code>#f8fafc</code></td></tr><tr><td><code>--ink</code></td><td><code>#2c384e</code></td></tr><tr><td><code>--muted</code></td><td><code>#64748b</code></td></tr><tr><td><code>--line</code></td><td><code>#e2e8f0</code></td></tr><tr><td><code>--orange</code></td><td><code>#EA5424</code></td></tr><tr><td><code>--pink</code></td><td><code>#db2777</code></td></tr><tr><td><code>--blue</code></td><td><code>#2563eb</code></td></tr><tr><td><code>--green</code></td><td><code>#16a34a</code></td></tr><tr><td><code>--card</code></td><td><code>#ffffff</code></td></tr><tr><td><code>--radius</code></td><td><code>18px</code></td></tr><tr><td><code>--shadow</code></td><td><code>0 20px 45px rgba(15, 23, 42, .11)</code></td></tr><tr><td><code>--page-width</code></td><td><code>1400px</code></td></tr><tr><td><code>--page-gutter</code></td><td><code>clamp(18px, 4vw, 40px)</code></td></tr><tr><td><code>--section-space</code></td><td><code>64px</code></td></tr><tr><td><code>--section-space-mobile</code></td><td><code>32px</code></td></tr><tr><td><code>--header-height</code></td><td><code>74px</code></td></tr><tr><td><code>--card-radius</code></td><td><code>18px</code></td></tr><tr><td><code>--card-padding</code></td><td><code>28px</code></td></tr><tr><td><code>--text-size</code></td><td><code>16px</code></td></tr><tr><td><code>--text-size1</code></td><td><code>24px</code></td></tr><tr><td><code>--text-line</code></td><td><code>1.65</code></td></tr></tbody></table></div></section>
+  <section class="ui-kit-section"><h2>Типографика</h2><div class="ui-type-sample ui-type-h1">Спорт объединяет</div><div class="ui-type-sample ui-type-h2">Ближайшие мероприятия</div><div class="ui-type-sample" style="font-size:21px;font-weight:700;line-height:1.2">Тульская гонка преследования</div><p>Основной текст: 16 px, межстрочный интервал 1,65. В карточках мероприятий — 16 px / 1,45; заголовки — 21 px / 1,2. Даты новостей и подписи — 14 px.</p><p>Локальные WOFF2: кириллица и латиница, обычное начертание 400, файлы для диапазонов 500–700 и 800–900. Резервный стек: Arial, sans-serif.</p></section>
+  <section class="ui-kit-section"><h2>Сетка и интервалы</h2><div class="kit-table-wrap"><table class="kit-table"><thead><tr><th>Область</th><th>Правило</th></tr></thead><tbody>
+   <tr><td>Основной контейнер</td><td>До 1400 px; боковые поля clamp(18px, 4vw, 40px)</td></tr>
+   <tr><td>Секции</td><td>Базовый токен 64 px; компактные секции главной на компьютере — 48 px</td></tr>
+   <tr><td>Предложения и новости</td><td>4 колонки от 981 px, 2 от 720 до 980 px, 1 до 719 px</td></tr>
+   <tr><td>Карточка мероприятия</td><td>На компьютере: обложка 180 px, внутренние поля 16 px</td></tr>
+   <tr><td>Место и тип мероприятия</td><td>Без дополнительного промежутка и резервной высоты строки</td></tr>
+   <tr><td>Кабинет</td><td>Карточки стартов, истории и документов в одну колонку; промежутки 16 px, поля 20 px, на телефоне 16 px</td></tr>
+   <tr><td>Партнёры</td><td>Область логотипа 156 px, на телефоне 128 px; подписи 16 px по центру</td></tr>
+  </tbody></table></div></section>
+  <section class="ui-kit-section"><h2>Рамки и поверхности</h2><div class="ui-kit-grid"><div class="kit-surface kit-surface-white"><strong>Новости и логотипы</strong><p>Белый фон, оранжевая рамка 1 px, радиус 18 px.</p></div><div class="kit-surface kit-surface-warm"><strong>Предложения</strong><p>Фон #FFFAF7, оранжевая рамка и компактные поля.</p></div><div class="kit-surface kit-surface-account"><strong>Кабинет</strong><p>Градиент от #FFF7ED к белому, единая оранжевая рамка.</p></div></div></section>
+  <section class="ui-kit-section"><h2>Состояния и доступность</h2><ul><li>Фокус с клавиатуры должен оставаться заметным. Используйте Tab для проверки компонентов в UI kit.</li><li>Ссылки переходят на страницы, кнопки изменяют состояние интерфейса.</li><li>Поля имеют подписи; ошибки обозначаются текстом вместе с aria-invalid.</li><li>Активные вкладки сопровождаются aria-selected или aria-expanded в зависимости от компонента.</li><li>Анимации учитывают prefers-reduced-motion. Карусель партнёров прокручивается пользователем.</li><li>Контент находится в HTML. jQuery управляет только взаимодействиями.</li></ul></section>
+  <section class="ui-kit-section"><h2>Подключение</h2><pre class="kit-code"><code>&lt;link rel="stylesheet" href="assets/css/site.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/internal.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/local.css"&gt;
+&lt;script src="assets/js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/internal.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/interactions.js"&gt;&lt;/script&gt;</code></pre><p>Стили <code>ui-kit.css</code> используются только в справочных страницах. Формы без серверных обработчиков остаются демонстрационными.</p></section>
+ </div></main>
+  <footer class="site-footer full-footer" id="contacts">
+    <div class="footer-brand">
+      <img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport">
+    </div>
+    <nav>
+      <strong>Участникам</strong>
+      <a href="events.html">Мероприятия</a>
+      <a href="registration.html">Регистрация</a>
+      <a href="lk.html">Личный кабинет</a>
+    </nav>
+    <nav>
+      <strong>Компания</strong>
+      <a href="offers.html">Наши предложения</a>
+      <a href="partners.html">Наши партнеры</a>
+      <a href="about.html">О нас</a>
+    </nav>
+    <nav class="footer-contact">
+      <strong>Контакты</strong>
+      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
+      <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+      <p>Москва</p>
+    </nav>
+    <nav class="footer-social-column">
+      <strong>Мы в соцсетях</strong>
+      <div class="footer-social">
+        <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
+        <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
+
+      </div>
+    </nav>
+    <div class="footer-legal">
+      <p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
+      <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
+    </div>
+  </footer>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/internal.js"></script>
+  
+<script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
+</body>
+</html>

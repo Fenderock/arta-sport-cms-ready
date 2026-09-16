@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
   <title>UI-kit и дизайн-система — ARTA Sport</title>
   <meta name="description" content="Компоненты, токены и правила интерфейса ARTA Sport.">
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-800-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/internal.css">
   <link rel="stylesheet" href="assets/css/ui-kit.css">
+<link rel="stylesheet" href="assets/css/local.css">
 </head>
 <body class="ui-kit-page">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
-    <nav class="desktop-nav" aria-label="Навигация UI-kit"><a href="index.html">Вернуться на сайт</a><a href="docs/DESIGN-SYSTEM.md">Спецификация</a></nav>
+    <nav class="desktop-nav" aria-label="Навигация UI-kit"><a href="index.html">Вернуться на сайт</a><a href="design-system.html">Дизайн-система</a><a href="ui-kit.html">UI kit</a></nav>
   </header>
   <main>
     <section class="ui-kit-hero">
@@ -68,9 +67,31 @@
         </div>
       </section>
       <section class="ui-kit-section">
-        <h2>Правила применения</h2>
+        <h2>Правила применения</h2><p><a href="design-system.html">Полная дизайн-система →</a> · <a href="docs/design-tokens.json" download>Токены JSON</a></p>
         <div class="ui-kit-note">Новые страницы подключают общие <strong>site.css</strong> и <strong>internal.css</strong>. Компоненты не получают локальные копии стилей, шапка и подвал используются без расхождений.</div>
       </section>
+<section class="ui-kit-section"><h2>Состояния кнопок и полей</h2><p>Наведение и фокус можно проверить мышью и клавишей Tab.</p><div class="ui-kit-actions"><button class="primary-btn" type="button">Основная</button><button class="ghost-btn" type="button">Вторичная</button><button class="primary-btn" type="button" disabled>Недоступна</button></div><div class="ui-kit-grid kit-space-top"><div class="ui-kit-field"><label for="kit-filled">Заполненное поле</label><input id="kit-filled" value="Ирина"></div><div class="ui-kit-field"><label for="kit-error">Ошибка в email</label><input id="kit-error" type="email" value="mail@" aria-invalid="true" aria-describedby="kit-error-text"><small id="kit-error-text" class="kit-error">Введите адрес целиком, например mail@example.ru.</small></div><div class="ui-kit-field"><label for="kit-disabled">Недоступное поле</label><input id="kit-disabled" value="Недоступно" disabled></div><div class="ui-kit-field"><label for="kit-message">Сообщение</label><textarea id="kit-message" rows="3" placeholder="Напишите свое сообщение"></textarea></div></div><p><label><input type="checkbox"> Согласен на обработку персональных данных</label></p></section>
+<section class="ui-kit-section"><h2>Новость</h2><div class="kit-example-narrow"><article class="news-card" id="kit-news">
+          <img src="assets/images/diz1/imports/1440WLight/6dd98ca0acaa339e158726df226104416d0648b6.png" alt="Участники на финише">
+          <div><span class="news-date-label">Дата публикации</span><time datetime="2026-06-06">06 июня 2026</time><h3><a href="news-317.html">ПОЛУМАРАФОН ЛОСЬ входит в календарь МФЛРД</a></h3><p>Новый лыжероллерный старт пополняет программу межрегионального фестиваля.</p></div>
+        </article></div><p>Дата с подписью, заголовок-ссылка, короткое описание. Одна рамка, без дополнительного выделения при переходе по якорю.</p></section>
+<section class="ui-kit-section"><h2>Компоненты личного кабинета</h2><div class="lk-page"><div class="document-grid"><article class="document-card">
+            <span class="doc-icon">PDF</span>
+            <div><h3>Страховка GoProtect</h3><p id="kit-insurance">goprotect_vasilev_2026.pdf · действует до 20.12.2026</p></div>
+            <label class="upload-btn">Загрузить<input type="file" id="kit-insurance-upload" accept=".pdf,.jpg,.jpeg,.png"></label>
+          </article></div><div id="ratings" class="kit-space-top"><div class="result-list"><article class="result-event">
+          <h3><a class="account-event-link" href="event-e6.html">Siberian Frost Run</a></h3>
+          <p class="event-subtitle">1 марта 2026 г. · Новосибирская область, Михайловская набережная</p>
+        </article></div></div><div class="empty-state kit-space-top">У вас пока нет активных промокодов.</div></div></section>
+<section class="ui-kit-section"><h2>Навигация и раскрывающиеся блоки</h2><nav class="breadcrumbs" aria-label="Пример навигационной цепочки"><a href="index.html">Главная</a><span aria-hidden="true">→</span><a href="news.html">Новости</a><span aria-current="page">Полумарафон «Лось»</span></nav><details class="kit-details"><summary>Правила использования компонентов</summary><p>Используйте классы из общих стилей. Содержимое компонентов хранится в HTML, состояние меняется обработчиками jQuery.</p></details></section>
+<section class="ui-kit-section"><h2>Карта компонентов</h2><div class="kit-table-wrap"><table class="kit-table"><thead><tr><th>Компонент</th><th>Класс</th><th>Живой пример</th></tr></thead><tbody>
+<tr><td>Мероприятие</td><td><code>.event-card</code></td><td><a href="events.html">Каталог</a></td></tr>
+<tr><td>Новость</td><td><code>.news-card</code></td><td><a href="news.html">Новости</a></td></tr>
+<tr><td>Предложение</td><td><code>.offer-card</code></td><td><a href="offers.html">Предложения</a></td></tr>
+<tr><td>Партнёр</td><td><code>.partner-directory-card</code></td><td><a href="partners.html">Партнёры</a></td></tr>
+<tr><td>Обратная связь</td><td><code>.feedback-form</code></td><td><a href="contacts.html#feedback">Контакты</a></td></tr>
+<tr><td>Документы, старты, результаты</td><td><code>.document-card, .mini-panel, .result-event</code></td><td><a href="lk.html">Кабинет</a></td></tr>
+</tbody></table></div></section>
     </div>
   </main>
   <footer class="site-footer full-footer" id="contacts">
@@ -100,7 +121,7 @@
       <div class="footer-social">
         <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
         <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
-        <a href="https://t.me/skicalendar" target="_blank" rel="noopener" aria-label="Telegram-канал ARTA Sport"><img src="assets/images/social/telegram.svg" alt=""></a>
+
       </div>
     </nav>
     <div class="footer-legal">
@@ -110,6 +131,7 @@
   </footer>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/internal.js"></script>
-  <script src="assets/js/auth-state.js"></script>
+  
+<script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
 </body>
 </html>

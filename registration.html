@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
   <title>Регистрация и вход — ARTA Sport</title>
   <meta name="description" content="Создание аккаунта участника и вход в личный кабинет ARTA Sport.">
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-800-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/inter/inter-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css"><link rel="stylesheet" href="assets/css/internal.css">
+<link rel="stylesheet" href="assets/css/local.css">
 </head>
 <body class="inner-page auth-page">
   <header class="site-header">
@@ -19,7 +18,7 @@
     <nav class="desktop-nav">
       <div class="nav-dropdown events-nav-dropdown">
         <a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Мероприятия</a>
-        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="index.html#news" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
+        <div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="news.html" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div>
       </div>
       <div class="nav-dropdown">
         <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
@@ -46,7 +45,7 @@
       </form>
     </div>
     <a href="index.html">Главная</a>
-    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="index.html#news">Новости</a><a href="event.html">МФЛРД</a></div></div>
+    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="news.html">Новости</a><a href="event.html">МФЛРД</a></div></div>
     <div class="mobile-item mobile-has-sub">
       <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
       <div class="mobile-submenu">
@@ -65,7 +64,6 @@
         <div class="js-auth-panel" data-panel="register"><div class="auth-heading"><h2>Новый участник</h2></div><form class="ui-form js-demo-form"><label>Имя<input type="text" required></label><label>Фамилия<input type="text" required></label><label>Email<input type="email" required></label><label>Телефон<input type="tel" required></label><label>Пароль<input type="password" required></label><label class="auth-check"><input type="checkbox" required><span>Согласен на обработку данных</span></label><button class="ui-button" type="submit">Создать аккаунт</button><p class="form-success is-hidden">Аккаунт создан. <a href="lk.html">Перейти в кабинет →</a></p></form></div>
           <div class="js-auth-panel is-hidden" data-panel="login"><div class="auth-heading"><h2>С возвращением</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><label>Пароль<input type="password" required></label><button class="js-reset-link" type="button">Забыли пароль?</button><button class="ui-button" type="submit">Войти</button><p class="form-success is-hidden"><a href="lk.html">Перейти в личный кабинет →</a></p></form></div>
         <div class="js-auth-panel is-hidden" data-panel="reset"><div class="auth-heading"><h2>Восстановление доступа</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><button class="ui-button" type="submit">Отправить ссылку</button><button class="js-login-link" type="button">Вернуться ко входу</button><p class="form-success is-hidden">Инструкция отправлена на указанный email.</p></form></div>
-          <div class="js-auth-panel is-hidden" data-panel="reset"><div class="auth-heading"><h2>Восстановление доступа</h2></div><form class="ui-form js-demo-form"><label>Email<input type="email" required></label><button class="ui-button" type="submit">Отправить ссылку</button><button class="js-login-link" type="button">Вернуться ко входу</button><p class="form-success is-hidden">Инструкция отправлена на указанный email.</p></form></div>
       </div>
     </section>
   </main>
@@ -96,7 +94,7 @@
       <div class="footer-social">
         <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
         <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
-        <a href="https://t.me/skicalendar" target="_blank" rel="noopener" aria-label="Telegram-канал ARTA Sport"><img src="assets/images/social/telegram.svg" alt=""></a>
+
       </div>
     </nav>
     <div class="footer-legal">
@@ -104,6 +102,7 @@
       <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
     </div>
   </footer>
-  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/auth-state.js"></script><script src="assets/js/animations.js"></script>
+  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
+<script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
 </body>
 </html>
