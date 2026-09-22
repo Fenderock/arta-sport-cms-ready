@@ -18,7 +18,7 @@ $(function () {
   });
   $('[data-open-modal="account"]').on('click',function(){window.location.href='lk.html';});
   $('[data-open-modal="video"]').on('click',function(){notice('Видео пока не добавлено.');});
-  $('[data-open-modal="result"]').on('click',function(){window.location.href='lk.html#ratings';});
+  $('[data-open-modal="result"]').on('click',function(){window.location.href=$(this).closest('.event-card').attr('data-event-href')||'event.html';});
   $('.js-demo-form').on('submit', function () {
     if($(this).closest('[data-panel="reset"]').length) {
       $(this).find('.form-success').text('Локальная демонстрация: письмо не отправляется.');
@@ -127,21 +127,16 @@ $(function () {
     $('#payBtn').text('Оплатить '+money(base+ageDiscount+dateFee+promo)).prop('disabled',!($('#offerAgree').prop('checked')&&$('#policyAgree').prop('checked')));
   }
   $('#regEvent,#regPerson,#regPromo,#offerAgree,#policyAgree').on('input change',updatePrice);updatePrice();
-  $(document).on('click','.js-register,.js-register-child',function(){
+  $(document).on('click','.js-register',function(){
     openDrawer('registration');if($(this).attr('data-event'))$('#regEvent').val($(this).attr('data-event'));$('#regPerson').val($(this).attr('data-child')||'self');updatePrice();
   });
   $(document).on('click','.js-transfer',function(){$('#transferEventName').text($(this).closest('.event-row').find('.event-title').text());openDrawer('transfer');});
-  $(document).on('click','.js-transfer-history',function(){$('#historyChildName').text($(this).closest('.family-item').find('h3').text());openDrawer('history');});
-  $('#insuranceUpload').on('change',function(){if(this.files[0]){$('#insuranceFile').text(this.files[0].name+' · выбран локально');notice('Файл выбран. Для загрузки на сервер необходимо подключить обработчик.');}});
+  $('#insuranceUpload,#medicalUpload').on('change',function(){if(this.files[0]){$(this.id==='insuranceUpload'?'#insuranceFile':'#medicalFile').text(this.files[0].name+' · выбран локально');notice('Файл выбран. Для загрузки на сервер необходимо подключить обработчик.');}});
   $('[data-order-document]').on('click',function(){notice('Документ не включён в демонстрационные данные.');});
   $('#drawer form').on('submit',function(event){
     event.preventDefault();if(!this.reportValidity())return;
-    if(this.id==='dependentForm'){
-      var name=$(this).find('[type="text"]').val(),age=$(this).find('[type="number"]').val(),id='local-child-'+Date.now();
-      var node=document.getElementById('familyMemberTemplate').content.firstElementChild.cloneNode(true);
-      $(node).find('h3').text(name);$(node).find('.family-person p').text(age+' лет');$(node).find('button').attr('data-child',id);document.getElementById('dependentList').appendChild(node);
-      var option=document.querySelector('#regPerson option').cloneNode(true);option.value=id;option.textContent=name;option.dataset.age=age;document.getElementById('regPerson').appendChild(option);
-      closeDrawer();notice('Профиль добавлен для просмотра. Изменения действуют до перезагрузки страницы.');return;
+    if(this.id==='profileDrawerForm'){
+      ['region','city','birth','club'].forEach(function(key){var v=$('#profileDrawerForm [name="'+key+'"]').val();$('[data-profile="'+key+'"]').text(key==='birth'&&v?v.split('-').reverse().join('.'):v||'Не указан');});
     }
     if(this.id==='passwordDrawerForm'){
       var inputs=$(this).find('input');if(inputs.eq(1).val()!==inputs.eq(2).val()){notice('Новые пароли не совпадают.');return;}

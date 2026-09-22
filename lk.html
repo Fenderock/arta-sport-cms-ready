@@ -1,494 +1,353 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
-  <title>Личный кабинет ARTA Sport</title>
-  <link rel="stylesheet" href="assets/css/site.css">
-<link rel="stylesheet" href="assets/css/local.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="assets/images/diz1/logo-mark-mobile.png" rel="icon" type="image/png"/>
+<title>Личный кабинет ARTA Sport</title>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<link href="assets/css/local.css" rel="stylesheet"/>
 </head>
 <body class="lk-page">
-  <header class="mobile-header">
-    <a class="brand" href="index.html" aria-label="ARTA Sport">
-      <img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport">
-    </a>
-    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
-    <button class="menu-btn" type="button" aria-label="Открыть меню">☰</button>
-  </header>
-
-  
+<header class="mobile-header">
+<a aria-label="ARTA Sport" class="brand" href="index.html">
+<img alt="Arta Sport" class="logo-img" src="assets/images/diz1/logo_1.png"/>
+</a>
+<a aria-label="Позвонить в ARTA Sport" class="header-phone" href="tel:+79166363710">+7 (916) 636-37-10</a>
+<button aria-label="Открыть меню" class="menu-btn" type="button">☰</button>
+</header>
 <div class="account-shell">
-    <aside class="sidebar" aria-label="Разделы личного кабинета">
-      <a class="side-logo" href="index.html">
-        <img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport">
-        <span>кабинет атлета</span>
-      </a>
-
-      <nav class="side-nav">
-        <button class="side-link is-active" type="button" data-view="profile"><span class="nav-ico">P</span><span>Профиль</span></button>
-        <button class="side-link" type="button" data-view="registrations"><span class="nav-ico">REG</span><span>Мои регистрации</span></button>
-        <button class="side-link" type="button" data-view="orders"><span class="nav-ico">PAY</span><span>Мои заказы</span></button>
-        <button class="side-link" type="button" data-view="documents"><span class="nav-ico">DOC</span><span>Документы</span></button>
-        <button class="side-link" type="button" data-view="ratings"><span class="nav-ico">TOP</span><span>Результаты</span></button>
-        <button class="side-link" type="button" data-view="family"><span class="nav-ico">FAM</span><span>Семья</span></button>
-        <button class="side-link" type="button" data-view="promocodes"><span class="nav-ico">%</span><span>Мои промокоды</span></button>
-        <button class="side-link is-temporarily-hidden" type="button" data-view="championships"><span class="nav-ico">CUP</span><span>Мои чемпионаты</span></button>
-        <button class="side-link is-temporarily-hidden" type="button" data-view="teams"><span class="nav-ico">TM</span><span>Команды</span></button>
-        <button class="side-link is-temporarily-hidden" type="button" data-view="clubs"><span class="nav-ico">CLB</span><span>Мои клубы</span></button>
-        <button class="side-link is-temporarily-hidden" type="button" data-view="training"><span class="nav-ico">TRN</span><span>Тренировки</span></button>
-      </nav>
-
-      <div class="side-footer">
-        <a class="side-link muted" href="index.html"><span class="nav-ico">←</span><span>На сайт</span></a>
-      </div>
-    </aside>
-
-    <main class="account-card">
-      <a class="back-home" href="index.html">← На главную страницу</a>
-
-      <section class="view is-visible" id="profile" data-view-panel="profile">
-
-        <div class="section-head">
-          <div><h2>Мой профиль</h2></div>
-        </div>
-
-        <article class="profile-summary">
-          <div class="avatar">ВД</div>
-          <div class="profile-text">
-            <h2>Васильев Дмитрий Сергеевич</h2>
-            <p>Мужчина · 49 лет · fendervik@gmail.com</p>
-          </div>
-          <div class="profile-summary-actions" aria-label="Настройки профиля">
-            <button class="ghost-btn" type="button" data-open-drawer="profile">Изменить профиль</button>
-            <button class="ghost-btn" type="button" data-open-drawer="password">Смена пароля</button>
-          </div>
-        </article>
-
-        <section class="metrics-grid is-temporarily-hidden">
-          <article class="metric-link" data-my-registrations role="button" tabindex="0"><strong id="futureStartsCount">2</strong><span>будущих старта</span></article>
-          <article><strong>2</strong><span>детских профиля</span></article>
-          <article class="metric-action metric-link" data-potential-registrations role="button" tabindex="0">
-            <strong>Ваши потенциальные старты</strong>
-            <span>Подберите новое мероприятие</span>
-            <button class="primary-btn" type="button" data-open-drawer="registration">Новая регистрация</button>
-          </article>
-        </section>
+<aside aria-label="Разделы личного кабинета" class="sidebar">
+<a class="side-logo" href="index.html">
+<img alt="Arta Sport" class="logo-img" src="assets/images/diz1/logo_1.png"/>
+<span>кабинет атлета</span>
+</a>
+<nav class="side-nav">
+<button class="side-link is-active" data-view="profile" type="button"><span class="nav-ico">P</span><span>Профиль</span></button>
+<button class="side-link" data-view="registrations" type="button"><span class="nav-ico">REG</span><span>Мои старты</span></button>
+<button class="side-link" data-view="orders" type="button"><span class="nav-ico">PAY</span><span>Мои заказы</span></button>
 
 
-        <section class="dashboard-grid">
-          <article class="mini-panel">
-            <div class="panel-head">
-              <h3>Мои будущие старты</h3>
-              <button class="text-btn" type="button" data-my-registrations>Все</button>
-            </div>
-            <div id="futureStarts">
-      <div class="start-item">
-        <strong>ARTA City Run 10K</strong>
-        <p>17 сентября 2026 г. · Москва, Лужники</p>
-        <button class="ghost-btn" type="button" data-my-registrations>Открыть в моих регистрациях</button>
-      </div>
-    </div>
-          </article>
-          <article class="mini-panel">
-            <div class="panel-head">
-              <h3>История участий</h3>
-              <button class="text-btn" type="button" data-view-target="ratings">Результаты</button>
-            </div>
-            <div id="pastStarts">
-      <div class="start-item">
-        <strong><a class="account-event-link" href="event-e5.html">Karelia Ski Sprint</a></strong>
-        <p>15 февраля 2026 г. · Карелия, Петрозаводск</p>
-      </div>
-    
-      <div class="start-item">
-        <strong><a class="account-event-link" href="event-e6.html">Siberian Frost Run</a></strong>
-        <p>1 марта 2026 г. · Новосибирская область, Михайловская набережная</p>
-      </div>
-    </div>
-          </article>
-        </section>
-      </section>
 
-      <section class="view" id="documents" data-view-panel="documents">
-        <div class="section-head">
-          <div><h2>Документы</h2></div>
-        </div>
-        <div class="document-grid">
-          <article class="document-card">
-            <span class="doc-icon">PDF</span>
-            <div><h3>Страховка GoProtect</h3><p id="insuranceFile">goprotect_vasilev_2026.pdf · действует до 20.12.2026</p></div>
-            <label class="upload-btn">Загрузить<input type="file" id="insuranceUpload" accept=".pdf,.jpg,.jpeg,.png"></label>
-          </article>
-          <article class="document-card">
-            <span class="doc-icon">MED</span>
-            <div><h3>Медицинская справка</h3><p>Не загружена. Понадобится для дистанций от 21 км.</p></div>
-            <button class="ghost-btn" type="button">Добавить</button>
-          </article>
-        </div>
-      </section>
+<button class="side-link" data-view="promocodes" type="button"><span class="nav-ico">%</span><span>Мои промокоды</span></button>
+<button class="side-link is-temporarily-hidden" data-view="championships" type="button"><span class="nav-ico">CUP</span><span>Мои чемпионаты</span></button>
+<button class="side-link is-temporarily-hidden" data-view="teams" type="button"><span class="nav-ico">TM</span><span>Команды</span></button>
+<button class="side-link is-temporarily-hidden" data-view="clubs" type="button"><span class="nav-ico">CLB</span><span>Мои клубы</span></button>
+<button class="side-link is-temporarily-hidden" data-view="training" type="button"><span class="nav-ico">TRN</span><span>Тренировки</span></button>
+</nav>
+<div class="side-footer">
+<a class="side-link muted" href="index.html"><span class="nav-ico">←</span><span>На сайт</span></a>
+</div>
+</aside>
+<main class="account-card">
+<a class="back-home" href="index.html">← На главную страницу</a>
+<section class="view is-visible" data-view-panel="profile" id="profile">
+<div class="section-head">
+<div><h2>Мой профиль</h2></div>
+</div>
+<article class="profile-summary">
+<div class="avatar">ВД</div>
+<div class="profile-text">
+<h2>Васильев Дмитрий Сергеевич</h2>
+<p>Мужчина · 49 лет · fendervik@gmail.com</p>
+</div>
+<div aria-label="Настройки профиля" class="profile-summary-actions">
+<button class="ghost-btn" data-open-drawer="profile" type="button">Изменить профиль</button>
+<button class="ghost-btn" data-open-drawer="password" type="button">Смена пароля</button>
+</div>
+<dl class="profile-details"><div><dt>Регион</dt><dd data-profile="region">Не указан</dd></div><div><dt>Город</dt><dd data-profile="city">Москва</dd></div><div><dt>Дата рождения</dt><dd data-profile="birth">12.04.1977</dd></div><div><dt>Клуб / команда</dt><dd data-profile="club">Не указан</dd></div></dl>
+</article>
 
-      <section class="view" id="registrations" data-view-panel="registrations">
-        <div class="section-head">
-          <div><h2>Мои регистрации</h2></div>
-          <a class="primary-btn" href="events.html?status=upcoming">Предстоящие мероприятия</a>
-        </div>
-        <form class="filters" id="eventFilters">
-          <label>Вид спорта<select id="sportFilter"><option value="all">Все</option><option value="run">Бег</option><option value="ski">Лыжи</option><option value="bike">Велоспорт</option></select></label>
-          <label>Регион<select id="regionFilter"><option value="all">Все регионы</option><option>Москва</option><option>Санкт-Петербург</option><option>Московская область</option><option>Ленинградская область</option><option>Краснодарский край</option><option>Татарстан</option><option>Свердловская область</option><option>Новосибирская область</option><option>Нижегородская область</option><option>Самарская область</option><option>Ростовская область</option><option>Пермский край</option><option>Башкортостан</option><option>Красноярский край</option><option>Вологодская область</option><option>Калининградская область</option><option>Карелия</option><option>Алтайский край</option></select></label>
-          <label>Статус<select id="statusFilter"><option value="upcoming">Предстоящие</option><option value="past">Прошедшие</option><option value="all">Все</option></select></label>
-        </form>
-        <div class="calendar-list" id="calendarList"><section class="month-group"><div class="month-title">Сентябрь 2026</div>
-      <article class="event-row" data-id="e1" data-sport="run" data-region="Москва" data-status="upcoming" data-paid="true">
-        <div class="event-main">
-          <span class="sport-icon run">RUN</span>
-          <div>
-            <h3 class="event-title">ARTA City Run 10K</h3>
-            <p class="event-subtitle">17 сентября 2026 г. · Москва, Лужники</p>
-            <div class="meta-row">
-              <span class="pill">Бег</span>
-            </div>
-          </div>
-        </div>
-        <div class="event-actions">
-          <div class="timer"><small>До старта</small><strong data-countdown="2026-09-17T09:00:00" data-event-status="upcoming">0 дн 17:03:51</strong></div>
-          <button class="ghost-btn js-transfer" type="button" data-event="e1">Передать слот</button>
-        </div>
-      </article>
-    
-      <article class="event-row" data-id="e2" data-sport="ski" data-region="Вологодская область" data-status="upcoming" data-paid="false">
-        <div class="event-main">
-          <span class="sport-icon ski">SKI</span>
-          <div>
-            <h3 class="event-title">Vologda Ski Classic</h3>
-            <p class="event-subtitle">24 сентября 2026 г. · Вологодская область, Кирики-Улита</p>
-            <div class="meta-row">
-              <span class="pill">Лыжи</span>
-            </div>
-          </div>
-        </div>
-        <div class="event-actions">
-          <div class="timer"><small>До старта</small><strong data-countdown="2026-09-24T10:30:00" data-event-status="upcoming">7 дн 18:33:51</strong></div>
-          <button class="primary-btn js-register" type="button" data-event="e2">Зарегистрироваться</button>
-        </div>
-      </article>
-    </section><section class="month-group"><div class="month-title">Октябрь 2026</div>
-      <article class="event-row" data-id="e3" data-sport="bike" data-region="Санкт-Петербург" data-status="upcoming" data-paid="true">
-        <div class="event-main">
-          <span class="sport-icon bike">BIKE</span>
-          <div>
-            <h3 class="event-title">Northern Bike Gran Fondo</h3>
-            <p class="event-subtitle">7 октября 2026 г. · Санкт-Петербург, Приморский маршрут</p>
-            <div class="meta-row">
-              <span class="pill">Велоспорт</span>
-            </div>
-          </div>
-        </div>
-        <div class="event-actions">
-          <div class="timer"><small>До старта</small><strong data-countdown="2026-10-07T08:00:00" data-event-status="upcoming">20 дн 16:03:51</strong></div>
-          <button class="ghost-btn js-transfer" type="button" data-event="e3">Передать слот</button>
-        </div>
-      </article>
-    
-      <article class="event-row" data-id="e4" data-sport="run" data-region="Татарстан" data-status="upcoming" data-paid="false">
-        <div class="event-main">
-          <span class="sport-icon run">RUN</span>
-          <div>
-            <h3 class="event-title">Kazan Night Half Marathon</h3>
-            <p class="event-subtitle">20 октября 2026 г. · Татарстан, Кремлевская набережная</p>
-            <div class="meta-row">
-              <span class="pill">Бег</span>
-            </div>
-          </div>
-        </div>
-        <div class="event-actions">
-          <div class="timer"><small>До старта</small><strong data-countdown="2026-10-20T21:00:00" data-event-status="upcoming">34 дн 05:03:51</strong></div>
-          <button class="primary-btn js-register" type="button" data-event="e4">Зарегистрироваться</button>
-        </div>
-      </article>
-    </section><section class="month-group"><div class="month-title">Февраль 2026</div>
-      <article class="event-row" data-id="e5" data-sport="ski" data-region="Карелия" data-status="past" data-paid="true">
-        <div class="event-main">
-          <span class="sport-icon ski">SKI</span>
-          <div>
-            <h3 class="event-title">Karelia Ski Sprint</h3>
-            <p class="event-subtitle">15 февраля 2026 г. · Карелия, Петрозаводск</p>
-            <div class="meta-row">
-              <span class="pill">Лыжи</span>
-            </div>
-          </div>
-        </div>
-        <div class="event-actions">
-          <div class="timer"><small>Статус</small><strong data-countdown="2026-02-15T11:00:00" data-event-status="past">Старт прошел</strong></div>
-          <button class="ghost-btn" type="button" data-view-target="ratings">Результат</button>
-        </div>
-      </article>
-    </section><section class="month-group"><div class="month-title">Март 2026</div>
-      <article class="event-row" data-id="e6" data-sport="run" data-region="Новосибирская область" data-status="past" data-paid="true">
-        <div class="event-main">
-          <span class="sport-icon run">RUN</span>
-          <div>
-            <h3 class="event-title">Siberian Frost Run</h3>
-            <p class="event-subtitle">1 марта 2026 г. · Новосибирская область, Михайловская набережная</p>
-            <div class="meta-row">
-              <span class="pill">Бег</span>
-            </div>
-          </div>
-        </div>
-        <div class="event-actions">
-          <div class="timer"><small>Статус</small><strong data-countdown="2026-03-01T10:00:00" data-event-status="past">Старт прошел</strong></div>
-          <button class="ghost-btn" type="button" data-view-target="ratings">Результат</button>
-        </div>
-      </article>
-    </section><div class="empty-state calendar-empty" hidden>По выбранным фильтрам мероприятий нет.</div></div>
-      </section>
 
-      <section class="view" id="orders" data-view-panel="orders">
-        <div class="section-head"><div><h2>Мои заказы</h2></div></div>
-        <div class="order-list" id="ordersList">
-      <section class="order-month">
-        <h2 class="order-month-title">Август 2026</h2>
-        <div class="order-month-list">
-          
-            <article class="order-item order-item--purchase">
-              <div class="order-main">
-                <span class="order-kind">Приобретен слот</span>
-                <h3>ARTA City Run 10K</h3>
-                <p class="event-subtitle">18 августа 2026 г. · Приобретен слот · 10 км</p>
-              </div>
-              <div class="order-details">
-                <strong class="order-amount">2 600 ₽</strong>
-                <button class="order-document" type="button" data-order-document="Чек № 18426">Чек № 18426</button>
-              </div>
-            </article>
-          
-        </div>
-      </section>
-    
-      <section class="order-month">
-        <h2 class="order-month-title">Июль 2026</h2>
-        <div class="order-month-list">
-          
-            <article class="order-item order-item--transfer">
-              <div class="order-main">
-                <span class="order-kind">Передан слот</span>
-                <h3>Northern Bike Gran Fondo</h3>
-                <p class="event-subtitle">29 июля 2026 г. · Слот передан участнику Анне Васильевой</p>
-              </div>
-              <div class="order-details">
-                
-                <span class="order-note">Без денежной операции</span>
-              </div>
-            </article>
-          
-        </div>
-      </section>
-    
-      <section class="order-month">
-        <h2 class="order-month-title">Июнь 2026</h2>
-        <div class="order-month-list">
-          
-            <article class="order-item order-item--refund">
-              <div class="order-main">
-                <span class="order-kind">Возврат средств</span>
-                <h3>Vologda Ski Classic</h3>
-                <p class="event-subtitle">12 июня 2026 г. · Возврат после отмены мероприятия</p>
-              </div>
-              <div class="order-details">
-                <strong class="order-amount">+2 100 ₽</strong>
-                <button class="order-document" type="button" data-order-document="Документ о возврате">Документ о возврате</button>
-              </div>
-            </article>
-          
-        </div>
-      </section>
-    
-      <section class="order-month">
-        <h2 class="order-month-title">Май 2026</h2>
-        <div class="order-month-list">
-          
-            <article class="order-item order-item--purchase">
-              <div class="order-main">
-                <span class="order-kind">Приобретен слот</span>
-                <h3>Karelia Ski Sprint</h3>
-                <p class="event-subtitle">3 мая 2026 г. · Приобретен слот · лыжная гонка</p>
-              </div>
-              <div class="order-details">
-                <strong class="order-amount">1 800 ₽</strong>
-                <button class="order-document" type="button" data-order-document="Чек № 15608">Чек № 15608</button>
-              </div>
-            </article>
-          
-        </div>
-      </section>
-    </div>
-      </section>
+<div class="document-grid">
+<article class="document-card">
+<span class="doc-icon">PDF</span>
+<div><h3>Страховка GoProtect</h3><p id="insuranceFile">goprotect_vasilev_2026.pdf · действует до 20.12.2026</p></div>
+<label class="upload-btn">Загрузить<input accept=".pdf,.jpg,.jpeg,.png" id="insuranceUpload" type="file"/></label>
+</article>
+<article class="document-card">
+<span class="doc-icon">MED</span>
+<div><h3>Медицинская справка</h3><p id="medicalFile">Не загружена. Понадобится для дистанций от 21 км.</p></div>
+<label class="upload-btn">Добавить<input accept=".pdf,.jpg,.jpeg,.png" id="medicalUpload" type="file"/></label>
+</article>
+</div></section>
 
-      <section class="view" id="ratings" data-view-panel="ratings">
-        <div class="section-head"><div><h2>Мои результаты</h2></div></div>
-        <div class="result-list" id="resultList">
-        <article class="result-event">
-          <h3><a class="account-event-link" href="event-e6.html">Siberian Frost Run</a></h3>
-          <p class="event-subtitle">1 марта 2026 г. · Новосибирская область, Михайловская набережная</p>
-        </article>
-      
-        <article class="result-event">
-          <h3><a class="account-event-link" href="event-e5.html">Karelia Ski Sprint</a></h3>
-          <p class="event-subtitle">15 февраля 2026 г. · Карелия, Петрозаводск</p>
-        </article>
-      </div>
-      </section>
+<section class="view" data-view-panel="registrations" id="registrations">
+<div class="section-head">
+<div><h2>Мои старты</h2></div>
+<a class="primary-btn" href="events.html?status=upcoming">Предстоящие мероприятия</a>
+</div>
+<form class="filters" id="eventFilters">
+<label>Вид спорта<select id="sportFilter"><option value="all">Все</option><option value="run">Бег</option><option value="ski">Лыжи</option><option value="bike">Велоспорт</option></select></label>
+<label>Регион<select id="regionFilter"><option value="all">Все регионы</option><option>Москва</option><option>Санкт-Петербург</option><option>Московская область</option><option>Ленинградская область</option><option>Краснодарский край</option><option>Татарстан</option><option>Свердловская область</option><option>Новосибирская область</option><option>Нижегородская область</option><option>Самарская область</option><option>Ростовская область</option><option>Пермский край</option><option>Башкортостан</option><option>Красноярский край</option><option>Вологодская область</option><option>Калининградская область</option><option>Карелия</option><option>Алтайский край</option></select></label>
+<label>Статус<select id="statusFilter"><option value="upcoming">Предстоящие</option><option value="past">Прошедшие</option><option value="all">Все</option></select></label>
+</form>
+<div class="calendar-list" id="calendarList"><section class="month-group"><div class="month-title">Сентябрь 2026</div>
+<article class="event-row" data-id="e1" data-paid="true" data-region="Москва" data-sport="run" data-status="upcoming">
+<div class="event-main">
+<span class="sport-icon run">RUN</span>
+<div>
+<h3 class="event-title">ARTA City Run 10K</h3>
+<p class="event-subtitle">17 сентября 2026 г. · Москва, Лужники</p>
+<div class="meta-row">
+<span class="pill">Бег</span>
+</div>
+</div>
+</div>
+<div class="event-actions">
+<div class="timer"><small>До старта</small><strong data-countdown="2026-09-17T09:00:00" data-event-status="upcoming">0 дн 17:03:51</strong></div>
+<button class="ghost-btn js-transfer" data-event="e1" type="button">Передать слот</button>
+</div>
+</article>
+<article class="event-row" data-id="e2" data-paid="false" data-region="Вологодская область" data-sport="ski" data-status="upcoming">
+<div class="event-main">
+<span class="sport-icon ski">SKI</span>
+<div>
+<h3 class="event-title">Vologda Ski Classic</h3>
+<p class="event-subtitle">24 сентября 2026 г. · Вологодская область, Кирики-Улита</p>
+<div class="meta-row">
+<span class="pill">Лыжи</span>
+</div>
+</div>
+</div>
+<div class="event-actions">
+<div class="timer"><small>До старта</small><strong data-countdown="2026-09-24T10:30:00" data-event-status="upcoming">7 дн 18:33:51</strong></div>
+<button class="primary-btn js-register" data-event="e2" type="button">Зарегистрироваться</button>
+</div>
+</article>
+</section><section class="month-group"><div class="month-title">Октябрь 2026</div>
+<article class="event-row" data-id="e3" data-paid="true" data-region="Санкт-Петербург" data-sport="bike" data-status="upcoming">
+<div class="event-main">
+<span class="sport-icon bike">BIKE</span>
+<div>
+<h3 class="event-title">Northern Bike Gran Fondo</h3>
+<p class="event-subtitle">7 октября 2026 г. · Санкт-Петербург, Приморский маршрут</p>
+<div class="meta-row">
+<span class="pill">Велоспорт</span>
+</div>
+</div>
+</div>
+<div class="event-actions">
+<div class="timer"><small>До старта</small><strong data-countdown="2026-10-07T08:00:00" data-event-status="upcoming">20 дн 16:03:51</strong></div>
+<button class="ghost-btn js-transfer" data-event="e3" type="button">Передать слот</button>
+</div>
+</article>
+<article class="event-row" data-id="e4" data-paid="false" data-region="Татарстан" data-sport="run" data-status="upcoming">
+<div class="event-main">
+<span class="sport-icon run">RUN</span>
+<div>
+<h3 class="event-title">Kazan Night Half Marathon</h3>
+<p class="event-subtitle">20 октября 2026 г. · Татарстан, Кремлевская набережная</p>
+<div class="meta-row">
+<span class="pill">Бег</span>
+</div>
+</div>
+</div>
+<div class="event-actions">
+<div class="timer"><small>До старта</small><strong data-countdown="2026-10-20T21:00:00" data-event-status="upcoming">34 дн 05:03:51</strong></div>
+<button class="primary-btn js-register" data-event="e4" type="button">Зарегистрироваться</button>
+</div>
+</article>
+</section><section class="month-group"><div class="month-title">Февраль 2026</div>
+<article class="event-row" data-id="e5" data-paid="true" data-region="Карелия" data-sport="ski" data-status="past">
+<div class="event-main">
+<span class="sport-icon ski">SKI</span>
+<div>
+<h3 class="event-title">Karelia Ski Sprint</h3>
+<p class="event-subtitle">15 февраля 2026 г. · Карелия, Петрозаводск</p>
+<div class="meta-row">
+<span class="pill">Лыжи</span>
+</div>
+</div>
+</div>
+<div class="event-actions">
+<div class="timer"><small>Статус</small><strong data-countdown="2026-02-15T11:00:00" data-event-status="past">Старт прошел</strong></div>
+<a class="ghost-btn" href="event-e5.html">Результат</a>
+</div>
+</article>
+</section><section class="month-group"><div class="month-title">Март 2026</div>
+<article class="event-row" data-id="e6" data-paid="true" data-region="Новосибирская область" data-sport="run" data-status="past">
+<div class="event-main">
+<span class="sport-icon run">RUN</span>
+<div>
+<h3 class="event-title">Siberian Frost Run</h3>
+<p class="event-subtitle">1 марта 2026 г. · Новосибирская область, Михайловская набережная</p>
+<div class="meta-row">
+<span class="pill">Бег</span>
+</div>
+</div>
+</div>
+<div class="event-actions">
+<div class="timer"><small>Статус</small><strong data-countdown="2026-03-01T10:00:00" data-event-status="past">Старт прошел</strong></div>
+<a class="ghost-btn" href="event-e6.html">Результат</a>
+</div>
+</article>
+</section><div class="empty-state calendar-empty" hidden="">По выбранным фильтрам мероприятий нет.</div></div>
+</section>
+<section class="view" data-view-panel="orders" id="orders">
+<div class="section-head"><div><h2>Мои заказы</h2></div></div>
+<div class="order-list" id="ordersList">
+<section class="order-month">
+<h2 class="order-month-title">Август 2026</h2>
+<div class="order-month-list">
+<article class="order-item order-item--purchase">
+<div class="order-main">
+<span class="order-kind">Приобретен слот</span>
+<h3>ARTA City Run 10K</h3>
+<p class="event-subtitle">18 августа 2026 г. · Приобретен слот · 10 км</p>
+</div>
+<div class="order-details">
+<strong class="order-amount">2 600 ₽</strong>
+<button class="order-document" data-order-document="Чек № 18426" type="button">Чек № 18426</button>
+</div>
+</article>
+</div>
+</section>
+<section class="order-month">
+<h2 class="order-month-title">Июль 2026</h2>
+<div class="order-month-list">
+<article class="order-item order-item--transfer">
+<div class="order-main">
+<span class="order-kind">Передан слот</span>
+<h3>Northern Bike Gran Fondo</h3>
+<p class="event-subtitle">29 июля 2026 г. · Слот передан участнику Анне Васильевой</p>
+</div>
+<div class="order-details">
+<span class="order-note">Без денежной операции</span>
+</div>
+</article>
+</div>
+</section>
+<section class="order-month">
+<h2 class="order-month-title">Июнь 2026</h2>
+<div class="order-month-list">
+<article class="order-item order-item--refund">
+<div class="order-main">
+<span class="order-kind">Возврат средств</span>
+<h3>Vologda Ski Classic</h3>
+<p class="event-subtitle">12 июня 2026 г. · Возврат после отмены мероприятия</p>
+</div>
+<div class="order-details">
+<strong class="order-amount">+2 100 ₽</strong>
+<button class="order-document" data-order-document="Документ о возврате" type="button">Документ о возврате</button>
+</div>
+</article>
+</div>
+</section>
+<section class="order-month">
+<h2 class="order-month-title">Май 2026</h2>
+<div class="order-month-list">
+<article class="order-item order-item--purchase">
+<div class="order-main">
+<span class="order-kind">Приобретен слот</span>
+<h3>Karelia Ski Sprint</h3>
+<p class="event-subtitle">3 мая 2026 г. · Приобретен слот · лыжная гонка</p>
+</div>
+<div class="order-details">
+<strong class="order-amount">1 800 ₽</strong>
+<button class="order-document" data-order-document="Чек № 15608" type="button">Чек № 15608</button>
+</div>
+</article>
+</div>
+</section>
+</div>
+</section>
 
-      <section class="view" id="championships" data-view-panel="championships"><h2>Мои чемпионаты</h2><div class="empty-state">Вы пока не состоите в чемпионатах. После регистрации серия появится здесь.</div></section>
-      <section class="view" id="teams" data-view-panel="teams"><h2>Команды</h2><div class="empty-state">Создавайте команды для эстафет и корпоративных стартов.</div></section>
-      <section class="view" id="clubs" data-view-panel="clubs"><h2>Мои клубы</h2><div class="empty-state">Добавьте спортивный клуб, чтобы получать клубные скидки.</div></section>
+<section class="view" data-view-panel="championships" id="championships"><h2>Мои чемпионаты</h2><div class="empty-state">Вы пока не состоите в чемпионатах. После регистрации серия появится здесь.</div></section>
+<section class="view" data-view-panel="teams" id="teams"><h2>Команды</h2><div class="empty-state">Создавайте команды для эстафет и корпоративных стартов.</div></section>
+<section class="view" data-view-panel="clubs" id="clubs"><h2>Мои клубы</h2><div class="empty-state">Добавьте спортивный клуб, чтобы получать клубные скидки.</div></section>
+<section class="view" data-view-panel="training" id="training">
+<h2>Тренировки</h2>
+<div class="training-grid">
+<article class="mini-panel"><h3>Беговая подготовка</h3><p>Вторник и четверг · 19:30</p><button class="ghost-btn" type="button">Записаться</button></article>
+<article class="mini-panel"><h3>Велогруппа</h3><p>Суббота · 08:00</p><button class="ghost-btn" type="button">Записаться</button></article>
+</div>
+</section>
 
-      <section class="view" id="training" data-view-panel="training">
-        <h2>Тренировки</h2>
-        <div class="training-grid">
-          <article class="mini-panel"><h3>Беговая подготовка</h3><p>Вторник и четверг · 19:30</p><button class="ghost-btn" type="button">Записаться</button></article>
-          <article class="mini-panel"><h3>Велогруппа</h3><p>Суббота · 08:00</p><button class="ghost-btn" type="button">Записаться</button></article>
-        </div>
-      </section>
-
-      <section class="view" id="family" data-view-panel="family">
-        <div class="section-head">
-          <div><h2>Семья</h2></div>
-          <button class="primary-btn" type="button" data-open-drawer="dependent">Добавить ребенка</button>
-        </div>
-        <p class="family-intro">Когда ребенок создаст собственный личный кабинет, его спортивную историю можно будет перенести без потери регистраций и результатов.</p>
-        <div class="family-list" id="dependentList">
-      <article class="family-item">
-        <div class="family-person">
-          <h3>Васильева Анна</h3>
-          <p>12 лет · 18.08.2014</p>
-          
-        </div>
-        <div class="family-actions">
-          <button class="ghost-btn js-register-child" type="button" data-child="child-1">Зарегистрировать на старт</button>
-          <button class="ghost-btn js-transfer-history" type="button" data-child="child-1" >Передать историю в личный кабинет</button>
-        </div>
-      </article>
-    
-      <article class="family-item">
-        <div class="family-person">
-          <h3>Васильев Егор</h3>
-          <p>9 лет · 03.02.2017</p>
-          
-        </div>
-        <div class="family-actions">
-          <button class="ghost-btn js-register-child" type="button" data-child="child-2">Зарегистрировать на старт</button>
-          <button class="ghost-btn js-transfer-history" type="button" data-child="child-2" >Передать историю в личный кабинет</button>
-        </div>
-      </article>
-    </div>
-      </section>
-
-      <section class="view" id="promocodes" data-view-panel="promocodes">
-        <div class="section-head"><div><h2>Мои промокоды</h2></div></div>
-        <div class="empty-state">У вас пока нет активных промокодов. Доступные промокоды появятся в этом разделе.</div>
-      </section>
-
-    </main>
-  </div>
-
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer-backdrop" data-close-drawer></div>
-    <aside class="drawer-panel">
-      <button class="drawer-close" type="button" data-close-drawer aria-label="Закрыть">×</button>
-      <h2 id="drawerTitle"></h2>
-      <div id="drawerBody"><section class="static-drawer-panel" data-drawer-panel="registration" data-title="Регистрация на старт" hidden>
-      <form class="registration-form" id="registrationForm">
-        <label>Событие
+<section class="view" data-view-panel="promocodes" id="promocodes">
+<div class="section-head"><div><h2>Мои промокоды</h2></div></div>
+<div class="empty-state">У вас пока нет активных промокодов. Доступные промокоды появятся в этом разделе.</div>
+</section>
+</main>
+</div>
+<div aria-hidden="true" class="drawer" id="drawer">
+<div class="drawer-backdrop" data-close-drawer=""></div>
+<aside class="drawer-panel">
+<button aria-label="Закрыть" class="drawer-close" data-close-drawer="" type="button">×</button>
+<h2 id="drawerTitle"></h2>
+<div id="drawerBody"><section class="static-drawer-panel" data-drawer-panel="registration" data-title="Регистрация на старт" hidden="">
+<form class="registration-form" id="registrationForm">
+<label>Событие
           <select id="regEvent">
-            <option value="e1" data-price="2600" data-date="2026-09-17T09:00:00" selected>ARTA City Run 10K</option><option value="e2" data-price="2100" data-date="2026-09-24T10:30:00" >Vologda Ski Classic</option><option value="e3" data-price="3900" data-date="2026-10-07T08:00:00" >Northern Bike Gran Fondo</option><option value="e4" data-price="3200" data-date="2026-10-20T21:00:00" >Kazan Night Half Marathon</option>
-          </select>
-        </label>
-        <label>Участник
+<option data-date="2026-09-17T09:00:00" data-price="2600" selected="" value="e1">ARTA City Run 10K</option><option data-date="2026-09-24T10:30:00" data-price="2100" value="e2">Vologda Ski Classic</option><option data-date="2026-10-07T08:00:00" data-price="3900" value="e3">Northern Bike Gran Fondo</option><option data-date="2026-10-20T21:00:00" data-price="3200" value="e4">Kazan Night Half Marathon</option>
+</select>
+</label>
+<label>Участник
           <select id="regPerson">
-            <option value="self" data-age="49">Себя: Васильев Дмитрий</option>
-            <option value="child-1" data-age="12" >Васильева Анна, 12 лет</option><option value="child-2" data-age="9" >Васильев Егор, 9 лет</option>
-          </select>
-        </label>
-        <label>Промокод<input type="text" id="regPromo" placeholder="ARTA10"></label>
-        <div class="price-box">
-          <div class="price-row"><span>Базовая цена</span><strong id="regBase"></strong></div>
-          <div class="price-row"><span>Возрастной тариф</span><strong id="regAge"></strong></div>
-          <div class="price-row"><span>Дата оплаты</span><strong id="regDate"></strong></div>
-          <div class="price-row"><span>Промокод</span><strong id="regPromoValue"></strong></div>
-          <div class="price-row price-total"><span>К оплате</span><strong id="regTotal"></strong></div>
-        </div>
-        <label class="agree"><input type="checkbox" id="offerAgree" required> Согласен с Офертой</label>
-        <label class="agree"><input type="checkbox" id="policyAgree" required> Согласен с Политикой персональных данных</label>
-        <button class="primary-btn" id="payBtn" type="submit" disabled>Оплатить</button>
-      </form>
-    </section><section class="static-drawer-panel" data-drawer-panel="transfer" data-title="Передать слот" hidden>
-      <p class="helper-text">Передача слота: <strong id="transferEventName"></strong>. Для отправки приглашений необходимо подключить сервер.</p>
-      <form class="drawer-form" id="transferForm">
-        <label>Email нового участника<input type="email" required placeholder="athlete@example.com"></label>
-        <button class="primary-btn" type="submit">Отправить приглашение</button>
-      </form>
-    </section><section class="static-drawer-panel" data-drawer-panel="history" data-title="Передать историю в личный кабинет" hidden>
-      <p class="helper-text">После подтверждения приглашения спортивный профиль <span id="historyChildName">Васильева Анна</span> будет привязан к самостоятельному аккаунту.</p>
-      <div class="history-transfer-summary">
-        <strong>Перейдут в новый кабинет</strong>
-        <p>Регистрации, результаты, протоколы и документы участника.</p>
-        <strong>Останутся у плательщика</strong>
-        <p>Заказы, чеки, возвраты и другие финансовые документы.</p>
-      </div>
-      <form class="drawer-form" id="historyTransferForm" data-child="child-1">
-        <label>Email нового личного кабинета<input type="email" required autocomplete="email" placeholder="athlete@example.com"></label>
-        <label class="agree"><input type="checkbox" required> Подтверждаю передачу спортивной истории владельцу нового аккаунта</label>
-        <button class="primary-btn" type="submit">Отправить приглашение</button>
-      </form>
-    </section><section class="static-drawer-panel" data-drawer-panel="profile" data-title="Изменить профиль" hidden><form class="drawer-form" id="profileDrawerForm"><label>Фамилия *<input type="text" value="Васильев" required></label><label>Имя *<input type="text" value="Дмитрий" required></label><label>Отчество<input type="text" value="Сергеевич"></label><label>Пол *<select required><option value="male" selected>Мужчина</option><option value="female">Женщина</option></select></label><label>Дата рождения *<input type="date" value="1977-04-12" required></label><label>Телефон *<input type="tel" value="+7 (900) 123-45-67" required></label><label>Email *<input type="email" value="fendervik@gmail.com" required></label><label>Страна<input type="text" value="Россия"></label><label>Город / населенный пункт<input type="text" value="Москва"></label><label>Организация / клуб<input type="text" placeholder="Название организации или клуба"></label><label>Экстренный контакт — имя<input type="text" autocomplete="name" placeholder="Имя контактного лица"></label><label>Экстренный контакт — телефон<input type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (999) 000-00-00"></label><button class="primary-btn" type="submit">Сохранить</button></form></section><section class="static-drawer-panel" data-drawer-panel="password" data-title="Смена пароля" hidden><form class="drawer-form" id="passwordDrawerForm"><label>Текущий пароль<input type="password" required autocomplete="current-password"></label><label>Новый пароль<input type="password" required autocomplete="new-password"></label><label>Повторите новый пароль<input type="password" required autocomplete="new-password"></label><button class="primary-btn" type="submit">Обновить пароль</button></form></section><section class="static-drawer-panel" data-drawer-panel="dependent" data-title="Добавить ребенка" hidden><form class="drawer-form" id="dependentForm"><label>Имя и фамилия<input type="text" required></label><label>Возраст<input type="number" min="1" max="17" required></label><button class="primary-btn" type="submit">Добавить</button></form></section></div>
-    </aside>
-  </div>
+<option data-age="49" value="self">Себя: Васильев Дмитрий</option>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <footer class="site-footer full-footer" id="contacts">
-    <div class="footer-brand">
-      <img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport">
-    </div>
-    <nav>
-      <strong>Участникам</strong>
-      <a href="events.html">Мероприятия</a>
-      <a href="registration.html">Регистрация</a>
-      <a href="lk.html">Личный кабинет</a>
-    </nav>
-    <nav>
-      <strong>Компания</strong>
-      <a href="offers.html">Наши предложения</a>
-      <a href="partners.html">Наши партнеры</a>
-      <a href="about.html">О нас</a>
-    </nav>
-    <nav class="footer-contact">
-      <strong>Контакты</strong>
-      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
-      <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
-      <p>Москва</p>
-    </nav>
-    <nav class="footer-social-column">
-      <strong>Мы в соцсетях</strong>
-      <div class="footer-social">
-        <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
-        <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
-
-      </div>
-    </nav>
-    <div class="footer-legal">
-      <p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
-      <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script>
-  
-  <script src="assets/js/animations.js"></script>
-<template id="familyMemberTemplate"><article class="family-item"><div class="family-person"><h3></h3><p></p></div><div class="family-actions"><button class="ghost-btn js-register-child" type="button">Зарегистрировать на старт</button><button class="ghost-btn js-transfer-history" type="button">Передать историю в личный кабинет</button></div></article></template><script src="assets/js/auth-state.js"></script>
+</select>
+</label>
+<label>Промокод<input id="regPromo" placeholder="ARTA10" type="text"/></label>
+<div class="price-box">
+<div class="price-row"><span>Базовая цена</span><strong id="regBase"></strong></div>
+<div class="price-row"><span>Возрастной тариф</span><strong id="regAge"></strong></div>
+<div class="price-row"><span>Дата оплаты</span><strong id="regDate"></strong></div>
+<div class="price-row"><span>Промокод</span><strong id="regPromoValue"></strong></div>
+<div class="price-row price-total"><span>К оплате</span><strong id="regTotal"></strong></div>
+</div>
+<label class="agree"><input id="offerAgree" required="" type="checkbox"/> Согласен с Офертой</label>
+<label class="agree"><input id="policyAgree" required="" type="checkbox"/> Согласен с Политикой персональных данных</label>
+<button class="primary-btn" disabled="" id="payBtn" type="submit">Оплатить</button>
+</form>
+</section><section class="static-drawer-panel" data-drawer-panel="transfer" data-title="Передать слот" hidden="">
+<p class="helper-text">Передача слота: <strong id="transferEventName"></strong>. Для отправки приглашений необходимо подключить сервер.</p>
+<form class="drawer-form" id="transferForm">
+<label>Email нового участника<input placeholder="athlete@example.com" required="" type="email"/></label>
+<button class="primary-btn" type="submit">Отправить приглашение</button>
+</form>
+</section><section class="static-drawer-panel" data-drawer-panel="profile" data-title="Изменить профиль" hidden=""><form class="drawer-form" id="profileDrawerForm"><label>Фамилия *<input required="" type="text" value="Васильев"/></label><label>Имя *<input required="" type="text" value="Дмитрий"/></label><label>Отчество<input type="text" value="Сергеевич"/></label><label>Пол *<select required=""><option selected="" value="male">Мужчина</option><option value="female">Женщина</option></select></label><label>Дата рождения *<input name="birth" required="" type="date" value="1977-04-12"/></label><label>Телефон *<input required="" type="tel" value="+7 (900) 123-45-67"/></label><label>Email *<input required="" type="email" value="fendervik@gmail.com"/></label><label>Страна<input type="text" value="Россия"/></label><label>Регион<input name="region" placeholder="Укажите регион" type="text"/></label><label>Город / населенный пункт<input name="city" type="text" value="Москва"/></label><label>Клуб / команда<input name="club" placeholder="Название организации или клуба" type="text"/></label><label>Экстренный контакт — имя<input autocomplete="name" placeholder="Имя контактного лица" type="text"/></label><label>Экстренный контакт — телефон<input autocomplete="tel" inputmode="tel" placeholder="+7 (999) 000-00-00" type="tel"/></label><button class="primary-btn" type="submit">Сохранить</button></form></section><section class="static-drawer-panel" data-drawer-panel="password" data-title="Смена пароля" hidden=""><form class="drawer-form" id="passwordDrawerForm"><label>Текущий пароль<input autocomplete="current-password" required="" type="password"/></label><label>Новый пароль<input autocomplete="new-password" required="" type="password"/></label><label>Повторите новый пароль<input autocomplete="new-password" required="" type="password"/></label><button class="primary-btn" type="submit">Обновить пароль</button></form></section></div>
+</aside>
+</div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<footer class="site-footer full-footer" id="contacts">
+<div class="footer-brand">
+<img alt="ARTA Sport" class="footer-logo" src="assets/images/diz1/logo_1.png"/>
+</div>
+<nav>
+<strong>Участникам</strong>
+<a href="events.html">Мероприятия</a>
+<a href="registration.html">Регистрация</a>
+<a href="lk.html">Личный кабинет</a>
+</nav>
+<nav>
+<strong>Компания</strong>
+<a href="offers.html">Наши предложения</a>
+<a href="partners.html">Наши партнеры</a>
+<a href="about.html">О нас</a>
+</nav>
+<nav class="footer-contact">
+<strong>Контакты</strong>
+<a href="tel:+79166363710">+7 (916) 636-37-10</a>
+<a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+<p>Москва</p>
+</nav>
+<nav class="footer-social-column">
+<strong>Мы в соцсетях</strong>
+<div class="footer-social">
+<a aria-label="ARTA Sport во ВКонтакте" href="https://vk.com/arta_sport" rel="noopener" target="_blank"><img alt="" src="assets/images/social/vk.svg"/></a>
+<a aria-label="Канал ARTA Sport в MAX" href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" rel="noopener" target="_blank"><img alt="" src="assets/images/social/max.svg"/></a>
+</div>
+</nav>
+<div class="footer-legal">
+<p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
+<p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
+</div>
+</footer>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/auth-state.js"></script>
 <script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
 </body>
 </html>
-
-

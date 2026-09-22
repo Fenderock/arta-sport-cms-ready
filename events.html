@@ -1,270 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
-  <title>Мероприятия — ARTA Sport</title>
-  <meta name="description" content="Предстоящие и прошедшие спортивные мероприятия ARTA Sport.">
-  <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="stylesheet" href="assets/css/internal.css">
-<link rel="stylesheet" href="assets/css/local.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="assets/images/diz1/logo-mark-mobile.png" rel="icon" type="image/png"/>
+<title>Мероприятия — ARTA Sport</title>
+<meta content="Предстоящие и прошедшие спортивные мероприятия ARTA Sport." name="description"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<link href="assets/css/internal.css" rel="stylesheet"/>
+<link href="assets/css/local.css" rel="stylesheet"/>
 </head>
 <body class="inner-page events-page">
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="ARTA Sport"><img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport"></a>
-    <form class="header-search" action="#" method="get"><input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту"></form>
-    <nav class="desktop-nav" aria-label="Основная навигация"><div class="nav-dropdown events-nav-dropdown"><a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">Мероприятия</a><div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="news.html" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div></div><div class="nav-dropdown"><a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a><div class="nav-dropdown-menu" role="menu"><a href="offers.html" role="menuitem">Наши предложения</a><a href="about.html" role="menuitem">О нас</a>
-        <a href="partners.html" role="menuitem">Наши партнеры</a></div></div><div class="nav-dropdown contacts-nav-dropdown"><a href="contacts.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div></nav>
-    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
-    <button class="search-btn" type="button" aria-label="Поиск"></button>
-    <div class="account-menu">
-      <a class="account-login-link" data-auth="guest" href="registration.html#registration">Личный кабинет</a><button class="account-icon" data-auth="member" type="button" aria-label="Личный кабинет" aria-expanded="false"><span></span></button><div class="account-dropdown" data-auth="member"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#documents">Документы</a><a href="lk.html#registrations">Мои регистрации</a><a class="account-logout" href="index.html">Выйти</a></div></div>
-    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
-  </header>
-  <nav class="mobile-menu" aria-label="Мобильная навигация"><div class="mobile-search"><form class="mobile-search-form" action="#" method="get"><input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту"></form></div><a href="index.html">Главная</a><div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="news.html">Новости</a><a href="event.html">МФЛРД</a></div></div><a href="offers.html">Наши предложения</a><a href="about.html">О нас</a>
-        <a href="partners.html">Наши партнеры</a><div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div><a href="lk.html">Личный кабинет</a></nav>
-  <main>
-    <section class="events-page-hero"><div class="container"><nav class="breadcrumbs"><a href="index.html">Главная</a><span>→</span><span>Мероприятия</span></nav><h1 class="page-title">Мероприятия</h1><p class="page-lead">Предстоящие старты и архив прошедших спортивных мероприятий.</p></div></section>
-    <section class="page-section events-catalogue"><div class="container">
-      <form class="filters" id="eventsPageFilters">
-        <div class="filter-group"><span class="filter-label">Вид мероприятия</span><div class="custom-select" data-filter="sport"><button type="button" class="select-trigger">Все</button><ul class="select-options"><li data-value="all" class="is-selected">Все</li><li data-value="run">Бег</li><li data-value="bike">Велоспорт</li><li data-value="ski">Лыжи и лыжероллеры</li><li data-value="multi">Другие</li></ul></div></div>
-        <div class="filter-group"><span class="filter-label">Год</span><div class="custom-select" data-filter="year"><button type="button" class="select-trigger">Все годы</button><ul class="select-options"><li data-value="all" class="is-selected">Все годы</li><li data-value="2026">2026</li></ul></div></div>
-        <label>Статус<div class="status-toggle" role="group" aria-label="Фильтр по статусу"><button type="button" class="status-btn is-active" data-status="upcoming">Предстоящие</button><button type="button" class="status-btn" data-status="past">Прошедшие</button></div></label>
-      </form>
-      <div class="events-results-head"><h2 id="eventsResultTitle">Предстоящие мероприятия</h2><span id="eventsResultCount"></span></div>
-      <div class="event-grid" id="eventsPageGrid">
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png" alt="Тульская гонка преследования"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Тульская гонка преследования</a></h3><div class="event-meta"><span class="event-date">Дата: 22 августа 2026 г.</span><span class="event-place">Место: Тульская область, Лыжероллерный центр «Веденино»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Подробнее</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="multi" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/event-1.jpg" alt="Туристический слет среди многодетных семей города Москвы"><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Туристический слет среди многодетных семей города Москвы</a></h3><div class="event-meta"><span class="event-date">Дата: 23 августа 2026 г.</span><span class="event-place">Место: Москва, ВАО</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Подробнее</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-series="tyscha" data-sport="run" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png" alt="4 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых"><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">4 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых</a></h3><div class="event-meta"><span class="event-date">Дата: 26 августа 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Подробнее</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="bike" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png" alt="6-е любительские соревнования по маунтинбайку ЯСПОРТ ХС RACE 2026"><div class="event-body"><span class="event-badge">Маунтинбайк</span><h3><a href="event.html">6-е любительские соревнования по маунтинбайку ЯСПОРТ ХС RACE 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 30 августа 2026 г.</span><span class="event-place">Место: Московская область, Одинцовский городской округ, Парк Малевича</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Подробнее</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Гонки на лыжероллерах и роликовых коньках"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Гонки на лыжероллерах и роликовых коньках</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Архангельская область, д. Малые Карелы, л/с им. В. С. Кузина</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Подробнее</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/rollers.jpg" alt="Этап Фестиваля лыжероллерных дисциплин 2026"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап Фестиваля лыжероллерных дисциплин 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Калужская область</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Подробнее</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/ski.jpg" alt="Гонка чемпионов"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Гонка чемпионов</a></h3><div class="event-meta"><span class="event-date">Дата: 17 октября 2026 г.</span><span class="event-place">Место: Москва, ОБЛК «Юго-Восток», лыжероллерная трасса</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Подробнее</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-series="tyscha" data-sport="run" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png" alt="3 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых"><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">3 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых</a></h3><div class="event-meta"><span class="event-date">Дата: 8 июля 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="multi" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/event-3.jpg" alt="Семейный фестиваль #ЦБНАСПОРТЕ"><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Семейный фестиваль #ЦБНАСПОРТЕ</a></h3><div class="event-meta"><span class="event-date">Дата: 5 июля 2026 г.</span><span class="event-place">Место: Москва, стадион «Воробьевы горы»</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="multi" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/biathlon.jpg" alt="Чемпионат ФСО России по служебному двоеборью"><div class="event-body"><span class="event-badge">Двоеборье</span><h3><a href="event.html">Чемпионат ФСО России по служебному двоеборью</a></h3><div class="event-meta"><span class="event-date">Дата: 30 июня 2026 г.</span><span class="event-place">Место: Московская область, Богородский городской округ, поселок Бисерово</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/athletics.jpg" alt="Соревнования по легкой атлетике в рамках «Мегаспартакиады — 2026»"><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">Соревнования по легкой атлетике в рамках «Мегаспартакиады — 2026»</a></h3><div class="event-meta"><span class="event-date">Дата: 28 июня 2026 г.</span><span class="event-place">Место: Москва, ул. Лужники, 24, с. 8</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="multi" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Дуатлон в рамках дорожного этапа V Железнодорожных спортивных игр"><div class="event-body"><span class="event-badge">Дуатлон</span><h3><a href="event.html">Дуатлон в рамках дорожного этапа V Железнодорожных спортивных игр</a></h3><div class="event-meta"><span class="event-date">Дата: 27 июня 2026 г.</span><span class="event-place">Место: Москва, ОД-80</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-series="tyscha" data-sport="run" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="2 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых"><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">2 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых</a></h3><div class="event-meta"><span class="event-date">Дата: 24 июня 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
-      </div>
-    </div></section>
-    <section class="content-block series-section" id="seriesSection">
-      <div class="container"><h2>Серии мероприятий</h2><p>Ежегодные мероприятия, объединённые в серии. Откройте серию, чтобы посмотреть её историю и материалы по годам.</p><div id="eventSeriesApp" class="event-grid series-grid">
-        <article class="series-card" data-series-id="tyscha">
-          <img class="series-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="«ТЫЩА В МЫТИЩАХ»">
-          <div class="series-body">
-            <span class="series-badge">Серия мероприятий</span>
-            <h3>«ТЫЩА В МЫТИЩАХ»</h3>
-            <p>Летняя серия стартов по лёгкой атлетике памяти Александра Толстых. Проводится ежегодно в Мытищах.</p>
-            <span class="series-count">3 выпуска · 2024–2026</span>
-            <button class="series-toggle ui-button secondary" type="button" aria-expanded="false">История выпусков</button>
-          </div>
-          <div class="series-history is-hidden">
-            <div class="series-years" role="tablist">
-              <button class="series-year is-active" type="button" data-year="all">Все годы</button>
-              <button class="series-year" type="button" data-year="2026">2026</button><button class="series-year" type="button" data-year="2025">2025</button><button class="series-year" type="button" data-year="2024">2024</button>
-            </div>
-            <div class="series-editions">
-        <div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
-            <div><a href="event.html">4 этап — «ТЫЩА В МЫТИЩАХ-2026»</a><span>26 августа 2026 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Стартовый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт (до 500 фото)</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
-            <div><a href="event.html">«ТЫЩА В МЫТИЩАХ-2025»</a><span>25 июня 2025 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a><a href="event.html" class="series-material"><b>Пресс-релиз</b>Итоги соревнований</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
-            <div><a href="event.html">«ТЫЩА В МЫТИЩАХ-2024»</a><span>19 июня 2024 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a>
-          </div>
-        </div>
-      </div>
-          </div>
-        </article>
-      
-        <article class="series-card" data-series-id="moscow-cross">
-          <img class="series-image" src="assets/images/legacy/events/event-run.jpg" alt="Московский кросс лыжников">
-          <div class="series-body">
-            <span class="series-badge">Серия мероприятий</span>
-            <h3>Московский кросс лыжников</h3>
-            <p>Ежегодный осенний кросс среди лыжников и любителей бега. Проводится в парках Москвы с 2018 года.</p>
-            <span class="series-count">4 выпуска · 2023–2026</span>
-            <button class="series-toggle ui-button secondary" type="button" aria-expanded="false">История выпусков</button>
-          </div>
-          <div class="series-history is-hidden">
-            <div class="series-years" role="tablist">
-              <button class="series-year is-active" type="button" data-year="all">Все годы</button>
-              <button class="series-year" type="button" data-year="2026">2026</button><button class="series-year" type="button" data-year="2025">2025</button><button class="series-year" type="button" data-year="2024">2024</button><button class="series-year" type="button" data-year="2023">2023</button>
-            </div>
-            <div class="series-editions">
-        <div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
-            <div><a href="event.html">Московский кросс лыжников-2026</a><span>12 сентября 2026 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Стартовый протокол</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
-            <div><a href="event.html">Московский кросс лыжников-2025</a><span>13 сентября 2025 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
-            <div><a href="event.html">Московский кросс лыжников-2024</a><span>14 сентября 2024 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a><a href="event.html" class="series-material"><b>Пресс-релиз</b>Итоги кросса</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2023"><div class="series-edition-head"><strong>2023</strong>
-            <div><a href="event.html">Московский кросс лыжников-2023</a><span>9 сентября 2023 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a>
-          </div>
-        </div>
-      </div>
-          </div>
-        </article>
-      
-        <article class="series-card" data-series-id="city-run">
-          <img class="series-image" src="assets/images/legacy/services/event-organization/trail.jpg" alt="ARTA City Run">
-          <div class="series-body">
-            <span class="series-badge">Серия мероприятий</span>
-            <h3>ARTA City Run</h3>
-            <p>Серия городских забегов на дистанции от 3 до 21,1 км. Финальный старт сезона проходит в центре Москвы.</p>
-            <span class="series-count">3 выпуска · 2024–2026</span>
-            <button class="series-toggle ui-button secondary" type="button" aria-expanded="false">История выпусков</button>
-          </div>
-          <div class="series-history is-hidden">
-            <div class="series-years" role="tablist">
-              <button class="series-year is-active" type="button" data-year="all">Все годы</button>
-              <button class="series-year" type="button" data-year="2026">2026</button><button class="series-year" type="button" data-year="2025">2025</button><button class="series-year" type="button" data-year="2024">2024</button>
-            </div>
-            <div class="series-editions">
-        <div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
-            <div><a href="event.html">ARTA City Run 10K</a><span>18 августа 2026 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Стартовый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
-            <div><a href="event.html">ARTA City Run Half</a><span>16 августа 2025 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
-            <div><a href="event.html">ARTA City Run 5K</a><span>18 августа 2024 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a>
-          </div>
-        </div>
-      </div>
-          </div>
-        </article>
-      
-        <article class="series-card" data-series-id="ski-classic">
-          <img class="series-image" src="assets/images/legacy/events/event-ski.jpg" alt="Vologda Ski Classic">
-          <div class="series-body">
-            <span class="series-badge">Серия мероприятий</span>
-            <h3>Vologda Ski Classic</h3>
-            <p>Зимняя серия лыжных гонок классическим и свободным стилем на трассах Вологды. Этапы Кубка АНО «АРТА-СПОРТ».</p>
-            <span class="series-count">3 выпуска · 2024–2026</span>
-            <button class="series-toggle ui-button secondary" type="button" aria-expanded="false">История выпусков</button>
-          </div>
-          <div class="series-history is-hidden">
-            <div class="series-years" role="tablist">
-              <button class="series-year is-active" type="button" data-year="all">Все годы</button>
-              <button class="series-year" type="button" data-year="2026">2026</button><button class="series-year" type="button" data-year="2025">2025</button><button class="series-year" type="button" data-year="2024">2024</button>
-            </div>
-            <div class="series-editions">
-        <div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
-            <div><a href="event.html">Vologda Ski Classic 2026</a><span>15 февраля 2026 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
-            <div><a href="event.html">Vologda Ski Classic 2025</a><span>16 февраля 2025 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a><a href="event.html" class="series-material"><b>Пресс-релиз</b>Итоги гонки</a>
-          </div>
-        </div>
-      
-        <div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
-            <div><a href="event.html">Vologda Ski Classic 2024</a><span>18 февраля 2024 г.</span></div>
-          </div>
-          <div class="series-edition-materials">
-            <a href="event.html" class="series-material"><b>Протокол</b>Итоговый протокол</a><a href="event.html" class="series-material"><b>Фото</b>Фотоотчёт</a>
-          </div>
-        </div>
-      </div>
-          </div>
-        </article>
-      </div></div></section>
-  <p class="empty" id="eventsPageGridEmpty" hidden>По выбранным фильтрам мероприятий нет.</p></main>
-  <footer class="site-footer full-footer" id="contacts">
-    <div class="footer-brand">
-      <img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport">
-    </div>
-    <nav>
-      <strong>Участникам</strong>
-      <a href="events.html">Мероприятия</a>
-      <a href="registration.html">Регистрация</a>
-      <a href="lk.html">Личный кабинет</a>
-    </nav>
-    <nav>
-      <strong>Компания</strong>
-      <a href="offers.html">Наши предложения</a>
-      <a href="partners.html">Наши партнеры</a>
-      <a href="about.html">О нас</a>
-    </nav>
-    <nav class="footer-contact">
-      <strong>Контакты</strong>
-      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
-      <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
-      <p>Москва</p>
-    </nav>
-    <nav class="footer-social-column">
-      <strong>Мы в соцсетях</strong>
-      <div class="footer-social">
-        <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
-        <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
+<header class="site-header">
+<a aria-label="ARTA Sport" class="brand" href="index.html"><img alt="Arta Sport" class="logo-img" src="assets/images/diz1/logo_1.png"/></a>
+<form action="#" class="header-search" method="get"><input aria-label="Поиск по сайту" class="search-input" name="q" placeholder="Поиск по сайту" type="search"/></form>
+<nav aria-label="Основная навигация" class="desktop-nav"><div class="nav-dropdown events-nav-dropdown"><a aria-current="page" aria-expanded="false" aria-haspopup="true" class="nav-link nav-dropdown-toggle" href="events.html">Мероприятия</a><div class="nav-dropdown-menu" role="menu"><a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a><a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a><a href="news.html" role="menuitem">Новости</a><a href="event.html" role="menuitem">МФЛРД</a></div></div><div class="nav-dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link nav-dropdown-toggle" href="offers.html">Наши предложения</a><div class="nav-dropdown-menu" role="menu"><a href="offers.html" role="menuitem">Наши предложения</a><a href="about.html" role="menuitem">О нас</a>
+<a href="partners.html" role="menuitem">Наши партнеры</a></div></div><div class="nav-dropdown contacts-nav-dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link nav-dropdown-toggle" href="contacts.html">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div></nav>
+<a aria-label="Позвонить в ARTA Sport" class="header-phone" href="tel:+79166363710">+7 (916) 636-37-10</a>
+<button aria-label="Поиск" class="search-btn" type="button"></button>
+<div class="account-menu">
+<a class="account-login-link" data-auth="guest" href="registration.html#registration">Личный кабинет</a><button aria-expanded="false" aria-label="Личный кабинет" class="account-icon" data-auth="member" type="button"><span></span></button><div class="account-dropdown" data-auth="member"><a class="account-primary" href="lk.html">Открыть личный кабинет</a><a href="lk.html#profile">Профиль</a><a href="lk.html#registrations">Мои старты</a><a class="account-logout" href="index.html">Выйти</a></div></div>
+<button aria-expanded="false" aria-label="Открыть меню" class="menu-toggle" type="button">☰</button>
+</header>
+<nav aria-label="Мобильная навигация" class="mobile-menu"><div class="mobile-search"><form action="#" class="mobile-search-form" method="get"><input aria-label="Поиск по сайту" class="search-input" name="q" placeholder="Поиск по сайту" type="search"/></form></div><a href="index.html">Главная</a><div class="mobile-item mobile-has-sub"><button aria-expanded="false" class="mobile-sub-toggle" type="button">Мероприятия</button><div class="mobile-submenu"><a href="events.html?status=upcoming">Предстоящие мероприятия</a><a href="events.html?status=past">Прошедшие мероприятия</a><a href="news.html">Новости</a><a href="event.html">МФЛРД</a></div></div><a href="offers.html">Наши предложения</a><a href="about.html">О нас</a>
+<a href="partners.html">Наши партнеры</a><div class="mobile-item mobile-has-sub"><button aria-expanded="false" class="mobile-sub-toggle" type="button">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div><a href="lk.html">Личный кабинет</a></nav>
+<main>
+<section class="events-page-hero"><div class="container"><nav class="breadcrumbs"><a href="index.html">Главная</a><span>→</span><span>Мероприятия</span></nav><h1 class="page-title">Мероприятия</h1><p class="page-lead">Предстоящие старты и архив прошедших спортивных мероприятий.</p></div></section>
+<section class="page-section events-catalogue"><div class="container">
+<form class="filters" id="eventsPageFilters">
+<div class="filter-group"><span class="filter-label">Вид мероприятия</span><div class="custom-select" data-filter="sport"><button class="select-trigger" type="button">Все</button><ul class="select-options"><li class="is-selected" data-value="all">Все</li><li data-value="run">Бег</li><li data-value="bike">Велоспорт</li><li data-value="ski">Лыжи и лыжероллеры</li><li data-value="multi">Другие</li></ul></div></div>
+<div class="filter-group"><span class="filter-label">Год</span><div class="custom-select" data-filter="year"><button class="select-trigger" type="button">Все годы</button><ul class="select-options"><li class="is-selected" data-value="all">Все годы</li><li data-value="2026">2026</li></ul></div></div>
+<label>Статус<div aria-label="Фильтр по статусу" class="status-toggle" role="group"><button class="status-btn is-active" data-status="upcoming" type="button">Предстоящие</button><button class="status-btn" data-status="past" type="button">Прошедшие</button></div></label>
+</form>
+<div class="events-results-head"><h2 id="eventsResultTitle">Предстоящие мероприятия</h2><span id="eventsResultCount"></span></div>
+<div class="event-grid" id="eventsPageGrid">
+<article class="event-card" data-event-href="event.html" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Тульская гонка преследования" class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Тульская гонка преследования</a></h3><div class="event-meta"><span class="event-date">Дата: 22 августа 2026 г.</span><span class="event-place">Место: Тульская область, Лыжероллерный центр «Веденино»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn js-public-register" data-event="tula-pursuit" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="multi" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Туристический слет среди многодетных семей города Москвы" class="event-image" src="assets/images/legacy/services/event-organization/event-1.jpg"/><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Туристический слет среди многодетных семей города Москвы</a></h3><div class="event-meta"><span class="event-date">Дата: 23 августа 2026 г.</span><span class="event-place">Место: Москва, ВАО</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn js-public-register" data-event="family-tourist-festival" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-series="tyscha" data-sport="run" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="4 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых" class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png"/><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">4 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых</a></h3><div class="event-meta"><span class="event-date">Дата: 26 августа 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn js-public-register" data-event="mytishchi-1000" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="bike" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="6-е любительские соревнования по маунтинбайку ЯСПОРТ ХС RACE 2026" class="event-image" src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png"/><div class="event-body"><span class="event-badge">Маунтинбайк</span><h3><a href="event.html">6-е любительские соревнования по маунтинбайку ЯСПОРТ ХС RACE 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 30 августа 2026 г.</span><span class="event-place">Место: Московская область, Одинцовский городской округ, Парк Малевича</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn js-public-register" data-event="xsport-xc" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Гонки на лыжероллерах и роликовых коньках" class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Гонки на лыжероллерах и роликовых коньках</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Архангельская область, д. Малые Карелы, л/с им. В. С. Кузина</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn js-public-register" data-event="roller-race" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Этап Фестиваля лыжероллерных дисциплин 2026" class="event-image" src="assets/images/legacy/services/event-organization/rollers.jpg"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап Фестиваля лыжероллерных дисциплин 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Калужская область</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn js-public-register" data-event="obninsk-festival" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Гонка чемпионов" class="event-image" src="assets/images/legacy/services/event-organization/ski.jpg"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Гонка чемпионов</a></h3><div class="event-meta"><span class="event-date">Дата: 17 октября 2026 г.</span><span class="event-place">Место: Москва, ОБЛК «Юго-Восток», лыжероллерная трасса</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><button class="primary-btn js-public-register" data-event="champions-race" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-series="tyscha" data-sport="run" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="3 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых" class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png"/><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">3 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых</a></h3><div class="event-meta"><span class="event-date">Дата: 8 июля 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="multi" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="Семейный фестиваль #ЦБНАСПОРТЕ" class="event-image" src="assets/images/legacy/services/event-organization/event-3.jpg"/><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Семейный фестиваль #ЦБНАСПОРТЕ</a></h3><div class="event-meta"><span class="event-date">Дата: 5 июля 2026 г.</span><span class="event-place">Место: Москва, стадион «Воробьевы горы»</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="multi" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="Чемпионат ФСО России по служебному двоеборью" class="event-image" src="assets/images/legacy/services/event-organization/biathlon.jpg"/><div class="event-body"><span class="event-badge">Двоеборье</span><h3><a href="event.html">Чемпионат ФСО России по служебному двоеборью</a></h3><div class="event-meta"><span class="event-date">Дата: 30 июня 2026 г.</span><span class="event-place">Место: Московская область, Богородский городской округ, поселок Бисерово</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="run" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="Соревнования по легкой атлетике в рамках «Мегаспартакиады — 2026»" class="event-image" src="assets/images/legacy/services/event-organization/athletics.jpg"/><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">Соревнования по легкой атлетике в рамках «Мегаспартакиады — 2026»</a></h3><div class="event-meta"><span class="event-date">Дата: 28 июня 2026 г.</span><span class="event-place">Место: Москва, ул. Лужники, 24, с. 8</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
+<article class="event-card" data-event-href="event.html" data-sport="multi" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="Дуатлон в рамках дорожного этапа V Железнодорожных спортивных игр" class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png"/><div class="event-body"><span class="event-badge">Дуатлон</span><h3><a href="event.html">Дуатлон в рамках дорожного этапа V Железнодорожных спортивных игр</a></h3><div class="event-meta"><span class="event-date">Дата: 27 июня 2026 г.</span><span class="event-place">Место: Москва, ОД-80</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
+<article class="event-card" data-event-href="event.html" data-series="tyscha" data-sport="run" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="2 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых" class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png"/><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">2 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых</a></h3><div class="event-meta"><span class="event-date">Дата: 24 июня 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span></div><div class="event-footer"><a class="primary-btn" href="event.html">Смотреть материалы</a></div></div></article>
+</div>
+</div></section>
+<section class="content-block series-section" id="seriesSection">
+<div class="container"><h2>Серии мероприятий</h2><p>Ежегодные мероприятия, объединённые в серии. Откройте серию, чтобы посмотреть её историю и материалы по годам.</p><div class="event-grid series-grid" id="eventSeriesApp">
+<article class="series-card" data-series-id="tyscha">
+<img alt="«ТЫЩА В МЫТИЩАХ»" class="series-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png"/>
+<div class="series-body">
 
-      </div>
-    </nav>
-    <div class="footer-legal">
-      <p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
-      <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
-    </div>
-  </footer>
-  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
+<h3>«ТЫЩА В МЫТИЩАХ»</h3>
+<p>Летняя серия стартов по лёгкой атлетике памяти Александра Толстых. Проводится ежегодно в Мытищах.</p>
+<span class="series-count">3 выпуска · 2024–2026</span>
+<button aria-expanded="false" class="series-toggle ui-button secondary" type="button">История выпусков</button>
+</div>
+<div class="series-history is-hidden">
+<div class="series-years" role="tablist">
+<button class="series-year is-active" data-year="all" type="button">Все годы</button>
+<button class="series-year" data-year="2026" type="button">2026</button><button class="series-year" data-year="2025" type="button">2025</button><button class="series-year" data-year="2024" type="button">2024</button>
+</div>
+<div class="series-editions">
+<div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
+<div><a href="event.html">4 этап — «ТЫЩА В МЫТИЩАХ-2026»</a><span>26 августа 2026 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Стартовый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт (до 500 фото)</a>
+</div>
+</div>
+<div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
+<div><a href="event.html">«ТЫЩА В МЫТИЩАХ-2025»</a><span>25 июня 2025 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a><a class="series-material" href="event.html"><b>Пресс-релиз</b>Итоги соревнований</a>
+</div>
+</div>
+<div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
+<div><a href="event.html">«ТЫЩА В МЫТИЩАХ-2024»</a><span>19 июня 2024 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="series-card" data-series-id="moscow-cross">
+<img alt="Московский кросс лыжников" class="series-image" src="assets/images/legacy/events/event-run.jpg"/>
+<div class="series-body">
+
+<h3>Московский кросс лыжников</h3>
+<p>Ежегодный осенний кросс среди лыжников и любителей бега. Проводится в парках Москвы с 2018 года.</p>
+<span class="series-count">4 выпуска · 2023–2026</span>
+<button aria-expanded="false" class="series-toggle ui-button secondary" type="button">История выпусков</button>
+</div>
+<div class="series-history is-hidden">
+<div class="series-years" role="tablist">
+<button class="series-year is-active" data-year="all" type="button">Все годы</button>
+<button class="series-year" data-year="2026" type="button">2026</button><button class="series-year" data-year="2025" type="button">2025</button><button class="series-year" data-year="2024" type="button">2024</button><button class="series-year" data-year="2023" type="button">2023</button>
+</div>
+<div class="series-editions">
+<div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
+<div><a href="event.html">Московский кросс лыжников-2026</a><span>12 сентября 2026 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Стартовый протокол</a>
+</div>
+</div>
+<div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
+<div><a href="event.html">Московский кросс лыжников-2025</a><span>13 сентября 2025 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a>
+</div>
+</div>
+<div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
+<div><a href="event.html">Московский кросс лыжников-2024</a><span>14 сентября 2024 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a><a class="series-material" href="event.html"><b>Пресс-релиз</b>Итоги кросса</a>
+</div>
+</div>
+<div class="series-edition" data-year="2023"><div class="series-edition-head"><strong>2023</strong>
+<div><a href="event.html">Московский кросс лыжников-2023</a><span>9 сентября 2023 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="series-card" data-series-id="city-run">
+<img alt="ARTA City Run" class="series-image" src="assets/images/legacy/services/event-organization/trail.jpg"/>
+<div class="series-body">
+
+<h3>ARTA City Run</h3>
+<p>Серия городских забегов на дистанции от 3 до 21,1 км. Финальный старт сезона проходит в центре Москвы.</p>
+<span class="series-count">3 выпуска · 2024–2026</span>
+<button aria-expanded="false" class="series-toggle ui-button secondary" type="button">История выпусков</button>
+</div>
+<div class="series-history is-hidden">
+<div class="series-years" role="tablist">
+<button class="series-year is-active" data-year="all" type="button">Все годы</button>
+<button class="series-year" data-year="2026" type="button">2026</button><button class="series-year" data-year="2025" type="button">2025</button><button class="series-year" data-year="2024" type="button">2024</button>
+</div>
+<div class="series-editions">
+<div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
+<div><a href="event.html">ARTA City Run 10K</a><span>18 августа 2026 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Стартовый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a>
+</div>
+</div>
+<div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
+<div><a href="event.html">ARTA City Run Half</a><span>16 августа 2025 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a>
+</div>
+</div>
+<div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
+<div><a href="event.html">ARTA City Run 5K</a><span>18 августа 2024 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="series-card" data-series-id="ski-classic">
+<img alt="Vologda Ski Classic" class="series-image" src="assets/images/legacy/events/event-ski.jpg"/>
+<div class="series-body">
+
+<h3>Vologda Ski Classic</h3>
+<p>Зимняя серия лыжных гонок классическим и свободным стилем на трассах Вологды. Этапы Кубка АНО «АРТА-СПОРТ».</p>
+<span class="series-count">3 выпуска · 2024–2026</span>
+<button aria-expanded="false" class="series-toggle ui-button secondary" type="button">История выпусков</button>
+</div>
+<div class="series-history is-hidden">
+<div class="series-years" role="tablist">
+<button class="series-year is-active" data-year="all" type="button">Все годы</button>
+<button class="series-year" data-year="2026" type="button">2026</button><button class="series-year" data-year="2025" type="button">2025</button><button class="series-year" data-year="2024" type="button">2024</button>
+</div>
+<div class="series-editions">
+<div class="series-edition" data-year="2026"><div class="series-edition-head"><strong>2026</strong>
+<div><a href="event.html">Vologda Ski Classic 2026</a><span>15 февраля 2026 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a>
+</div>
+</div>
+<div class="series-edition" data-year="2025"><div class="series-edition-head"><strong>2025</strong>
+<div><a href="event.html">Vologda Ski Classic 2025</a><span>16 февраля 2025 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a><a class="series-material" href="event.html"><b>Пресс-релиз</b>Итоги гонки</a>
+</div>
+</div>
+<div class="series-edition" data-year="2024"><div class="series-edition-head"><strong>2024</strong>
+<div><a href="event.html">Vologda Ski Classic 2024</a><span>18 февраля 2024 г.</span></div>
+</div>
+<div class="series-edition-materials">
+<a class="series-material" href="event.html"><b>Протокол</b>Итоговый протокол</a><a class="series-material" href="event.html"><b>Фото</b>Фотоотчёт</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div></div></section>
+<p class="empty" hidden="" id="eventsPageGridEmpty">По выбранным фильтрам мероприятий нет.</p></main>
+<footer class="site-footer full-footer" id="contacts">
+<div class="footer-brand">
+<img alt="ARTA Sport" class="footer-logo" src="assets/images/diz1/logo_1.png"/>
+</div>
+<nav>
+<strong>Участникам</strong>
+<a href="events.html">Мероприятия</a>
+<a href="registration.html">Регистрация</a>
+<a href="lk.html">Личный кабинет</a>
+</nav>
+<nav>
+<strong>Компания</strong>
+<a href="offers.html">Наши предложения</a>
+<a href="partners.html">Наши партнеры</a>
+<a href="about.html">О нас</a>
+</nav>
+<nav class="footer-contact">
+<strong>Контакты</strong>
+<a href="tel:+79166363710">+7 (916) 636-37-10</a>
+<a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+<p>Москва</p>
+</nav>
+<nav class="footer-social-column">
+<strong>Мы в соцсетях</strong>
+<div class="footer-social">
+<a aria-label="ARTA Sport во ВКонтакте" href="https://vk.com/arta_sport" rel="noopener" target="_blank"><img alt="" src="assets/images/social/vk.svg"/></a>
+<a aria-label="Канал ARTA Sport в MAX" href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" rel="noopener" target="_blank"><img alt="" src="assets/images/social/max.svg"/></a>
+</div>
+</nav>
+<div class="footer-legal">
+<p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
+<p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
+</div>
+</footer>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script><script src="assets/js/animations.js"></script>
 <script src="assets/js/auth-state.js"></script>
 <script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
-</body>
+<div aria-hidden="true" class="modal" id="modal"><div class="modal-backdrop" data-close-modal=""></div><div aria-labelledby="modalTitle" aria-modal="true" class="modal-card" role="dialog"><button aria-label="Закрыть" class="modal-close" data-close-modal="" type="button">×</button><h2 id="modalTitle">Регистрация на старт</h2><div id="modalBody"><form class="registration-form" id="publicRegistrationForm"><label>Событие<select id="publicEvent"><option data-date="2026-08-22T10:00:00" data-price="3900" value="tula-pursuit">Тульская гонка преследования</option><option data-date="" data-price="" value="family-tourist-festival">Туристический слет среди многодетных семей города Москвы</option><option data-date="2026-08-26T18:00:00" data-price="2100" value="mytishchi-1000">4 этап — «ТЫЩА В МЫТИЩАХ-2026» памяти Александра Толстых</option><option data-date="2026-08-30T10:00:00" data-price="3200" value="xsport-xc">6-е любительские соревнования по маунтинбайку ЯСПОРТ ХС RACE 2026</option><option data-date="" data-price="" value="roller-race">Гонки на лыжероллерах и роликовых коньках</option><option data-date="2026-09-05T10:00:00" data-price="3500" value="obninsk-festival">Этап Фестиваля лыжероллерных дисциплин 2026</option><option data-date="" data-price="" value="champions-race">Гонка чемпионов</option></select></label><label>Участник<select><option>Себя: Васильев Дмитрий</option></select></label><label>Промокод<input id="publicPromo" placeholder="ARTA10"/></label><div class="modal-list"><div>Базовая цена: <strong id="publicBase">—</strong></div><div>Возрастной тариф: <strong>0 ₽</strong></div><div>Дата оплаты: <strong id="publicDateFee">—</strong></div><div>Итого: <strong id="publicTotal">—</strong></div></div><div class="checks"><label><input id="publicOffer" type="checkbox"/> Согласен с Офертой</label><label><input id="publicPolicy" type="checkbox"/> Согласен с Политикой персональных данных</label></div><button class="primary-btn" disabled="" id="publicPay" type="submit">Оплатить</button></form><p hidden="" id="publicRegistrationNotice">Заявка заполнена. Онлайн-оплата в этой демонстрационной версии не подключена.</p></div></div></div><script src="assets/js/public-registration.js"></script></body>
 </html>

@@ -1,181 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="assets/images/diz1/logo-mark-mobile.png">
-  <title>ARTA Sport — спортивные события и организация стартов</title>
-  <meta name="description" content="Спортивные события, регистрация участников, результаты и полный цикл организации стартов ARTA Sport.">
-  <link rel="stylesheet" href="assets/css/site.css">
-<link rel="stylesheet" href="assets/css/local.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="assets/images/diz1/logo-mark-mobile.png" rel="icon" type="image/png"/>
+<title>ARTA Sport — спортивные события и организация стартов</title>
+<meta content="Спортивные события, регистрация участников, результаты и полный цикл организации стартов ARTA Sport." name="description"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<link href="assets/css/local.css" rel="stylesheet"/>
 </head>
 <body class="home-page">
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="ARTA Sport">
-      <img class="logo-img" src="assets/images/diz1/logo_1.png" alt="Arta Sport">
-    </a>
-    <form class="header-search" action="#" method="get">
-      <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-    </form>
-    <nav class="desktop-nav" aria-label="Основная навигация">
-      <div class="nav-dropdown events-nav-dropdown">
-        <a href="events.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Мероприятия</a>
-        <div class="nav-dropdown-menu" role="menu">
-          <a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a>
-          <a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a>
-          <a href="news.html" role="menuitem">Новости</a>
-          <a href="event.html" role="menuitem">МФЛРД</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <a href="offers.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Наши предложения</a>
-        <div class="nav-dropdown-menu" role="menu">
-          <a href="offers.html" role="menuitem">Наши предложения</a>
-          <a href="about.html" role="menuitem">О нас</a>
-        <a href="partners.html" role="menuitem">Наши партнеры</a>
-        </div>
-      </div>
-      <div class="nav-dropdown contacts-nav-dropdown"><a href="contacts.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div>
-    </nav>
-    <a class="header-phone" href="tel:+79166363710" aria-label="Позвонить в ARTA Sport">+7 (916) 636-37-10</a>
-    <button class="search-btn" type="button" aria-label="Поиск"></button>
-    <div class="account-menu">
-      <a class="account-login-link" data-auth="guest" href="registration.html#registration">Личный кабинет</a>
-      <button class="account-icon" data-auth="member" type="button" aria-label="Личный кабинет" aria-expanded="false">
-        <span></span>
-      </button>
-      <div class="account-dropdown" data-auth="member" aria-label="Меню личного кабинета">
-        <a class="account-primary" href="lk.html">Открыть личный кабинет</a>
-        <a href="lk.html#profile">Профиль</a>
-        <a href="lk.html#documents">Документы</a>
-        <a href="lk.html#registrations">Мои регистрации</a>
-      <a class="account-logout" href="index.html">Выйти</a></div>
-    </div>
-    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
-  </header>
-
-  <nav class="mobile-menu" aria-label="Мобильная навигация">
-    <div class="mobile-search">
-      <form class="mobile-search-form" action="#" method="get">
-        <input class="search-input" type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-      </form>
-    </div>
-    <div class="mobile-item mobile-has-sub">
-      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Мероприятия</button>
-      <div class="mobile-submenu">
-        <a href="events.html?status=upcoming">Предстоящие мероприятия</a>
-        <a href="events.html?status=past">Прошедшие мероприятия</a>
-        <a href="news.html">Новости</a>
-        <a href="event.html">МФЛРД</a>
-      </div>
-    </div>
-    <div class="mobile-item mobile-has-sub">
-      <button type="button" class="mobile-sub-toggle" aria-expanded="false">Наши предложения</button>
-      <div class="mobile-submenu">
-        <a href="offers.html">Наши предложения</a>
-        <a href="about.html">О нас</a>
-        <a href="partners.html">Наши партнеры</a>
-      </div>
-    </div>
-    <a href="partners.html">Наши партнеры</a>
-    <div class="mobile-item mobile-has-sub"><button type="button" class="mobile-sub-toggle" aria-expanded="false">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div>
-    <a href="lk.html">Личный кабинет</a>
-  </nav>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-media">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.webp" aria-hidden="true">
-          <source src="assets/video/hero-promo.mp4" type="video/mp4">
-        </video>
-        <img class="hero-poster" src="assets/video/hero-poster.webp" alt="Спортивное мероприятие ARTA Sport">
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>СПОРТИВНЫЕ МЕРОПРИЯТИЯ.<br><span class="hero-title-line">МЫ – ОРГАНИЗУЕМ И&nbsp;ПРОВОДИМ,<br>ВЫ&nbsp;–&nbsp;СОРЕВНУЕТЕСЬ.</span></h1>
-        <p class="hero-text">Циклические спортивные дисциплины и не только.<br>2000+ мероприятий с 2002 года.</p>
-        <div class="hero-actions">
-          <a class="glass-btn" href="offers.html">Организаторам</a>
-          <button class="primary-btn" type="button" data-scroll="#events">Найти событие</button>
-        </div>
-       <!-- <div class="hero-stats">
+<header class="site-header">
+<a aria-label="ARTA Sport" class="brand" href="#top">
+<img alt="Arta Sport" class="logo-img" src="assets/images/diz1/logo_1.png"/>
+</a>
+<form action="#" class="header-search" method="get">
+<input aria-label="Поиск по сайту" class="search-input" name="q" placeholder="Поиск по сайту" type="search"/>
+</form>
+<nav aria-label="Основная навигация" class="desktop-nav">
+<div class="nav-dropdown events-nav-dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link nav-dropdown-toggle" href="events.html">Мероприятия</a>
+<div class="nav-dropdown-menu" role="menu">
+<a href="events.html?status=upcoming" role="menuitem">Предстоящие мероприятия</a>
+<a href="events.html?status=past" role="menuitem">Прошедшие мероприятия</a>
+<a href="news.html" role="menuitem">Новости</a>
+<a href="event.html" role="menuitem">МФЛРД</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link nav-dropdown-toggle" href="offers.html">Наши предложения</a>
+<div class="nav-dropdown-menu" role="menu">
+<a href="offers.html" role="menuitem">Наши предложения</a>
+<a href="about.html" role="menuitem">О нас</a>
+<a href="partners.html" role="menuitem">Наши партнеры</a>
+</div>
+</div>
+<div class="nav-dropdown contacts-nav-dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link nav-dropdown-toggle" href="contacts.html">Контакты</a><div class="nav-dropdown-menu" role="menu"><a href="contacts.html" role="menuitem">Контакты</a><a href="contacts.html#social" role="menuitem">Мы в соцсетях</a></div></div>
+</nav>
+<a aria-label="Позвонить в ARTA Sport" class="header-phone" href="tel:+79166363710">+7 (916) 636-37-10</a>
+<button aria-label="Поиск" class="search-btn" type="button"></button>
+<div class="account-menu">
+<a class="account-login-link" data-auth="guest" href="registration.html#registration">Личный кабинет</a>
+<button aria-expanded="false" aria-label="Личный кабинет" class="account-icon" data-auth="member" type="button">
+<span></span>
+</button>
+<div aria-label="Меню личного кабинета" class="account-dropdown" data-auth="member">
+<a class="account-primary" href="lk.html">Открыть личный кабинет</a>
+<a href="lk.html#profile">Профиль</a>
+<a href="lk.html#registrations">Мои старты</a>
+<a class="account-logout" href="index.html">Выйти</a></div>
+</div>
+<button aria-expanded="false" aria-label="Открыть меню" class="menu-toggle" type="button">☰</button>
+</header>
+<nav aria-label="Мобильная навигация" class="mobile-menu">
+<div class="mobile-search">
+<form action="#" class="mobile-search-form" method="get">
+<input aria-label="Поиск по сайту" class="search-input" name="q" placeholder="Поиск по сайту" type="search"/>
+</form>
+</div>
+<div class="mobile-item mobile-has-sub">
+<button aria-expanded="false" class="mobile-sub-toggle" type="button">Мероприятия</button>
+<div class="mobile-submenu">
+<a href="events.html?status=upcoming">Предстоящие мероприятия</a>
+<a href="events.html?status=past">Прошедшие мероприятия</a>
+<a href="news.html">Новости</a>
+<a href="event.html">МФЛРД</a>
+</div>
+</div>
+<div class="mobile-item mobile-has-sub">
+<button aria-expanded="false" class="mobile-sub-toggle" type="button">Наши предложения</button>
+<div class="mobile-submenu">
+<a href="offers.html">Наши предложения</a>
+<a href="about.html">О нас</a>
+<a href="partners.html">Наши партнеры</a>
+</div>
+</div>
+<a href="partners.html">Наши партнеры</a>
+<div class="mobile-item mobile-has-sub"><button aria-expanded="false" class="mobile-sub-toggle" type="button">Контакты</button><div class="mobile-submenu"><a href="contacts.html">Контакты</a><a href="contacts.html#social">Мы в соцсетях</a></div></div>
+<a href="lk.html">Личный кабинет</a>
+</nav>
+<main id="top">
+<section class="hero">
+<div class="hero-media">
+<video aria-hidden="true" autoplay="" class="hero-video" loop="" muted="" playsinline="" poster="assets/video/hero-poster.webp" preload="metadata">
+<source src="assets/video/hero-promo.mp4" type="video/mp4"/>
+</video>
+<img alt="Спортивное мероприятие ARTA Sport" class="hero-poster" src="assets/video/hero-poster.webp"/>
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>СПОРТИВНЫЕ МЕРОПРИЯТИЯ.<br/><span class="hero-title-line">МЫ – ОРГАНИЗУЕМ И ПРОВОДИМ,<br/>ВЫ – СОРЕВНУЕТЕСЬ.</span></h1>
+<p class="hero-text">Циклические спортивные дисциплины и не только.<br/>2000+ мероприятий с 2002 года.</p>
+<div class="hero-actions">
+<a class="glass-btn" href="offers.html">Организаторам</a>
+<button class="primary-btn" data-scroll="#events" type="button">Найти событие</button>
+</div>
+<!-- <div class="hero-stats">
           <div><strong data-count="2000" data-suffix="+">2000+</strong><span>мероприятий</span></div>
           <div><strong data-count="24">24</strong><span>года опыта</span></div>
           <div><strong data-count="26">26</strong><span>спортивных дисциплин</span></div>
         </div>
       </div>-->
-      </div>
-    </section>
-
-    <section class="section" id="events">
-      <div class="section-head">
-        <p class="label">Ближайшие события</p>
-        <h2>Предстоящие мероприятия</h2>
-        <!--<p>Календарь событий с фильтрами, таймером до старта и быстрым переходом к регистрации</p>-->
-      </div>
-
-      <form class="filters" id="eventFilters">
-        <div class="filter-group">
-          <span class="filter-label">Вид спорта</span>
-          <div class="custom-select" data-filter="sport">
-            <button type="button" class="select-trigger">Все</button>
-            <ul class="select-options">
-              <li data-value="all" class="is-selected">Все</li>
-              <li data-value="run">Бег</li>
-              <li data-value="bike">Велоспорт</li>
-              <li data-value="ski">Лыжи</li>
-            </ul>
-          </div>
-        </div>
-        <div class="filter-group is-temporarily-hidden">
-          <span class="filter-label">Регион</span>
-          <div class="custom-select" data-filter="region">
-            <button type="button" class="select-trigger">Все регионы</button>
-            <ul class="select-options">
-              <li data-value="all" class="is-selected">Все регионы</li>
-            </ul>
-          </div>
-        </div>
-        <div class="filter-group">
-          <span class="filter-label">Год</span>
-          <div class="custom-select" data-filter="year">
-            <button type="button" class="select-trigger">Все годы</button>
-            <ul class="select-options">
-              <li data-value="all" class="is-selected">Все годы</li>
-              <li data-value="2026">2026</li>
-              <li data-value="2025">2025</li>
-              <li data-value="2024">2024</li>
-            </ul>
-          </div>
-        </div>
-        <label>Статус
-          <div class="status-toggle" role="group" aria-label="Фильтр по статусу">
-            <button type="button" class="status-btn is-active" data-status="upcoming">Предстоящие</button>
-            <button type="button" class="status-btn" data-status="past">Прошедшие</button>
-          </div>
-        </label>
-      </form>
-
-      <div class="event-grid" id="eventGrid">
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Москва" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Этап МФЛРД 2026 — «С НАМИ ВСЕ»"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап МФЛРД 2026 — «С НАМИ ВСЕ»</a></h3><div class="event-meta"><span class="event-date">Дата: 8 августа 2026 г.</span><span class="event-place">Место: Москва, ОБЛК «Юго-Восток»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-08T11:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 42</div><button class="primary-btn js-register" type="button" data-event="mflrd-2026">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Тульская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png" alt="Тульская гонка преследования"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Тульская гонка преследования</a></h3><div class="event-meta"><span class="event-date">Дата: 22 августа 2026 г.</span><span class="event-place">Место: Тульская область, Лыжероллерный центр «Веденино»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-22T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 126</div><button class="primary-btn js-register" type="button" data-event="tula-pursuit">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Московская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png" alt="4 этап «ТЫЩА В МЫТИЩАХ-2026»"><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">4 этап «ТЫЩА В МЫТИЩАХ-2026»</a></h3><div class="event-meta"><span class="event-date">Дата: 26 августа 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-26T18:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 8</div><button class="primary-btn js-register" type="button" data-event="mytishchi-1000">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="bike" data-region="Московская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png" alt="ЯСПОРТ ХС RACE 2026"><div class="event-body"><span class="event-badge">Маунтинбайк</span><h3><a href="event.html">ЯСПОРТ ХС RACE 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 30 августа 2026 г.</span><span class="event-place">Место: Московская область, Одинцовский округ, Парк Малевича</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-30T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 310</div><button class="primary-btn js-register" type="button" data-event="xsport-xc">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Калужская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png" alt="Этап Фестиваля лыжероллерных дисциплин 2026"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап Фестиваля лыжероллерных дисциплин 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Калужская область, Обнинск, лыжероллерная трасса</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-09-05T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 74</div><button class="primary-btn js-register" type="button" data-event="obninsk-festival">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Алтайский край" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Altai Trail Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Altai Trail Run</a></h3><div class="event-meta"><span class="event-date">Дата: 2 августа 2026 г.</span><span class="event-place">Место: Алтайский край, Манжерок</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-02T07:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 19</div><button class="primary-btn js-register" type="button" data-event="altai-trail-run">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="multi" data-region="Москва" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/event-1.jpg" alt="Туристический слет среди многодетных семей города Москвы"><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Туристический слет среди многодетных семей города Москвы</a></h3><div class="event-meta"><span class="event-date">Дата: 23 августа 2026 г.</span><span class="event-place">Место: Москва, ВАО</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-23T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 120</div><button class="primary-btn js-register" type="button" data-event="family-tourist-festival">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Архангельская область" data-year="2026" data-status="upcoming" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png" alt="Гонки на лыжероллерах и роликовых коньках"><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Гонки на лыжероллерах и роликовых коньках</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Архангельская область, д. Малые Карелы, л/с им. В. С. Кузина</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-09-05T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 90</div><button class="primary-btn js-register" type="button" data-event="roller-race">Регистрация</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="ski" data-region="Карелия" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Karelia Ski Sprint"><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span class="event-date">Дата: 15 февраля 2026 г.</span><span class="event-place">Место: Карелия, Петрозаводск</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-02-15T11:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результаты</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Новосибирская область" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Siberian Frost Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span class="event-date">Дата: 1 марта 2026 г.</span><span class="event-place">Место: Новосибирская область, Михайловская набережная</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-03-01T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результаты</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" data-sport="run" data-region="Свердловская область" data-year="2026" data-status="past" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Ural Mountain Trail"><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span class="event-date">Дата: 12 апреля 2026 г.</span><span class="event-place">Место: Свердловская область, Екатеринбург</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-04-12T09:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" type="button" data-open-modal="result">Смотреть результаты</button></div></div></article>
-      </div>
-
-      <div class="section-more">
-        <a class="primary-btn" href="events.html">Все мероприятия<span class="btn-arrow" aria-hidden="true">→</span></a>
-      </div>
-    </section>
-
-    <!-- Временно скрыта секция «Информация по мероприятиям».
+</div>
+</section>
+<section class="section" id="events">
+<div class="section-head">
+<p class="label">Ближайшие события</p>
+<h2>Предстоящие мероприятия</h2>
+<!--<p>Календарь событий с фильтрами, таймером до старта и быстрым переходом к регистрации</p>-->
+</div>
+<form class="filters" id="eventFilters">
+<div class="filter-group">
+<span class="filter-label">Вид спорта</span>
+<div class="custom-select" data-filter="sport">
+<button class="select-trigger" type="button">Все</button>
+<ul class="select-options">
+<li class="is-selected" data-value="all">Все</li>
+<li data-value="run">Бег</li>
+<li data-value="bike">Велоспорт</li>
+<li data-value="ski">Лыжи</li>
+</ul>
+</div>
+</div>
+<div class="filter-group is-temporarily-hidden">
+<span class="filter-label">Регион</span>
+<div class="custom-select" data-filter="region">
+<button class="select-trigger" type="button">Все регионы</button>
+<ul class="select-options">
+<li class="is-selected" data-value="all">Все регионы</li>
+</ul>
+</div>
+</div>
+<div class="filter-group">
+<span class="filter-label">Год</span>
+<div class="custom-select" data-filter="year">
+<button class="select-trigger" type="button">Все годы</button>
+<ul class="select-options">
+<li class="is-selected" data-value="all">Все годы</li>
+<li data-value="2026">2026</li>
+<li data-value="2025">2025</li>
+<li data-value="2024">2024</li>
+</ul>
+</div>
+</div>
+<label>Статус
+          <div aria-label="Фильтр по статусу" class="status-toggle" role="group">
+<button class="status-btn is-active" data-status="upcoming" type="button">Предстоящие</button>
+<button class="status-btn" data-status="past" type="button">Прошедшие</button>
+</div>
+</label>
+</form>
+<div class="event-grid" id="eventGrid">
+<article class="event-card" data-event-href="event.html" data-region="Москва" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Этап МФЛРД 2026 — «С НАМИ ВСЕ»" class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап МФЛРД 2026 — «С НАМИ ВСЕ»</a></h3><div class="event-meta"><span class="event-date">Дата: 8 августа 2026 г.</span><span class="event-place">Место: Москва, ОБЛК «Юго-Восток»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-08T11:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 42</div><button class="primary-btn js-public-register" data-event="mflrd-2026" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Тульская область" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Тульская гонка преследования" class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Тульская гонка преследования</a></h3><div class="event-meta"><span class="event-date">Дата: 22 августа 2026 г.</span><span class="event-place">Место: Тульская область, Лыжероллерный центр «Веденино»</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-22T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 126</div><button class="primary-btn js-public-register" data-event="tula-pursuit" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Московская область" data-sport="run" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="4 этап «ТЫЩА В МЫТИЩАХ-2026»" class="event-image" src="assets/images/diz1/imports/1440WLight/6ffce6e4ee8939e1a96f476ecf2fdf47352d257d.png"/><div class="event-body"><span class="event-badge">Легкая атлетика</span><h3><a href="event.html">4 этап «ТЫЩА В МЫТИЩАХ-2026»</a></h3><div class="event-meta"><span class="event-date">Дата: 26 августа 2026 г.</span><span class="event-place">Место: Московская область, Мытищи, ул. Коминтерна, вл. 5</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-26T18:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 8</div><button class="primary-btn js-public-register" data-event="mytishchi-1000" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Московская область" data-sport="bike" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="ЯСПОРТ ХС RACE 2026" class="event-image" src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png"/><div class="event-body"><span class="event-badge">Маунтинбайк</span><h3><a href="event.html">ЯСПОРТ ХС RACE 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 30 августа 2026 г.</span><span class="event-place">Место: Московская область, Одинцовский округ, Парк Малевича</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-30T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 310</div><button class="primary-btn js-public-register" data-event="xsport-xc" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Калужская область" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Этап Фестиваля лыжероллерных дисциплин 2026" class="event-image" src="assets/images/diz1/imports/1440WLight/20d6faaf14e1d2458642b2028593187587031c0c.png"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Этап Фестиваля лыжероллерных дисциплин 2026</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Калужская область, Обнинск, лыжероллерная трасса</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-09-05T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 74</div><button class="primary-btn js-public-register" data-event="obninsk-festival" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Алтайский край" data-sport="run" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Altai Trail Run" class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png"/><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Altai Trail Run</a></h3><div class="event-meta"><span class="event-date">Дата: 2 августа 2026 г.</span><span class="event-place">Место: Алтайский край, Манжерок</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-02T07:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 19</div><button class="primary-btn js-public-register" data-event="altai-trail-run" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Москва" data-sport="multi" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Туристический слет среди многодетных семей города Москвы" class="event-image" src="assets/images/legacy/services/event-organization/event-1.jpg"/><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Туристический слет среди многодетных семей города Москвы</a></h3><div class="event-meta"><span class="event-date">Дата: 23 августа 2026 г.</span><span class="event-place">Место: Москва, ВАО</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-08-23T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 120</div><button class="primary-btn js-public-register" data-event="family-tourist-festival" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Архангельская область" data-sport="ski" data-status="upcoming" data-year="2026" role="link" tabindex="0"><img alt="Гонки на лыжероллерах и роликовых коньках" class="event-image" src="assets/images/diz1/imports/1440WLight/031d70ce4026a68e34bc8924b7b577f61fbe6ee4.png"/><div class="event-body"><span class="event-badge">Лыжероллеры</span><h3><a href="event.html">Гонки на лыжероллерах и роликовых коньках</a></h3><div class="event-meta"><span class="event-date">Дата: 5 сентября 2026 г.</span><span class="event-place">Место: Архангельская область, д. Малые Карелы, л/с им. В. С. Кузина</span><span class="event-type">Тип мероприятия: Для всех желающих</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-09-05T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Осталось мест: 90</div><button class="primary-btn js-public-register" data-event="roller-race" type="button">Зарегистрироваться</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Карелия" data-sport="ski" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="Karelia Ski Sprint" class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png"/><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span class="event-date">Дата: 15 февраля 2026 г.</span><span class="event-place">Место: Карелия, Петрозаводск</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-02-15T11:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" data-open-modal="result" type="button">Смотреть результаты</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Новосибирская область" data-sport="run" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="Siberian Frost Run" class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png"/><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span class="event-date">Дата: 1 марта 2026 г.</span><span class="event-place">Место: Новосибирская область, Михайловская набережная</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-03-01T10:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" data-open-modal="result" type="button">Смотреть результаты</button></div></div></article>
+<article class="event-card" data-event-href="event.html" data-region="Свердловская область" data-sport="run" data-status="past" data-year="2026" role="link" tabindex="0"><img alt="Ural Mountain Trail" class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png"/><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span class="event-date">Дата: 12 апреля 2026 г.</span><span class="event-place">Место: Свердловская область, Екатеринбург</span></div><div class="event-footer"><!-- <div class="timer">До старта: <strong data-countdown="2026-04-12T09:00:00">—</strong></div> --><div class="seats is-temporarily-hidden">Регистрация закрыта</div><button class="primary-btn" data-open-modal="result" type="button">Смотреть результаты</button></div></div></article>
+</div>
+<div class="section-more">
+<a class="primary-btn" href="events.html">Все мероприятия<span aria-hidden="true" class="btn-arrow">→</span></a>
+</div>
+</section>
+<!-- Временно скрыта секция «Информация по мероприятиям».
     <section class="section info-section" id="event-info">
       <div class="section-head">
         <p class="label blue">Информация по мероприятиям</p>
@@ -189,272 +182,242 @@
       </div>
     </section>
     -->
-
-    <section class="section past-section" id="past-events">
-      <div class="section-head">
-        <p class="label">Прошедшие мероприятия</p>
-        <h2>Прошедшие мероприятия</h2>
-       <!-- <p>архив стартов</p>-->
-      </div>
-      <div class="event-grid" id="pastEventGrid">
-        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Karelia Ski Sprint"><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span class="event-date">Дата: 15 февраля 2026 г.</span><span class="event-place">Место: Карелия, Петрозаводск</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результаты</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Siberian Frost Run"><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span class="event-date">Дата: 1 марта 2026 г.</span><span class="event-place">Место: Новосибирская область, Михайловская набережная</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результаты</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png" alt="Ural Mountain Trail"><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span class="event-date">Дата: 12 апреля 2026 г.</span><span class="event-place">Место: Свердловская область, Екатеринбург</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результаты</button></div></div></article>
-        <article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img class="event-image" src="assets/images/legacy/services/event-organization/event-3.jpg" alt="Семейный фестиваль #ЦБНАСПОРТЕ"><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Семейный фестиваль #ЦБНАСПОРТЕ</a></h3><div class="event-meta"><span class="event-date">Дата: 5 июля 2026 г.</span><span class="event-place">Место: Москва, стадион «Воробьевы горы»</span></div><div class="event-footer"><button class="primary-btn" type="button" data-open-modal="result">Смотреть результаты</button></div></div></article>
-      </div>
-
-      <div class="section-more">
-        <a class="primary-btn" href="events.html">Весь архив стартов<span class="btn-arrow" aria-hidden="true">→</span></a>
-      </div>
-    </section>
-
-    <section class="section sports-section" id="sports">
-      <div class="section-head">
-        <p class="label pink">Виды спорта</p>
-        <h2>Арсенал спортивных дисциплин</h2>
-        <!--<p>Категории помогают быстро отфильтровать календарь и перейти к подходящим стартам.</p>-->
-      </div>
-      <div class="sports-grid sports-grid-full">
-        <button class="sport-card" type="button" data-sport="ski"><img src="assets/images/legacy/sports-original/1.jpg" alt=""><strong>Лыжные гонки</strong></button>
-        <button class="sport-card" type="button" data-sport="ski"><img src="assets/images/legacy/sports-original/2.jpg" alt=""><strong>Лыжероллеры</strong></button>
-        <button class="sport-card" type="button" data-sport="run"><img src="assets/images/legacy/sports-original/3.jpg" alt=""><strong>Trail Running</strong></button>
-        <button class="sport-card" type="button" data-sport="ski"><img src="assets/images/legacy/sports-original/4.jpg" alt=""><strong>Биатлон</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/5.jpg" alt=""><strong>Полиатлон</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/6.png" alt=""><strong>Конькобежный спорт</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/7.jpg" alt=""><strong>Скандинавская ходьба</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/8.jpg" alt=""><strong>Спортивная ходьба</strong></button>
-        <button class="sport-card" type="button" data-sport="run"><img src="assets/images/legacy/sports-original/9.jpg" alt=""><strong>Легкая атлетика</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/10.jpg" alt=""><strong>Многоборье ГТО</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/11.jpg" alt=""><strong>Плавание</strong></button>
-        <button class="sport-card" type="button" data-sport="bike"><img src="assets/images/legacy/sports-original/12.jpg" alt=""><strong>Велогонки</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/13.jpg" alt=""><strong>Спартакиады</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/14.jpg" alt=""><strong>Автогонки</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/16.jpg" alt=""><strong>Подвижные игры</strong></button>
-        <button class="sport-card" type="button" data-sport="all"><img src="assets/images/legacy/sports-original/15.jpg" alt=""><strong>Игровые виды спорта</strong></button>
-      </div>
-    </section>
-
-    <section class="section trust-section" id="trust">
-      <div class="section-head">
-        <p class="label">Почему доверяют нам</p>
-        <h2>Почему доверяют нам</h2>
-        <p>От концепции и программы до хронометража и оборудования соревновательной зоны.</p>
-      </div>
-      <div class="trust-grid">
-        <article><strong>1</strong><h3>Качественно</h3><p>Многолетний опыт и индивидуальный подход к профессиональным и любительским стартам.</p></article>
-        <article><strong>2</strong><h3>Продуктивно</h3><p>Квалифицированные судьи, тренеры и инструкторы с профильным образованием.</p></article>
-        <article><strong>3</strong><h3>Комплексно</h3><p>Создание концепции и программы мероприятий различного уровня.</p></article>
-        <article><strong>4</strong><h3>Надежно</h3><p>Точный, оперативный хронометраж и соблюдение принципа fair play.</p></article>
-        <article><strong>5</strong><h3>Практично</h3><p>Подготовка трасс и профессиональное оборудование соревновательных зон.</p></article>
-        <article><strong>6</strong><h3>Выгодно</h3><p>Гибкий подход к формированию стоимости услуг.</p></article>
-        <article><strong>7</strong><h3>Технологично</h3><p>Современные системы регистрации, хронометража и подготовки итоговых протоколов.</p></article>
-        <article><strong>8</strong><h3>Ответственно</h3><p>Контроль каждого этапа подготовки и сопровождение мероприятия до его завершения.</p></article>
-      </div>
-    </section>
-
-    <section class="section locations-section" id="start-locations">
-      <div class="section-head">
-        <p class="label blue">География стартов</p>
-        <h2>Карта локаций</h2>
-        <p>Площадки, на которых проходили мероприятия ARTA Sport.</p>
-      </div>
-      <div class="locations-map-card">
-        <iframe
-          class="locations-map"
-          src="https://yandex.ru/map-widget/v1/?ll=54.386000%2C58.245000&z=4&l=map&pt=34.346900,61.784900,pm2rdm~82.920400,55.030200,pm2rdm~60.597500,56.838900,pm2rdm"
-          title="Яндекс Карта локаций стартов ARTA Sport"
-          loading="lazy"
-          allowfullscreen></iframe>
-        <div class="locations-map-footer">
-          <ul class="locations-list" aria-label="Локации прошедших стартов">
-            <li><span></span>Петрозаводск</li>
-            <li><span></span>Новосибирск</li>
-            <li><span></span>Екатеринбург</li>
-          </ul>
-          <a class="map-open-link" href="https://yandex.ru/maps/?ll=54.386000%2C58.245000&z=4&pt=34.346900,61.784900,pm2rdm~82.920400,55.030200,pm2rdm~60.597500,56.838900,pm2rdm" target="_blank" rel="noopener">Открыть в Яндекс Картах →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section partners-section" id="partners">
-      <div class="section-head partners-head">
-        <div>
-          <p class="label blue">Наши партнеры</p>
-          <h2>Вместе создаем крупные проекты</h2>
-        </div>
-      </div>
-      <div class="partner-carousel">
-        <div class="partner-strip" aria-label="Партнеры ARTA Sport" tabindex="0">
-          <a href="https://www.lukoil.ru/" target="_blank" rel="noopener" title="ПАО «ЛУКОЙЛ»"><img src="assets/images/legacy/partners/original/lukoil.jpg" alt="ЛУКОЙЛ"></a>
-          <a href="https://mrg.gazprom.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/gazprom.png" alt="Газпром межрегионгаз"></a>
-          <a href="https://www.rzd.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/rzhd.png" alt="РЖД"></a>
-          <a href="https://www.sintecgroup.ru/" target="_blank" rel="noopener" title="SINTEC Group"><img src="assets/images/legacy/partners/original/sintec.png" alt="SINTEC Group"></a>
-          <a href="https://www.rosneft.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/rosneft.png" alt="Роснефть"></a>
-          <a href="https://www.sibur.ru/" target="_blank" rel="noopener" title="СИБУР"><img src="assets/images/legacy/partners/original/sibur.jpg" alt="СИБУР"></a>
-          <a href="https://minenergo.gov.ru/" target="_blank" rel="noopener" title="Минэнерго России"><img src="assets/images/legacy/partners/original/minenergo.jpg" alt="Минэнерго России"></a>
-          <a href="https://mil.ru/" target="_blank" rel="noopener" title="Минобороны России"><img src="assets/images/legacy/partners/original/minoborony.jpg" alt="Минобороны России"></a>
-          <a href="https://www.nalog.gov.ru/rn77/" target="_blank" rel="noopener" title="ФНС России"><img src="assets/images/legacy/partners/original/fns.png" alt="ФНС России"></a>
-          <a href="https://valeshi.ru/" target="_blank" rel="noopener" title="Валеши"><img src="assets/images/legacy/partners/original/valeshi.png" alt="Валеши"></a>
-          <a href="https://t.me/s/skifactory" target="_blank" rel="noopener" title="УРАЛХИМ SKI FACTORY"><img src="assets/images/legacy/partners/original/uralhim.png" alt="УРАЛХИМ SKI FACTORY"></a>
-          <a href="https://parkpatriot.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/Patriot.png" alt="Парк Патриот"></a>
-          <a href="https://www.sportmaster.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/sportmaster.jpg" alt="Спортмастер"></a>
-          <a href="https://bionovashop.ru/" target="_blank" rel="noopener"><img src="assets/images/legacy/partners/BIONOVA.jpg" alt="BIONOVA"></a>
-        </div>
-        <div class="partner-controls" aria-label="Управление каруселью партнеров">
-          <button type="button" data-partner-scroll="prev" aria-label="Предыдущие партнеры">‹</button>
-          <button type="button" data-partner-scroll="next" aria-label="Следующие партнеры">›</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section account-preview" id="account">
-      <div class="account-copy">
-        <p class="label">Личный кабинет</p>
-        <h2>Регистрация, документы и семья в одном месте</h2>
-        <p>Прототип поддерживает автозаполнение профиля, зависимые профили детей, загрузку страховки и передачу оплаченного слота.</p>
-        <a class="primary-btn" href="lk.html">Открыть личный кабинет</a>
-      </div>
-      <div class="preview-account-card">
-        <div class="profile-line">
-          <span>ВД</span>
-          <div><strong>Васильев Дмитрий</strong><small>Мужчина · 49 лет · fendervik@gmail.com</small></div>
-        </div>
-        <div class="account-list">
-          <div><strong>3</strong><span>будущих старта</span></div>
-          <div><strong>18</strong><span>баллов участия</span></div>
-          <div><strong>2</strong><span>детских профиля</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="news">
-      <div class="section-head">
-        <p class="label blue">Новости и статьи</p>
-        <h2>Новостная лента</h2>
-      </div>
-      <div class="news-grid">
-        <article class="news-card">
-          <img src="assets/images/diz1/imports/1440WLight/6dd98ca0acaa339e158726df226104416d0648b6.png" alt="Участники на финише">
-          <div><span class="news-date-label">Дата публикации</span><time datetime="2026-06-06">06 июня 2026</time><h3><a href="news-317.html">ПОЛУМАРАФОН ЛОСЬ входит в календарь МФЛРД</a></h3><p>Новый лыжероллерный старт пополняет программу межрегионального фестиваля.</p></div>
-        </article>
-        <article class="news-card">
-          <img src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png" alt="Спортивная площадка">
-          <div><span class="news-date-label">Дата публикации</span><time datetime="2026-05-26">26 мая 2026</time><h3><a href="news.html#news-2">Весенний лыжероллерный полумарафон возвращается</a></h3><p>Старт снова пройдет на своей родной площадке — в парке «Патриот».</p></div>
-        </article>
-        <article class="news-card">
-          <img src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png" alt="Спортсмены">
-          <div><span class="news-date-label">Дата публикации</span><time datetime="2026-05-06">06 мая 2026</time><h3><a href="news.html#news-3">Гонки фестиваля пройдут в Обнинске</a></h3><p>10 мая состоится очередной этап Межрегионального фестиваля лыжероллерных дисциплин.</p></div>
-        </article>
-        <article class="news-card">
-          <img src="assets/images/legacy/services/event-organization/athletics.jpg" alt="Легкоатлетический старт">
-          <div><span class="news-date-label">Дата публикации</span><time datetime="2026-04-21">21 апреля 2026</time><h3><a href="news.html#news-4">Открыта регистрация на «ТЫЩУ В МЫТИЩАХ»</a></h3><p>Легкоатлетическая серия на 1000 метров объявляет набор участников на летние этапы.</p></div>
-        </article>
-      </div>
-
-      <div class="section-more">
-        <a class="primary-btn" href="news.html">Смотреть все новости<span class="btn-arrow" aria-hidden="true">→</span></a>
-      </div>
-    </section>
-
-    <!--<section class="cta">
+<section class="section past-section" id="past-events">
+<div class="section-head">
+<p class="label">Прошедшие мероприятия</p>
+<h2>Прошедшие мероприятия</h2>
+<!-- <p>архив стартов</p>-->
+</div>
+<div class="event-grid" id="pastEventGrid">
+<article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img alt="Karelia Ski Sprint" class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png"/><div class="event-body"><span class="event-badge">Лыжи</span><h3><a href="event.html">Karelia Ski Sprint</a></h3><div class="event-meta"><span class="event-date">Дата: 15 февраля 2026 г.</span><span class="event-place">Место: Карелия, Петрозаводск</span></div><div class="event-footer"><button class="primary-btn" data-open-modal="result" type="button">Смотреть результаты</button></div></div></article>
+<article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img alt="Siberian Frost Run" class="event-image" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png"/><div class="event-body"><span class="event-badge">Бег</span><h3><a href="event.html">Siberian Frost Run</a></h3><div class="event-meta"><span class="event-date">Дата: 1 марта 2026 г.</span><span class="event-place">Место: Новосибирская область, Михайловская набережная</span></div><div class="event-footer"><button class="primary-btn" data-open-modal="result" type="button">Смотреть результаты</button></div></div></article>
+<article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img alt="Ural Mountain Trail" class="event-image" src="assets/images/diz1/imports/1440WLight/04d0e49637dd3340ccec361b074a85de3c5bff80.png"/><div class="event-body"><span class="event-badge">Трейл</span><h3><a href="event.html">Ural Mountain Trail</a></h3><div class="event-meta"><span class="event-date">Дата: 12 апреля 2026 г.</span><span class="event-place">Место: Свердловская область, Екатеринбург</span></div><div class="event-footer"><button class="primary-btn" data-open-modal="result" type="button">Смотреть результаты</button></div></div></article>
+<article class="event-card" data-event-href="event.html" role="link" tabindex="0"><img alt="Семейный фестиваль #ЦБНАСПОРТЕ" class="event-image" src="assets/images/legacy/services/event-organization/event-3.jpg"/><div class="event-body"><span class="event-badge">Спортивный фестиваль</span><h3><a href="event.html">Семейный фестиваль #ЦБНАСПОРТЕ</a></h3><div class="event-meta"><span class="event-date">Дата: 5 июля 2026 г.</span><span class="event-place">Место: Москва, стадион «Воробьевы горы»</span></div><div class="event-footer"><button class="primary-btn" data-open-modal="result" type="button">Смотреть результаты</button></div></div></article>
+</div>
+<div class="section-more">
+<a class="primary-btn" href="events.html">Весь архив стартов<span aria-hidden="true" class="btn-arrow">→</span></a>
+</div>
+</section>
+<section class="section sports-section" id="sports">
+<div class="section-head">
+<p class="label pink">Виды спорта</p>
+<h2>Арсенал спортивных дисциплин</h2>
+<!--<p>Категории помогают быстро отфильтровать календарь и перейти к подходящим стартам.</p>-->
+</div>
+<div class="sports-grid sports-grid-full">
+<button class="sport-card" data-sport="ski" type="button"><img alt="" src="assets/images/legacy/sports-original/1.jpg"/><strong>Лыжные гонки</strong></button>
+<button class="sport-card" data-sport="ski" type="button"><img alt="" src="assets/images/legacy/sports-original/2.jpg"/><strong>Лыжероллеры</strong></button>
+<button class="sport-card" data-sport="run" type="button"><img alt="" src="assets/images/legacy/sports-original/3.jpg"/><strong>Trail Running</strong></button>
+<button class="sport-card" data-sport="ski" type="button"><img alt="" src="assets/images/legacy/sports-original/4.jpg"/><strong>Биатлон</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/5.jpg"/><strong>Полиатлон</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/6.png"/><strong>Конькобежный спорт</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/7.jpg"/><strong>Скандинавская ходьба</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/8.jpg"/><strong>Спортивная ходьба</strong></button>
+<button class="sport-card" data-sport="run" type="button"><img alt="" src="assets/images/legacy/sports-original/9.jpg"/><strong>Легкая атлетика</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/10.jpg"/><strong>Многоборье ГТО</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/11.jpg"/><strong>Плавание</strong></button>
+<button class="sport-card" data-sport="bike" type="button"><img alt="" src="assets/images/legacy/sports-original/12.jpg"/><strong>Велогонки</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/13.jpg"/><strong>Спартакиады</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/14.jpg"/><strong>Автогонки</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/16.jpg"/><strong>Подвижные игры</strong></button>
+<button class="sport-card" data-sport="all" type="button"><img alt="" src="assets/images/legacy/sports-original/15.jpg"/><strong>Игровые виды спорта</strong></button>
+</div>
+</section>
+<section class="section trust-section" id="trust">
+<div class="section-head">
+<p class="label">Почему доверяют нам</p>
+<h2>Почему доверяют нам</h2>
+<p>От концепции и программы до хронометража и оборудования соревновательной зоны.</p>
+</div>
+<div class="trust-grid">
+<article><strong>1</strong><h3>Качественно</h3><p>Многолетний опыт и индивидуальный подход к профессиональным и любительским стартам.</p></article>
+<article><strong>2</strong><h3>Продуктивно</h3><p>Квалифицированные судьи, тренеры и инструкторы с профильным образованием.</p></article>
+<article><strong>3</strong><h3>Комплексно</h3><p>Создание концепции и программы мероприятий различного уровня.</p></article>
+<article><strong>4</strong><h3>Надежно</h3><p>Точный, оперативный хронометраж и соблюдение принципа fair play.</p></article>
+<article><strong>5</strong><h3>Практично</h3><p>Подготовка трасс и профессиональное оборудование соревновательных зон.</p></article>
+<article><strong>6</strong><h3>Выгодно</h3><p>Гибкий подход к формированию стоимости услуг.</p></article>
+<article><strong>7</strong><h3>Технологично</h3><p>Современные системы регистрации, хронометража и подготовки итоговых протоколов.</p></article>
+<article><strong>8</strong><h3>Ответственно</h3><p>Контроль каждого этапа подготовки и сопровождение мероприятия до его завершения.</p></article>
+</div>
+</section>
+<section class="section locations-section" id="start-locations">
+<div class="section-head">
+<p class="label blue">География стартов</p>
+<h2>Карта локаций</h2>
+<p>Площадки, на которых проходили мероприятия ARTA Sport.</p>
+</div>
+<div class="locations-map-card">
+<iframe allowfullscreen="" class="locations-map" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=54.386000%2C58.245000&amp;z=4&amp;l=map&amp;pt=34.346900,61.784900,pm2rdm~82.920400,55.030200,pm2rdm~60.597500,56.838900,pm2rdm" title="Яндекс Карта локаций стартов ARTA Sport"></iframe>
+<div class="locations-map-footer">
+<ul aria-label="Локации прошедших стартов" class="locations-list">
+<li><span></span>Петрозаводск</li>
+<li><span></span>Новосибирск</li>
+<li><span></span>Екатеринбург</li>
+</ul>
+<a class="map-open-link" href="https://yandex.ru/maps/?ll=54.386000%2C58.245000&amp;z=4&amp;pt=34.346900,61.784900,pm2rdm~82.920400,55.030200,pm2rdm~60.597500,56.838900,pm2rdm" rel="noopener" target="_blank">Открыть в Яндекс Картах →</a>
+</div>
+</div>
+</section>
+<section class="section partners-section" id="partners">
+<div class="section-head partners-head">
+<div>
+<p class="label blue">Наши партнеры</p>
+<h2>Вместе создаем крупные проекты</h2>
+</div>
+</div>
+<div class="partner-carousel">
+<div aria-label="Партнеры ARTA Sport" class="partner-strip" tabindex="0">
+<a href="https://www.lukoil.ru/" rel="noopener" target="_blank" title="ПАО «ЛУКОЙЛ»"><img alt="ЛУКОЙЛ" src="assets/images/legacy/partners/original/lukoil.jpg"/></a>
+<a href="https://mrg.gazprom.ru/" rel="noopener" target="_blank"><img alt="Газпром межрегионгаз" src="assets/images/legacy/partners/gazprom.png"/></a>
+<a href="https://www.rzd.ru/" rel="noopener" target="_blank"><img alt="РЖД" src="assets/images/legacy/partners/rzhd.png"/></a>
+<a href="https://www.sintecgroup.ru/" rel="noopener" target="_blank" title="SINTEC Group"><img alt="SINTEC Group" src="assets/images/legacy/partners/original/sintec.png"/></a>
+<a href="https://www.rosneft.ru/" rel="noopener" target="_blank"><img alt="Роснефть" src="assets/images/legacy/partners/rosneft.png"/></a>
+<a href="https://www.sibur.ru/" rel="noopener" target="_blank" title="СИБУР"><img alt="СИБУР" src="assets/images/legacy/partners/original/sibur.jpg"/></a>
+<a href="https://minenergo.gov.ru/" rel="noopener" target="_blank" title="Минэнерго России"><img alt="Минэнерго России" src="assets/images/legacy/partners/original/minenergo.jpg"/></a>
+<a href="https://mil.ru/" rel="noopener" target="_blank" title="Минобороны России"><img alt="Минобороны России" src="assets/images/legacy/partners/original/minoborony.jpg"/></a>
+<a href="https://www.nalog.gov.ru/rn77/" rel="noopener" target="_blank" title="ФНС России"><img alt="ФНС России" src="assets/images/legacy/partners/original/fns.png"/></a>
+<a href="https://valeshi.ru/" rel="noopener" target="_blank" title="Валеши"><img alt="Валеши" src="assets/images/legacy/partners/original/valeshi.png"/></a>
+<a href="https://t.me/s/skifactory" rel="noopener" target="_blank" title="УРАЛХИМ SKI FACTORY"><img alt="УРАЛХИМ SKI FACTORY" src="assets/images/legacy/partners/original/uralhim.png"/></a>
+<a href="https://parkpatriot.ru/" rel="noopener" target="_blank"><img alt="Парк Патриот" src="assets/images/legacy/partners/Patriot.png"/></a>
+<a href="https://www.sportmaster.ru/" rel="noopener" target="_blank"><img alt="Спортмастер" src="assets/images/legacy/partners/sportmaster.jpg"/></a>
+<a href="https://bionovashop.ru/" rel="noopener" target="_blank"><img alt="BIONOVA" src="assets/images/legacy/partners/BIONOVA.jpg"/></a>
+</div>
+<div aria-label="Управление каруселью партнеров" class="partner-controls">
+<button aria-label="Предыдущие партнеры" data-partner-scroll="prev" type="button">‹</button>
+<button aria-label="Следующие партнеры" data-partner-scroll="next" type="button">›</button>
+</div>
+</div>
+</section>
+<section class="section account-preview" id="account">
+<div class="account-copy">
+<p class="label">Личный кабинет</p>
+<h2>Регистрация, документы и семья в одном месте</h2>
+<p>Прототип поддерживает автозаполнение профиля, зависимые профили детей, загрузку страховки и передачу оплаченного слота.</p>
+<a class="primary-btn" href="lk.html">Открыть личный кабинет</a>
+</div>
+<div class="preview-account-card">
+<div class="profile-line">
+<span>ВД</span>
+<div><strong>Васильев Дмитрий</strong><small>Мужчина · 49 лет · fendervik@gmail.com</small></div>
+</div>
+<div class="account-list">
+<div><strong>3</strong><span>будущих старта</span></div>
+<div><strong>18</strong><span>баллов участия</span></div>
+<div><strong>2</strong><span>детских профиля</span></div>
+</div>
+</div>
+</section>
+<section class="section" id="news">
+<div class="section-head">
+<p class="label blue">Новости и статьи</p>
+<h2>Новостная лента</h2>
+</div>
+<div class="news-grid">
+<article class="news-card">
+<img alt="Участники на финише" src="assets/images/diz1/imports/1440WLight/6dd98ca0acaa339e158726df226104416d0648b6.png"/>
+<div><span class="news-date-label">Дата публикации</span><time datetime="2026-06-06">06 июня 2026</time><h3><a class="news-card-link" href="news-317.html">ПОЛУМАРАФОН ЛОСЬ входит в календарь МФЛРД</a></h3><p>Новый лыжероллерный старт пополняет программу межрегионального фестиваля.</p></div>
+</article>
+<article class="news-card">
+<img alt="Спортивная площадка" src="assets/images/diz1/imports/1440WLight/70709b4fe4f01449ab339feb2339804b4a1bdff2.png"/>
+<div><span class="news-date-label">Дата публикации</span><time datetime="2026-05-26">26 мая 2026</time><h3><a class="news-card-link" href="news-2.html">Весенний лыжероллерный полумарафон возвращается</a></h3><p>Старт снова пройдет на своей родной площадке — в парке «Патриот».</p></div>
+</article>
+<article class="news-card">
+<img alt="Спортсмены" src="assets/images/diz1/imports/1440WLight/453815ae6aaca94cfa7ba9935a5657c4abddffea.png"/>
+<div><span class="news-date-label">Дата публикации</span><time datetime="2026-05-06">06 мая 2026</time><h3><a class="news-card-link" href="news-3.html">Гонки фестиваля пройдут в Обнинске</a></h3><p>10 мая состоится очередной этап Межрегионального фестиваля лыжероллерных дисциплин.</p></div>
+</article>
+<article class="news-card">
+<img alt="Легкоатлетический старт" src="assets/images/legacy/services/event-organization/athletics.jpg"/>
+<div><span class="news-date-label">Дата публикации</span><time datetime="2026-04-21">21 апреля 2026</time><h3><a class="news-card-link" href="news-4.html">Открыта регистрация на «ТЫЩУ В МЫТИЩАХ»</a></h3><p>Легкоатлетическая серия на 1000 метров объявляет набор участников на летние этапы.</p></div>
+</article>
+</div>
+<div class="section-more">
+<a class="primary-btn" href="news.html">Смотреть все новости<span aria-hidden="true" class="btn-arrow">→</span></a>
+</div>
+</section>
+<!--<section class="cta">
       <h2>Готовы к новым достижениям?</h2>
       <p>Выберите старт, заполните заявку из профиля и оплатите слот без лишних шагов.</p>
       <a class="light-btn" href="#events">Начать сейчас</a>
     </section>-->
-  <p class="empty" id="eventGridEmpty" hidden>По выбранным фильтрам мероприятий нет.</p></main>
+<p class="empty" hidden="" id="eventGridEmpty">По выбранным фильтрам мероприятий нет.</p></main>
+<section aria-labelledby="feedback-title" class="feedback-section" id="feedback">
+<div class="feedback-shell">
+<div class="feedback-copy">
+<!--<span class="feedback-kicker">Остались вопросы?</span>-->
+<h3 id="feedback-title">Принимаем заказы на проведение мероприятий</h3>
+<!--<p>Принимаем заказы на проведение мероприятий.<br class="desktop-only"> Свяжитесь с нами удобным способом.</p>-->
+<address class="feedback-contacts">
+<a class="feedback-phone" href="tel:+79166363710">+7 (916) 636-37-10</a>
+<a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+<span>Москва</span>
+</address>
+</div>
+<form class="feedback-form" novalidate="">
+<div class="feedback-field">
+<label for="feedback-name">Имя</label>
+<input autocomplete="name" id="feedback-name" name="name" placeholder="Как к вам обращаться" type="text"/>
+</div>
+<div class="feedback-field">
+<label for="feedback-email">Электронная почта <span aria-hidden="true">*</span></label>
+<input autocomplete="email" id="feedback-email" name="email" placeholder="mail@example.ru" required="" type="email"/>
+</div>
+<div class="feedback-field feedback-phone-field">
+<label for="feedback-phone">Телефон</label>
+<input autocomplete="tel" id="feedback-phone" name="phone" placeholder="+7 (999) 000-00-00" type="tel"/>
+</div>
+<div class="feedback-field feedback-comment">
+<label for="feedback-comment">Сообщение <span aria-hidden="true">*</span></label>
+<textarea id="feedback-comment" name="comment" placeholder="Напишите свое сообщение" required=""></textarea>
+</div>
+<label class="feedback-consent">
+<input name="consent" required="" type="checkbox"/>
+<span>Я даю согласие на обработку и хранение персональных данных</span>
+</label>
+<button class="feedback-submit" type="submit"><span>Отправить</span><span aria-hidden="true">↗</span></button>
+<p aria-live="polite" class="feedback-status" role="status"></p>
+</form>
+</div>
+</section>
+<footer class="site-footer full-footer" id="contacts">
+<div class="footer-brand">
+<img alt="ARTA Sport" class="footer-logo" src="assets/images/diz1/logo_1.png"/>
+</div>
+<nav>
+<strong>Участникам</strong>
+<a href="events.html">Мероприятия</a>
+<a href="registration.html">Регистрация</a>
+<a href="lk.html">Личный кабинет</a>
+</nav>
+<nav>
+<strong>Компания</strong>
+<a href="offers.html">Наши предложения</a>
+<a href="partners.html">Наши партнеры</a>
+<a href="about.html">О нас</a>
+</nav>
+<nav class="footer-contact">
+<strong>Контакты</strong>
+<a href="tel:+79166363710">+7 (916) 636-37-10</a>
+<a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
+<p>Москва</p>
+</nav>
+<nav class="footer-social-column">
+<strong>Мы в соцсетях</strong>
+<div class="footer-social">
+<a aria-label="ARTA Sport во ВКонтакте" href="https://vk.com/arta_sport" rel="noopener" target="_blank"><img alt="" src="assets/images/social/vk.svg"/></a>
+<a aria-label="Канал ARTA Sport в MAX" href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" rel="noopener" target="_blank"><img alt="" src="assets/images/social/max.svg"/></a>
+</div>
+</nav>
+<div class="footer-legal">
+<p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
+<p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
+</div>
+</footer>
 
-  <section class="feedback-section" id="feedback" aria-labelledby="feedback-title">
-    <div class="feedback-shell">
-      <div class="feedback-copy">
-        <!--<span class="feedback-kicker">Остались вопросы?</span>-->
-        <h3 id="feedback-title">Принимаем заказы на проведение мероприятий</h3>
-        <!--<p>Принимаем заказы на проведение мероприятий.<br class="desktop-only"> Свяжитесь с нами удобным способом.</p>-->
-        <address class="feedback-contacts">
-          <a class="feedback-phone" href="tel:+79166363710">+7 (916) 636-37-10</a>
-          <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
-          <span>Москва</span>
-        </address>
-      </div>
-
-      <form class="feedback-form" novalidate>
-        <div class="feedback-field">
-          <label for="feedback-name">Имя</label>
-          <input id="feedback-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
-        </div>
-        <div class="feedback-field">
-          <label for="feedback-email">Электронная почта <span aria-hidden="true">*</span></label>
-          <input id="feedback-email" name="email" type="email" autocomplete="email" placeholder="mail@example.ru" required>
-        </div>
-        <div class="feedback-field feedback-phone-field">
-          <label for="feedback-phone">Телефон</label>
-          <input id="feedback-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (999) 000-00-00">
-        </div>
-        <div class="feedback-field feedback-comment">
-          <label for="feedback-comment">Сообщение <span aria-hidden="true">*</span></label>
-          <textarea id="feedback-comment" name="comment" placeholder="Напишите свое сообщение" required></textarea>
-        </div>
-        <label class="feedback-consent">
-          <input name="consent" type="checkbox" required>
-          <span>Я даю согласие на обработку и хранение персональных данных</span>
-        </label>
-        <button class="feedback-submit" type="submit"><span>Отправить</span><span aria-hidden="true">↗</span></button>
-        <p class="feedback-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <footer class="site-footer full-footer" id="contacts">
-    <div class="footer-brand">
-      <img class="footer-logo" src="assets/images/diz1/logo_1.png" alt="ARTA Sport">
-    </div>
-    <nav>
-      <strong>Участникам</strong>
-      <a href="events.html">Мероприятия</a>
-      <a href="registration.html">Регистрация</a>
-      <a href="lk.html">Личный кабинет</a>
-    </nav>
-    <nav>
-      <strong>Компания</strong>
-      <a href="offers.html">Наши предложения</a>
-      <a href="partners.html">Наши партнеры</a>
-      <a href="about.html">О нас</a>
-    </nav>
-    <nav class="footer-contact">
-      <strong>Контакты</strong>
-      <a href="tel:+79166363710">+7 (916) 636-37-10</a>
-      <a href="mailto:artasport@yandex.ru">artasport@yandex.ru</a>
-      <p>Москва</p>
-    </nav>
-    <nav class="footer-social-column">
-      <strong>Мы в соцсетях</strong>
-      <div class="footer-social">
-        <a href="https://vk.com/arta_sport" target="_blank" rel="noopener" aria-label="ARTA Sport во ВКонтакте"><img src="assets/images/social/vk.svg" alt=""></a>
-        <a href="https://max.ru/join/fTqh5lvKwrMDfonQY3ZyFlGOFggONE7JxdDklujuikE" target="_blank" rel="noopener" aria-label="Канал ARTA Sport в MAX"><img src="assets/images/social/max.svg" alt=""></a>
-
-      </div>
-    </nav>
-    <div class="footer-legal">
-      <p>© АНО «АРТА-СПОРТ», 2016–2026.</p>
-      <p>Все материалы и дизайн настоящего сайта являются объектами авторского права. Запрещается копирование, распространение (в том числе посредством копирования на любые сайты и ресурсы в сети Интернет) или любое иное использование информации и объектов сайта без согласия правообладателя. При полном или частичном использовании материалов активная ссылка на АНО «АРТА-СПОРТ» обязательна.</p>
-    </div>
-  </footer>
-
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-card">
-      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
-      <h2 id="modalTitle"></h2>
-      <div id="modalBody"></div>
-    </div>
-  </div>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script>
-  
-  <script src="assets/js/animations.js"></script>
-  <script src="assets/js/feedback.js"></script>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/internal.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/feedback.js"></script>
 <script src="assets/js/auth-state.js"></script>
 <script src="assets/js/interactions.js"></script><script src="assets/js/carousel.js"></script>
-</body>
+<div aria-hidden="true" class="modal" id="modal"><div class="modal-backdrop" data-close-modal=""></div><div aria-labelledby="modalTitle" aria-modal="true" class="modal-card" role="dialog"><button aria-label="Закрыть" class="modal-close" data-close-modal="" type="button">×</button><h2 id="modalTitle">Регистрация на старт</h2><div id="modalBody"><form class="registration-form" id="publicRegistrationForm"><label>Событие<select id="publicEvent"><option data-date="2026-08-08T11:00:00" data-price="2600" value="mflrd-2026">Этап МФЛРД 2026 — «С НАМИ ВСЕ»</option><option data-date="2026-08-22T10:00:00" data-price="3900" value="tula-pursuit">Тульская гонка преследования</option><option data-date="2026-08-26T18:00:00" data-price="2100" value="mytishchi-1000">4 этап «ТЫЩА В МЫТИЩАХ-2026»</option><option data-date="2026-08-30T10:00:00" data-price="3200" value="xsport-xc">ЯСПОРТ ХС RACE 2026</option><option data-date="2026-09-05T10:00:00" data-price="3500" value="obninsk-festival">Этап Фестиваля лыжероллерных дисциплин 2026</option><option data-date="2026-08-02T07:00:00" data-price="4200" value="altai-trail-run">Altai Trail Run</option><option data-date="" data-price="" value="family-tourist-festival">Туристический слет среди многодетных семей города Москвы</option><option data-date="" data-price="" value="roller-race">Гонки на лыжероллерах и роликовых коньках</option></select></label><label>Участник<select><option>Себя: Васильев Дмитрий</option></select></label><label>Промокод<input id="publicPromo" placeholder="ARTA10"/></label><div class="modal-list"><div>Базовая цена: <strong id="publicBase">—</strong></div><div>Возрастной тариф: <strong>0 ₽</strong></div><div>Дата оплаты: <strong id="publicDateFee">—</strong></div><div>Итого: <strong id="publicTotal">—</strong></div></div><div class="checks"><label><input id="publicOffer" type="checkbox"/> Согласен с Офертой</label><label><input id="publicPolicy" type="checkbox"/> Согласен с Политикой персональных данных</label></div><button class="primary-btn" disabled="" id="publicPay" type="submit">Оплатить</button></form><p hidden="" id="publicRegistrationNotice">Заявка заполнена. Онлайн-оплата в этой демонстрационной версии не подключена.</p></div></div></div><script src="assets/js/public-registration.js"></script></body>
 </html>
