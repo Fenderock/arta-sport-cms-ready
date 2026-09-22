@@ -1,0 +1,23 @@
+{
+  "--bg": "#f8fafc",
+  "--ink": "#2c384e",
+  "--muted": "#64748b",
+  "--line": "#e2e8f0",
+  "--orange": "#EA5424",
+  "--pink": "#db2777",
+  "--blue": "#2563eb",
+  "--green": "#16a34a",
+  "--card": "#ffffff",
+  "--radius": "18px",
+  "--shadow": "0 20px 45px rgba(15, 23, 42, .11)",
+  "--page-width": "1400px",
+  "--page-gutter": "clamp(18px, 4vw, 40px)",
+  "--section-space": "64px",
+  "--section-space-mobile": "32px",
+  "--header-height": "74px",
+  "--card-radius": "18px",
+  "--card-padding": "28px",
+  "--text-size": "16px",
+  "--text-size1": "24px",
+  "--text-line": "1.65"
+}
